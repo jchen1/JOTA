@@ -24,9 +24,7 @@ class ActionViewController: UIViewController {
                         guard let dictionary = item as? NSDictionary else { return }
                         OperationQueue.main.addOperation {
                             if let results = dictionary[NSExtensionJavaScriptPreprocessingResultsKey] as? NSDictionary {
-                                
-                                let test = results["test"] as? String
-                                print("da value is... \(results.allKeys)")
+                                print("da value is... \(results.allKeys), \(results.allValues)")
                             }
                         }
                     })

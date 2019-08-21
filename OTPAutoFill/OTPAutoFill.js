@@ -2,7 +2,9 @@ var OTPAutoFill = function() {};
 
 OTPAutoFill.prototype = {
     run: function(arguments) {
-        arguments.completionFunction({"test": "value"});
+        arguments.completionFunction({"url": document.URL,
+                                     "host": window.location.host
+                                     });
     }
 };
 

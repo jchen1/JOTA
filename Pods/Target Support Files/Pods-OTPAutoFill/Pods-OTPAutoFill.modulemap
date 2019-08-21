@@ -1,0 +1,6 @@
+framework module Pods_OTPAutoFill {
+  umbrella header "Pods-OTPAutoFill-umbrella.h"
+
+  export *
+  module * { export * }
+}

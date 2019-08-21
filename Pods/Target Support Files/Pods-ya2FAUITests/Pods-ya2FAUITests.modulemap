@@ -1,0 +1,6 @@
+framework module Pods_ya2FAUITests {
+  umbrella header "Pods-ya2FAUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
