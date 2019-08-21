@@ -19,6 +19,7 @@
 		1F81622F230DB89700DF9578 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F81622D230DB89700DF9578 /* MainInterface.storyboard */; };
 		1F816233230DB89700DF9578 /* OTPAutoFill.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F816227230DB89700DF9578 /* OTPAutoFill.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1F816239230DBA3700DF9578 /* OTPAutoFill.js in Resources */ = {isa = PBXBuildFile; fileRef = 1F816238230DBA3700DF9578 /* OTPAutoFill.js */; };
+		1FE4D891230DE02700701EB8 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4D890230DE02700701EB8 /* OTP.swift */; };
 		293A237A7D0AA8C35912AB38 /* Pods_ya2FA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D81053CE781DB4D0AD2F6D /* Pods_ya2FA.framework */; };
 		2E59353D593B410AC151DC38 /* Pods_ya2FATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2590AD7E33853FFA25F67AA6 /* Pods_ya2FATests.framework */; };
 		4BA1C2BE256A6D783E373D89 /* Pods_OTPAutoFill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFE03E4DC62F56688C82627 /* Pods_OTPAutoFill.framework */; };
@@ -84,6 +85,7 @@
 		1F81622E230DB89700DF9578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		1F816230230DB89700DF9578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F816238230DBA3700DF9578 /* OTPAutoFill.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = OTPAutoFill.js; sourceTree = "<group>"; };
+		1FE4D890230DE02700701EB8 /* OTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTP.swift; sourceTree = "<group>"; };
 		2590AD7E33853FFA25F67AA6 /* Pods_ya2FATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ya2FATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B1A9018113145567FAFC94F /* Pods_ya2FAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ya2FAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFE03E4DC62F56688C82627 /* Pods_OTPAutoFill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPAutoFill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +168,7 @@
 				1F8161FC230DB6DF00DF9578 /* Assets.xcassets */,
 				1F8161FE230DB6DF00DF9578 /* LaunchScreen.storyboard */,
 				1F816201230DB6DF00DF9578 /* Info.plist */,
+				1FE4D890230DE02700701EB8 /* OTP.swift */,
 			);
 			path = ya2FA;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE4D891230DE02700701EB8 /* OTP.swift in Sources */,
 				1F8161F8230DB6DE00DF9578 /* ViewController.swift in Sources */,
 				1F8161F6230DB6DE00DF9578 /* AppDelegate.swift in Sources */,
 			);

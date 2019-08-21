@@ -16,8 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let totp = TOTP(secret: "JBSWY3DPEHPK3PXP".base32DecodedData!)
-        print(totp?.generate(time: Date()))
+//        let totp = TOTP(secret: "JBSWY3DPEHPK3PXP".base32DecodedData!)
+//        print(totp?.generate(time: Date()))
+        print("asdf")
+        let otp = try! OTP(url: "otpauth://totp/Example1:6?secret=JBSWY3DPEHPK3PXP&issuer=Example1&digits=6&period=30")
+        print("hello", otp.generate())
         // Override point for customization after application launch.
         return true
     }
