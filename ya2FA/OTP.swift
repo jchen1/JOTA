@@ -75,9 +75,7 @@ public struct OTP {
         guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
             throw OTPError.invalidURL
         }
-        
-        print(url, components.debugDescription)
-        
+                
         if components.scheme != "otpauth" {
             throw OTPError.invalidOrMissingScheme
         }
