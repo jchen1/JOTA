@@ -14,6 +14,11 @@
 		1F816200230DB6DF00DF9578 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8161FE230DB6DF00DF9578 /* LaunchScreen.storyboard */; };
 		1F81620B230DB6DF00DF9578 /* ya2FATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81620A230DB6DF00DF9578 /* ya2FATests.swift */; };
 		1F816216230DB6DF00DF9578 /* ya2FAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F816215230DB6DF00DF9578 /* ya2FAUITests.swift */; };
+		1F81622A230DB89700DF9578 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F816229230DB89700DF9578 /* Media.xcassets */; };
+		1F81622C230DB89700DF9578 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81622B230DB89700DF9578 /* ActionViewController.swift */; };
+		1F81622F230DB89700DF9578 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F81622D230DB89700DF9578 /* MainInterface.storyboard */; };
+		1F816233230DB89700DF9578 /* OTPAutoFill.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F816227230DB89700DF9578 /* OTPAutoFill.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1F816239230DBA3700DF9578 /* OTPAutoFill.js in Resources */ = {isa = PBXBuildFile; fileRef = 1F816238230DBA3700DF9578 /* OTPAutoFill.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +36,28 @@
 			remoteGlobalIDString = 1F8161F1230DB6DE00DF9578;
 			remoteInfo = ya2FA;
 		};
+		1F816231230DB89700DF9578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F8161EA230DB6DE00DF9578 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F816226230DB89700DF9578;
+			remoteInfo = OTPAutoFill;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1F816237230DB89700DF9578 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1F816233230DB89700DF9578 /* OTPAutoFill.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1F8161F2230DB6DE00DF9578 /* ya2FA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ya2FA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +73,12 @@
 		1F816211230DB6DF00DF9578 /* ya2FAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ya2FAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F816215230DB6DF00DF9578 /* ya2FAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ya2FAUITests.swift; sourceTree = "<group>"; };
 		1F816217230DB6DF00DF9578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F816227230DB89700DF9578 /* OTPAutoFill.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OTPAutoFill.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F816229230DB89700DF9578 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		1F81622B230DB89700DF9578 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		1F81622E230DB89700DF9578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		1F816230230DB89700DF9578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F816238230DBA3700DF9578 /* OTPAutoFill.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = OTPAutoFill.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +103,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F816224230DB89700DF9578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +119,7 @@
 				1F8161F4230DB6DE00DF9578 /* ya2FA */,
 				1F816209230DB6DF00DF9578 /* ya2FATests */,
 				1F816214230DB6DF00DF9578 /* ya2FAUITests */,
+				1F816228230DB89700DF9578 /* OTPAutoFill */,
 				1F8161F3230DB6DE00DF9578 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +130,7 @@
 				1F8161F2230DB6DE00DF9578 /* ya2FA.app */,
 				1F816206230DB6DF00DF9578 /* ya2FATests.xctest */,
 				1F816211230DB6DF00DF9578 /* ya2FAUITests.xctest */,
+				1F816227230DB89700DF9578 /* OTPAutoFill.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +166,18 @@
 			path = ya2FAUITests;
 			sourceTree = "<group>";
 		};
+		1F816228230DB89700DF9578 /* OTPAutoFill */ = {
+			isa = PBXGroup;
+			children = (
+				1F816229230DB89700DF9578 /* Media.xcassets */,
+				1F81622B230DB89700DF9578 /* ActionViewController.swift */,
+				1F81622D230DB89700DF9578 /* MainInterface.storyboard */,
+				1F816230230DB89700DF9578 /* Info.plist */,
+				1F816238230DBA3700DF9578 /* OTPAutoFill.js */,
+			);
+			path = OTPAutoFill;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +188,12 @@
 				1F8161EE230DB6DE00DF9578 /* Sources */,
 				1F8161EF230DB6DE00DF9578 /* Frameworks */,
 				1F8161F0230DB6DE00DF9578 /* Resources */,
+				1F816237230DB89700DF9578 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1F816232230DB89700DF9578 /* PBXTargetDependency */,
 			);
 			name = ya2FA;
 			productName = ya2FA;
@@ -181,6 +236,23 @@
 			productReference = 1F816211230DB6DF00DF9578 /* ya2FAUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		1F816226230DB89700DF9578 /* OTPAutoFill */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F816234230DB89700DF9578 /* Build configuration list for PBXNativeTarget "OTPAutoFill" */;
+			buildPhases = (
+				1F816223230DB89700DF9578 /* Sources */,
+				1F816224230DB89700DF9578 /* Frameworks */,
+				1F816225230DB89700DF9578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTPAutoFill;
+			productName = OTPAutoFill;
+			productReference = 1F816227230DB89700DF9578 /* OTPAutoFill.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +274,9 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 1F8161F1230DB6DE00DF9578;
 					};
+					1F816226230DB89700DF9578 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 1F8161ED230DB6DE00DF9578 /* Build configuration list for PBXProject "ya2FA" */;
@@ -220,6 +295,7 @@
 				1F8161F1230DB6DE00DF9578 /* ya2FA */,
 				1F816205230DB6DF00DF9578 /* ya2FATests */,
 				1F816210230DB6DF00DF9578 /* ya2FAUITests */,
+				1F816226230DB89700DF9578 /* OTPAutoFill */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +322,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F816225230DB89700DF9578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F816239230DBA3700DF9578 /* OTPAutoFill.js in Resources */,
+				1F81622A230DB89700DF9578 /* Media.xcassets in Resources */,
+				1F81622F230DB89700DF9578 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +363,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F816223230DB89700DF9578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F81622C230DB89700DF9578 /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +383,11 @@
 			isa = PBXTargetDependency;
 			target = 1F8161F1230DB6DE00DF9578 /* ya2FA */;
 			targetProxy = 1F816212230DB6DF00DF9578 /* PBXContainerItemProxy */;
+		};
+		1F816232230DB89700DF9578 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F816226230DB89700DF9578 /* OTPAutoFill */;
+			targetProxy = 1F816231230DB89700DF9578 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -307,6 +406,14 @@
 				1F8161FF230DB6DF00DF9578 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1F81622D230DB89700DF9578 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F81622E230DB89700DF9578 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -431,6 +538,7 @@
 		1F81621B230DB6DF00DF9578 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45A594478C;
@@ -449,6 +557,7 @@
 		1F81621C230DB6DF00DF9578 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45A594478C;
@@ -546,6 +655,44 @@
 			};
 			name = Release;
 		};
+		1F816235230DB89700DF9578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45A594478C;
+				INFOPLIST_FILE = OTPAutoFill/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.jeffchen.ya2FA.OTPAutoFill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F816236230DB89700DF9578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45A594478C;
+				INFOPLIST_FILE = OTPAutoFill/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.jeffchen.ya2FA.OTPAutoFill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,6 +728,15 @@
 			buildConfigurations = (
 				1F816221230DB6DF00DF9578 /* Debug */,
 				1F816222230DB6DF00DF9578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F816234230DB89700DF9578 /* Build configuration list for PBXNativeTarget "OTPAutoFill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F816235230DB89700DF9578 /* Debug */,
+				1F816236230DB89700DF9578 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
