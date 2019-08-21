@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -212,7 +212,6 @@
 				A7BC6DD5E03A8B7D4CB47029 /* Pods-ya2FAUITests.debug.xcconfig */,
 				DE8066916819827C8DA9A15D /* Pods-ya2FAUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -319,17 +318,21 @@
 				TargetAttributes = {
 					1F8161F1230DB6DE00DF9578 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 					1F816205230DB6DF00DF9578 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = 1F8161F1230DB6DE00DF9578;
 					};
 					1F816210230DB6DF00DF9578 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = 1F8161F1230DB6DE00DF9578;
 					};
 					1F816226230DB89700DF9578 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -712,7 +715,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.jeffchen.ya2FA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -732,7 +735,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.jeffchen.ya2FA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -753,7 +756,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.jeffchen.ya2FATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ya2FA.app/ya2FA";
 			};
@@ -775,7 +778,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.jeffchen.ya2FATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ya2FA.app/ya2FA";
 			};
@@ -796,7 +799,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.jeffchen.ya2FAUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ya2FA;
 			};
@@ -817,7 +820,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.jeffchen.ya2FAUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ya2FA;
 			};
@@ -838,7 +841,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.jeffchen.ya2FA.OTPAutoFill;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -858,7 +861,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.jeffchen.ya2FA.OTPAutoFill;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

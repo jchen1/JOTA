@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftOTP
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let totp = TOTP(secret: "JBSWY3DPEHPK3PXP".base32DecodedData!)
+        print(totp?.generate(time: Date()))
         // Override point for customization after application launch.
         return true
     }
