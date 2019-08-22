@@ -35,10 +35,10 @@ import Foundation
 import CryptoSwift
 
 /// Hash algorithm to use for one time password generation
-public enum OTPAlgorithm {
-	case sha1
-	case sha256
-	case sha512
+public enum OTPAlgorithm: Int32 {
+	case sha1 = 0
+	case sha256 = 1
+	case sha512 = 2
 	
 	/// CryptoSwift HMAC variant equivalent
 	internal var hmacVariant: HMAC.Variant {

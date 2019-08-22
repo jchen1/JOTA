@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F35AD5F230E074F000535F5 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4D890230DE02700701EB8 /* OTP.swift */; };
+		1F35AD63230E1C8A000535F5 /* OTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD62230E1C8A000535F5 /* OTPLoader.swift */; };
+		1F35AD64230E1D5D000535F5 /* OTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD62230E1C8A000535F5 /* OTPLoader.swift */; };
 		1F8161F6230DB6DE00DF9578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8161F5230DB6DE00DF9578 /* AppDelegate.swift */; };
 		1F8161F8230DB6DE00DF9578 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8161F7230DB6DE00DF9578 /* ViewController.swift */; };
 		1F8161FB230DB6DE00DF9578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8161F9230DB6DE00DF9578 /* Main.storyboard */; };
@@ -66,6 +69,9 @@
 
 /* Begin PBXFileReference section */
 		084EDF0844096FB670C4283E /* Pods-OTPAutoFill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPAutoFill.release.xcconfig"; path = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.release.xcconfig"; sourceTree = "<group>"; };
+		1F35AD60230E100C000535F5 /* OTPAutoFill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OTPAutoFill.entitlements; sourceTree = "<group>"; };
+		1F35AD61230E102B000535F5 /* ya2FA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ya2FA.entitlements; sourceTree = "<group>"; };
+		1F35AD62230E1C8A000535F5 /* OTPLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPLoader.swift; sourceTree = "<group>"; };
 		1F8161F2230DB6DE00DF9578 /* ya2FA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ya2FA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8161F5230DB6DE00DF9578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F8161F7230DB6DE00DF9578 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +168,7 @@
 		1F8161F4230DB6DE00DF9578 /* ya2FA */ = {
 			isa = PBXGroup;
 			children = (
+				1F35AD61230E102B000535F5 /* ya2FA.entitlements */,
 				1F8161F5230DB6DE00DF9578 /* AppDelegate.swift */,
 				1F8161F7230DB6DE00DF9578 /* ViewController.swift */,
 				1F8161F9230DB6DE00DF9578 /* Main.storyboard */,
@@ -169,6 +176,7 @@
 				1F8161FE230DB6DF00DF9578 /* LaunchScreen.storyboard */,
 				1F816201230DB6DF00DF9578 /* Info.plist */,
 				1FE4D890230DE02700701EB8 /* OTP.swift */,
+				1F35AD62230E1C8A000535F5 /* OTPLoader.swift */,
 			);
 			path = ya2FA;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 		1F816228230DB89700DF9578 /* OTPAutoFill */ = {
 			isa = PBXGroup;
 			children = (
+				1F35AD60230E100C000535F5 /* OTPAutoFill.entitlements */,
 				1F816229230DB89700DF9578 /* Media.xcassets */,
 				1F81622B230DB89700DF9578 /* ActionViewController.swift */,
 				1F81622D230DB89700DF9578 /* MainInterface.storyboard */,
@@ -322,6 +331,11 @@
 					1F8161F1230DB6DE00DF9578 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1030;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					1F816205230DB6DF00DF9578 = {
 						CreatedOnToolsVersion = 10.1;
@@ -336,6 +350,11 @@
 					1F816226230DB89700DF9578 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1030;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -510,6 +529,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F35AD63230E1C8A000535F5 /* OTPLoader.swift in Sources */,
 				1FE4D891230DE02700701EB8 /* OTP.swift in Sources */,
 				1F8161F8230DB6DE00DF9578 /* ViewController.swift in Sources */,
 				1F8161F6230DB6DE00DF9578 /* AppDelegate.swift in Sources */,
@@ -536,6 +556,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F35AD64230E1D5D000535F5 /* OTPLoader.swift in Sources */,
+				1F35AD5F230E074F000535F5 /* OTP.swift in Sources */,
 				1F81622C230DB89700DF9578 /* ActionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -710,6 +732,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ya2FA/ya2FA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45A594478C;
 				INFOPLIST_FILE = ya2FA/Info.plist;
@@ -730,6 +753,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ya2FA/ya2FA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45A594478C;
 				INFOPLIST_FILE = ya2FA/Info.plist;
@@ -834,6 +858,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6FBA3ED8305AEDECBC1E4DCA /* Pods-OTPAutoFill.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OTPAutoFill/OTPAutoFill.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45A594478C;
 				INFOPLIST_FILE = OTPAutoFill/Info.plist;
@@ -854,6 +879,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 084EDF0844096FB670C4283E /* Pods-OTPAutoFill.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OTPAutoFill/OTPAutoFill.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45A594478C;
 				INFOPLIST_FILE = OTPAutoFill/Info.plist;

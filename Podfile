@@ -6,6 +6,7 @@ target 'OTPAutoFill' do
   use_frameworks!
 
   # Pods for OTPAutoFill
+  pod 'SwiftOTP'
 
 end
 

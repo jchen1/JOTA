@@ -9,10 +9,10 @@
 import Foundation
 import SwiftOTP
 
-public struct OTP {
-    public enum OTPType {
-        case TOTP
-        case HOTP
+public class OTP: NSObject,NSCoding {
+    public enum OTPType: Int32 {
+        case TOTP = 0
+        case HOTP = 1
     }
     
     public enum InputData {
@@ -36,9 +36,16 @@ public struct OTP {
         case HOTP(HOTP)
     }
     
-    private let defaultDigits = 6
-    private let defaultTimeInterval = 30
-    private let defaultAlgorithm = OTPAlgorithm.sha1
+    private enum Keys: String {
+        case type = "Type"
+        case secret = "Secret"
+        case user = "User"
+        case label = "Label"
+        case digits = "Digits"
+        case timeInterval = "Time Interval"
+        case algorithm = "Algorithm"
+    }
+    
     private let label: String?
     private let user: String?
     private var otpContainer: Optional<OTPContainer> = .none
@@ -47,9 +54,9 @@ public struct OTP {
         self.user = user
         self.label = label
 
-        let digits = digits ?? defaultDigits
-        let timeInterval = timeInterval ?? defaultTimeInterval
-        let algorithm = algorithm ?? defaultAlgorithm
+        let digits = digits ?? 6
+        let timeInterval = timeInterval ?? 30
+        let algorithm = algorithm ?? OTPAlgorithm.sha1
         
         switch type {
         case .HOTP:
@@ -67,11 +74,11 @@ public struct OTP {
         }
     }
     
-    public init(type: OTPType, secret: Data, user: String?, label: String?) throws {
+    public convenience init(type: OTPType, secret: Data, user: String?, label: String?) throws {
         try self.init(type: type, secret: secret, user: user, label: label, digits: nil, timeInterval: nil, algorithm: nil)
     }
     
-    public init(url: URL) throws {
+    public convenience init(url: URL) throws {
         guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
             throw OTPError.invalidURL
         }
@@ -109,11 +116,58 @@ public struct OTP {
         try self.init(type: otpType, secret: secret, user: user, label: label, digits: digits, timeInterval: timeInterval, algorithm: algorithm)
     }
     
-    public init(url: String) throws {
+    public convenience init(url: String) throws {
         guard let url = URL(string: url) else {
             throw OTPError.invalidURL
         }
         try self.init(url: url)
+    }
+    
+    required public convenience init?(coder: NSCoder) {
+        let type = OTPType(rawValue: coder.decodeInt32(forKey: Keys.type.rawValue))!
+        let b32Secret = coder.decodeObject(forKey: Keys.secret.rawValue) as! String
+        guard let secret = b32Secret.base32DecodedData else { return nil }
+        
+        let user = coder.decodeObject(forKey: Keys.user.rawValue) as! String
+        let label = coder.decodeObject(forKey: Keys.label.rawValue) as! String
+        let digits = coder.decodeInteger(forKey: Keys.digits.rawValue)
+        let timeInterval: Int? = {
+            switch type {
+            case .TOTP:
+                return coder.decodeInteger(forKey: Keys.timeInterval.rawValue)
+            case .HOTP:
+                return nil
+            }
+        }()
+        let algorithm = OTPAlgorithm(rawValue: coder.decodeInt32(forKey: Keys.algorithm.rawValue))!
+        
+        do {
+            try self.init(type: type, secret: secret, user: user, label: label, digits: digits, timeInterval: timeInterval, algorithm: algorithm)
+        } catch {
+            return nil
+        }
+        
+    }
+    
+    public func encode(with coder: NSCoder) {
+        switch otpContainer! {
+        case .HOTP(let hotp):
+            coder.encode(OTPType.HOTP.rawValue, forKey: Keys.type.rawValue)
+            coder.encode(hotp.secret.base32EncodedString, forKey: Keys.secret.rawValue)
+            coder.encode(hotp.digits, forKey: Keys.digits.rawValue)
+            coder.encode(hotp.algorithm.rawValue, forKey: Keys.algorithm.rawValue)
+            break
+        case .TOTP(let totp):
+            coder.encode(OTPType.TOTP.rawValue, forKey: Keys.type.rawValue)
+            coder.encode(totp.secret.base32EncodedString, forKey: Keys.secret.rawValue)
+            coder.encode(totp.digits, forKey: Keys.digits.rawValue)
+            coder.encode(totp.timeInterval, forKey: Keys.timeInterval.rawValue)
+            coder.encode(totp.algorithm.rawValue, forKey: Keys.algorithm.rawValue)
+            break
+        }
+        
+        coder.encode(user ?? "", forKey: Keys.user.rawValue)
+        coder.encode(label ?? "", forKey: Keys.label.rawValue)
     }
     
     public func generate(time: Date) throws -> String {
