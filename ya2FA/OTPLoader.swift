@@ -23,8 +23,9 @@ class OTPLoader {
         }
         
         // lol yolo
-        if (otps.count == 0) {
+        if (otps.count == 1) {
             otps.append(try! OTP(url: "otpauth://totp/Twitter:@iambald?secret=7A3H374INDJGYDBY&issuer=Twitter"))
+            otps.append(try! OTP(url: "otpauth://totp/Rippling:Ladder%20Financial%20Inc.%20-%20hello%40jeff.yt?secret=XH57TYXTYVF007LQ&issuer=Rippling"))
         }
         
         return otps
