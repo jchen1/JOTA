@@ -1,10 +1,15 @@
 # before release...
 
 - [x] otp module
-- [ ] add oOTP from QR code
-- [ ] otp tableview
+- [x] add OTP from QR code
+- [x] otp tableview
+- [x] TOTP
+- [ ] HOTP
 - [ ] tap to copy
 - [x] safari action extension
-- [ ] support html autocomplete
+- [x] support html autocomplete
 - [ ] otp suggestions
   - [ ] dynamic suggestions (based on previous usages)
+- [ ] ux
+  - [ ] icon
+  - [ ] ...

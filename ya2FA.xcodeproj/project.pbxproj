@@ -12,8 +12,11 @@
 		1F35AD64230E1D5D000535F5 /* OTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD62230E1C8A000535F5 /* OTPLoader.swift */; };
 		1F35AD69230F8DC1000535F5 /* OTPTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD68230F8DC1000535F5 /* OTPTableViewController.swift */; };
 		1F35AD6A230F8DC1000535F5 /* OTPTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD68230F8DC1000535F5 /* OTPTableViewController.swift */; };
+		1F35AD732310BB23000535F5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD712310BB23000535F5 /* ScannerViewController.swift */; };
+		1F35AD742310BB23000535F5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD712310BB23000535F5 /* ScannerViewController.swift */; };
+		1F35AD752310BB23000535F5 /* OTPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD722310BB23000535F5 /* OTPTableViewCell.swift */; };
+		1F35AD762310BB23000535F5 /* OTPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD722310BB23000535F5 /* OTPTableViewCell.swift */; };
 		1F8161F6230DB6DE00DF9578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8161F5230DB6DE00DF9578 /* AppDelegate.swift */; };
-		1F8161F8230DB6DE00DF9578 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8161F7230DB6DE00DF9578 /* ViewController.swift */; };
 		1F8161FB230DB6DE00DF9578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8161F9230DB6DE00DF9578 /* Main.storyboard */; };
 		1F8161FD230DB6DF00DF9578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8161FC230DB6DF00DF9578 /* Assets.xcassets */; };
 		1F816200230DB6DF00DF9578 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8161FE230DB6DF00DF9578 /* LaunchScreen.storyboard */; };
@@ -75,9 +78,10 @@
 		1F35AD61230E102B000535F5 /* ya2FA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ya2FA.entitlements; sourceTree = "<group>"; };
 		1F35AD62230E1C8A000535F5 /* OTPLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPLoader.swift; sourceTree = "<group>"; };
 		1F35AD68230F8DC1000535F5 /* OTPTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTableViewController.swift; sourceTree = "<group>"; };
+		1F35AD712310BB23000535F5 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		1F35AD722310BB23000535F5 /* OTPTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPTableViewCell.swift; sourceTree = "<group>"; };
 		1F8161F2230DB6DE00DF9578 /* ya2FA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ya2FA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8161F5230DB6DE00DF9578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F8161F7230DB6DE00DF9578 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F8161FA230DB6DE00DF9578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F8161FC230DB6DF00DF9578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F8161FF230DB6DF00DF9578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -171,9 +175,10 @@
 		1F8161F4230DB6DE00DF9578 /* ya2FA */ = {
 			isa = PBXGroup;
 			children = (
+				1F35AD722310BB23000535F5 /* OTPTableViewCell.swift */,
+				1F35AD712310BB23000535F5 /* ScannerViewController.swift */,
 				1F35AD61230E102B000535F5 /* ya2FA.entitlements */,
 				1F8161F5230DB6DE00DF9578 /* AppDelegate.swift */,
-				1F8161F7230DB6DE00DF9578 /* ViewController.swift */,
 				1F8161F9230DB6DE00DF9578 /* Main.storyboard */,
 				1F8161FC230DB6DF00DF9578 /* Assets.xcassets */,
 				1F8161FE230DB6DF00DF9578 /* LaunchScreen.storyboard */,
@@ -536,8 +541,9 @@
 				1F35AD69230F8DC1000535F5 /* OTPTableViewController.swift in Sources */,
 				1F35AD63230E1C8A000535F5 /* OTPLoader.swift in Sources */,
 				1FE4D891230DE02700701EB8 /* OTP.swift in Sources */,
-				1F8161F8230DB6DE00DF9578 /* ViewController.swift in Sources */,
+				1F35AD732310BB23000535F5 /* ScannerViewController.swift in Sources */,
 				1F8161F6230DB6DE00DF9578 /* AppDelegate.swift in Sources */,
+				1F35AD752310BB23000535F5 /* OTPTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +570,9 @@
 				1F35AD64230E1D5D000535F5 /* OTPLoader.swift in Sources */,
 				1F35AD6A230F8DC1000535F5 /* OTPTableViewController.swift in Sources */,
 				1F35AD5F230E074F000535F5 /* OTP.swift in Sources */,
+				1F35AD742310BB23000535F5 /* ScannerViewController.swift in Sources */,
 				1F81622C230DB89700DF9578 /* ActionViewController.swift in Sources */,
+				1F35AD762310BB23000535F5 /* OTPTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
