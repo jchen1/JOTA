@@ -81,10 +81,7 @@ class ActionViewController: UITableViewController {
         let code = try? otp.generate()
         
         let item = NSExtensionItem()
-        let jsDict = [ NSExtensionJavaScriptFinalizeArgumentKey :
-            [
-              "code": code ?? ""
-            ]]
+        let jsDict = [ NSExtensionJavaScriptFinalizeArgumentKey : ["code": code ?? ""] ]
         
         item.attachments = [ NSItemProvider(item: jsDict as NSSecureCoding, typeIdentifier: kUTTypePropertyList as String)]
         self.extensionContext!.completeRequest(returningItems: [item], completionHandler: nil)

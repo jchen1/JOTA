@@ -11,9 +11,7 @@
 		1F35AD63230E1C8A000535F5 /* OTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD62230E1C8A000535F5 /* OTPLoader.swift */; };
 		1F35AD64230E1D5D000535F5 /* OTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD62230E1C8A000535F5 /* OTPLoader.swift */; };
 		1F35AD69230F8DC1000535F5 /* OTPTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD68230F8DC1000535F5 /* OTPTableViewController.swift */; };
-		1F35AD6A230F8DC1000535F5 /* OTPTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD68230F8DC1000535F5 /* OTPTableViewController.swift */; };
 		1F35AD732310BB23000535F5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD712310BB23000535F5 /* ScannerViewController.swift */; };
-		1F35AD742310BB23000535F5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD712310BB23000535F5 /* ScannerViewController.swift */; };
 		1F35AD752310BB23000535F5 /* OTPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD722310BB23000535F5 /* OTPTableViewCell.swift */; };
 		1F35AD762310BB23000535F5 /* OTPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD722310BB23000535F5 /* OTPTableViewCell.swift */; };
 		1F8161F6230DB6DE00DF9578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8161F5230DB6DE00DF9578 /* AppDelegate.swift */; };
@@ -568,9 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F35AD64230E1D5D000535F5 /* OTPLoader.swift in Sources */,
-				1F35AD6A230F8DC1000535F5 /* OTPTableViewController.swift in Sources */,
 				1F35AD5F230E074F000535F5 /* OTP.swift in Sources */,
-				1F35AD742310BB23000535F5 /* ScannerViewController.swift in Sources */,
 				1F81622C230DB89700DF9578 /* ActionViewController.swift in Sources */,
 				1F35AD762310BB23000535F5 /* OTPTableViewCell.swift in Sources */,
 			);

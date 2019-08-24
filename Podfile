@@ -7,8 +7,6 @@ target 'OTPAutoFill' do
 
   # Pods for OTPAutoFill
   pod 'SwiftOTP'
-  pod 'Toaster'
-
 end
 
 target 'ya2FA' do

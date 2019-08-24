@@ -17,7 +17,6 @@
 		1300F6EECCF17021C06779B04672929A /* Pods-ya2FA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D50DFF0355B7AF838A36901DF963C283 /* Pods-ya2FA-dummy.m */; };
 		13A4BA994DAE26C3B22F1842D5E186BD /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1225B6492623A8EB84AE5A84E9A68E4 /* Padding.swift */; };
 		15A581FE47E8E0B711E603627653C5BF /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB633CE5444143649E7211C4C39A8284 /* Generator.swift */; };
-		1A3037EDA7DBA282E14B3344BAAD080E /* Pods-OTPAutoFill-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B70B7FBCBAE2EFD5CF92C877ABAF2171 /* Pods-OTPAutoFill-dummy.m */; };
 		1C482705924CA6C3DF716EC60624900B /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F186807A4F94F520C45C29CBAE25907 /* Generics.swift */; };
 		1C9F46BEA8B45B6C6BFE244BCC19274C /* SwiftOTP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 479477A449DDBC0AD3AA83449B4A6750 /* SwiftOTP-dummy.m */; };
 		1E6C33DE401D9AEFE660851A3E3394E6 /* NoPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DE7897E264219723F76DE0F74E9FF /* NoPadding.swift */; };
@@ -55,6 +54,7 @@
 		61330480364F92D57CB181E890C8896B /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB2DB62D892C92E82665E8404ACE27 /* Collection+Extension.swift */; };
 		636A216DCBEBED81DA2DB1A12C7639E0 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20E05C22B3D69A68245FDCB00C4329 /* Operators.swift */; };
 		639C6438CD01AE7A36FE1E551F2E7A8F /* CryptoSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE783CFBB213D53AFA5D357C11E27DD /* CryptoSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		646F0CECDC3BCE23AD199F51A3FD3BEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F61BD0C7610993CCE79B263B70E9468 /* Foundation.framework */; };
 		67F0180D484B413723C2196A8FBAD4F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F61BD0C7610993CCE79B263B70E9468 /* Foundation.framework */; };
 		68A92231E087567C6A9AD700359DAE80 /* AEADChaCha20Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10A06E9F5FCED7885A68F73B05F7014 /* AEADChaCha20Poly1305.swift */; };
 		694E630570AB4DB0BCDF003411CF2B63 /* SHA3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49F92F364F34DDB2DE8E3BBDA6BBD2 /* SHA3.swift */; };
@@ -71,6 +71,7 @@
 		8039DF4C1AE7378FB41921D22A44AEF7 /* UInt16+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA06CEB409D7F47E9FC804917FFAE88 /* UInt16+Extension.swift */; };
 		854AF7B141389D5512E8E73DF38FEBEA /* BlockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6137E2EA808D5D8188FFFCD357A4D0 /* BlockMode.swift */; };
 		8573D5547D4AC8CEE69AB545148A72B6 /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E41389096F0477BC4C870C5001DDBF3 /* CCM.swift */; };
+		88BD0495E83C571CF2970707A7E48CAA /* Pods-OTPAutoFill-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B70B7FBCBAE2EFD5CF92C877ABAF2171 /* Pods-OTPAutoFill-dummy.m */; };
 		8A0A653CD9FAA128B349CF83F4B09345 /* ToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912876A8F5F2141311E3110CFB00558 /* ToastWindow.swift */; };
 		8C05403EC0F455CB86CFD8060C1C5DC2 /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E2F4C4B95193280024D790DFFD1DD /* Cryptor.swift */; };
 		8D03B5706C51EFAB22148F8ABDAB7303 /* Toaster-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C49F3F0DFB8E693195D293E8970615C2 /* Toaster-dummy.m */; };
@@ -83,6 +84,7 @@
 		9D22006C799C6F6E9452B97B760F7CD1 /* UInt64+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBD6B5561414204FF78A7DE7B859608 /* UInt64+Extension.swift */; };
 		A65BC55FFE138090EF77D9EC1F72A88B /* HKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18C62B0B43184F298BC7895BBF2F28 /* HKDF.swift */; };
 		A93275D5C1DAD3CA7CCC2A9586AC9ADE /* AEAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B859E2EB491E0B9499FDDCF86BAF6 /* AEAD.swift */; };
+		AA98CCB26E8EE855E6F140324282EA5A /* Pods-OTPAutoFill-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5E724C167CA18A008E486178FD458E /* Pods-OTPAutoFill-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAA648FE58CC4A49EF39BFDBCBA7C1FA /* PBKDF1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72269F3E9B2FFD87FD61FD1E9DB1FF /* PBKDF1.swift */; };
 		ABF5E5F45D270B8B7CE386D4BB8E614D /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237EC443FFAF5B481532CF64A5F14B1E /* Int+Extension.swift */; };
 		AC01A4E8BE89FB9A5020D404C351B4FD /* TOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B1B001027872C50592C8C1E985726 /* TOTP.swift */; };
@@ -101,7 +103,6 @@
 		CBC27F3832D11E3144CE31A52AEED38C /* Toaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 67DDB81C726BFDEC70B4FF5E045EC5DF /* Toaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC03E31F122F91A26DD22BEEF813D779 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFF429C6192A61D3F15AADD1E489BC /* UInt128.swift */; };
 		CE7B7B8BF467065E556B8DD44738CEBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F61BD0C7610993CCE79B263B70E9468 /* Foundation.framework */; };
-		D19A52CD1BF13D62BA02710D1B4741C9 /* Pods-OTPAutoFill-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5E724C167CA18A008E486178FD458E /* Pods-OTPAutoFill-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D262937892E6D6DD62A8AF58A00EA11A /* Pods-ya2FA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D61000AAA73CA08EBECA680D7831CDEA /* Pods-ya2FA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D820172C124F8B10D0C72B31F1819FDC /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC887E99828BEBD146AA78441F38810 /* String+FoundationExtension.swift */; };
 		D8C90AFD1D666460C3FE007172ED052E /* CompactMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B0E1BAA7140BF793306C2215C980A /* CompactMap.swift */; };
@@ -113,7 +114,6 @@
 		EC1F98C6E1424F6190176058FAA43C5A /* UInt8+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23716F6F97E878DFC47898C0088AA3DD /* UInt8+Extension.swift */; };
 		ED4ED80104798E648B2B82A10DA586F1 /* HMAC+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F16C5D320D908FC6B905AB9AB65280E /* HMAC+Foundation.swift */; };
 		EE2B76A1015936D3B867283CD72FB55E /* ToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB1EC309452859F7602E915F8F4F4F /* ToastCenter.swift */; };
-		F05C4F5DBDB041CE4CAE8F55EAAC6A14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F61BD0C7610993CCE79B263B70E9468 /* Foundation.framework */; };
 		F3B9FF17CD827482C5FCDE987FCBA026 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6678C5DBBB956B601BD11C4E764B11 /* SHA1.swift */; };
 		F44208FA90F7B7118E5A3CA21AB37A84 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D708C4F6F0176385C4A3A83FDF8797E /* PKCS5.swift */; };
 		F4DB8BAA8CC2482A2F0408BB78DC5636 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7B5AD1686647DFC5E77C7E5FF23AA8 /* Array+Extension.swift */; };
@@ -135,20 +135,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = AFA02167EA305598C96FED3F1E18FE0A;
 			remoteInfo = "Pods-ya2FA";
-		};
-		32B051BE12A398A0C9DBDA03992FE9EC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B90AB98A7BC6A346D671B36DB990DAC2;
-			remoteInfo = Toaster;
-		};
-		5FD44D94CA1DEBA0FB0C925D9EEE5B5B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 58B9AD85FE03CF119B42720114874474;
-			remoteInfo = SwiftOTP;
 		};
 		6C937ADBCD8F7422FE25F9CBA2885C13 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -178,12 +164,19 @@
 			remoteGlobalIDString = 58B9AD85FE03CF119B42720114874474;
 			remoteInfo = SwiftOTP;
 		};
-		FEE18D5E6D1FF54D81E779C9B24CEB22 /* PBXContainerItemProxy */ = {
+		D71E29DAE55637D49A4D36FE2B68BD4C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 99313990C1D76A6D1D017868B6975CC8;
 			remoteInfo = CryptoSwift;
+		};
+		E7683343F4285B4B273D52C442AFA7A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58B9AD85FE03CF119B42720114874474;
+			remoteInfo = SwiftOTP;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -229,7 +222,7 @@
 		479477A449DDBC0AD3AA83449B4A6750 /* SwiftOTP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftOTP-dummy.m"; sourceTree = "<group>"; };
 		4B6678C5DBBB956B601BD11C4E764B11 /* SHA1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA1.swift; path = Sources/CryptoSwift/SHA1.swift; sourceTree = "<group>"; };
 		4CBB2DB62D892C92E82665E8404ACE27 /* Collection+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+Extension.swift"; path = "Sources/CryptoSwift/Collection+Extension.swift"; sourceTree = "<group>"; };
-		4D2E352712F8D3BFBCAF8A885FF56EF7 /* Pods_ya2FATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ya2FATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D2E352712F8D3BFBCAF8A885FF56EF7 /* Pods_ya2FATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ya2FATests.framework; path = "Pods-ya2FATests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3F47AA963B0E18A51429B5C577679A /* Toaster-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Toaster-Info.plist"; sourceTree = "<group>"; };
 		4EC0C77B77219AE192AC7F35A3AEF095 /* StreamEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamEncryptor.swift; path = Sources/CryptoSwift/StreamEncryptor.swift; sourceTree = "<group>"; };
 		4F1479E195CEF334A58A3575B95BA5BD /* Pods-ya2FATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ya2FATests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -269,12 +262,12 @@
 		8D47746930BC95EEB732A40BE9FEB41F /* Pods-ya2FA-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ya2FA-acknowledgements.plist"; sourceTree = "<group>"; };
 		8D708C4F6F0176385C4A3A83FDF8797E /* PKCS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS5.swift; path = Sources/CryptoSwift/PKCS/PKCS5.swift; sourceTree = "<group>"; };
 		8E5825631397EEEF2EA5AF516128256B /* Pods-ya2FATests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ya2FATests-acknowledgements.plist"; sourceTree = "<group>"; };
-		906B4F8881E1F47CA253F59EDEBDC66C /* SwiftOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		906B4F8881E1F47CA253F59EDEBDC66C /* SwiftOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftOTP.framework; path = SwiftOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		935FD30473AABA25BA7D03268FF63635 /* CipherModeWorker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CipherModeWorker.swift; path = Sources/CryptoSwift/BlockMode/CipherModeWorker.swift; sourceTree = "<group>"; };
 		93C7A5D81218CAAC51C68420E5AFADDA /* Pods-ya2FA.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ya2FA.modulemap"; sourceTree = "<group>"; };
 		95E078B127D71CDE1A24DFC02F934C0A /* Cipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cipher.swift; path = Sources/CryptoSwift/Cipher.swift; sourceTree = "<group>"; };
 		996A427F532B7745C8080AD10EA722E6 /* SecureBytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureBytes.swift; path = Sources/CryptoSwift/SecureBytes.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A24C0E8778FF290C1269926416400B81 /* SwiftOTP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOTP-prefix.pch"; sourceTree = "<group>"; };
 		A24E37D349B3234D482D758EE2605166 /* CryptoSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CryptoSwift-dummy.m"; sourceTree = "<group>"; };
 		A304F3918E6402128299DBC3BABBFA68 /* Pods-ya2FA-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ya2FA-frameworks.sh"; sourceTree = "<group>"; };
@@ -296,7 +289,7 @@
 		BA345383FC89EFCE1667A0E9A4D29000 /* MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MD5.swift; path = Sources/CryptoSwift/MD5.swift; sourceTree = "<group>"; };
 		BA368B163B43A7ABC39C0EFBF6214CF9 /* Toaster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-umbrella.h"; sourceTree = "<group>"; };
 		BD6DE7897E264219723F76DE0F74E9FF /* NoPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NoPadding.swift; path = Sources/CryptoSwift/NoPadding.swift; sourceTree = "<group>"; };
-		BD810337F4A305D60D9250A197AA1EF1 /* Toaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD810337F4A305D60D9250A197AA1EF1 /* Toaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toaster.framework; path = Toaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA6523E4E961EBBA8F8A48BD6F0AC30 /* Toaster-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-prefix.pch"; sourceTree = "<group>"; };
 		BDC887E99828BEBD146AA78441F38810 /* String+FoundationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+FoundationExtension.swift"; path = "Sources/CryptoSwift/Foundation/String+FoundationExtension.swift"; sourceTree = "<group>"; };
 		BE6137E2EA808D5D8188FFFCD357A4D0 /* BlockMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockMode.swift; path = Sources/CryptoSwift/BlockMode/BlockMode.swift; sourceTree = "<group>"; };
@@ -304,7 +297,7 @@
 		C40845E2BF637F67EC403B8F73C5A12A /* Pods-ya2FAUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ya2FAUITests-Info.plist"; sourceTree = "<group>"; };
 		C496DDD2755F6DE0C143F961E78D4075 /* BlockDecryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockDecryptor.swift; path = Sources/CryptoSwift/BlockDecryptor.swift; sourceTree = "<group>"; };
 		C49F3F0DFB8E693195D293E8970615C2 /* Toaster-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toaster-dummy.m"; sourceTree = "<group>"; };
-		C758D8AD15D402C4C6485415DBD81DF9 /* Pods_ya2FAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ya2FAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C758D8AD15D402C4C6485415DBD81DF9 /* Pods_ya2FAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ya2FAUITests.framework; path = "Pods-ya2FAUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA06CEB409D7F47E9FC804917FFAE88 /* UInt16+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt16+Extension.swift"; path = "Sources/CryptoSwift/UInt16+Extension.swift"; sourceTree = "<group>"; };
 		CAC608B21F19BE35BE3AC1247264FC4A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		CC4CB8528052887AACE9E4096E052CA2 /* Pods-ya2FAUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ya2FAUITests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -320,8 +313,8 @@
 		D5336E14D76F5FEC8331E0759FFF77E9 /* ZeroPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZeroPadding.swift; path = Sources/CryptoSwift/ZeroPadding.swift; sourceTree = "<group>"; };
 		D61000AAA73CA08EBECA680D7831CDEA /* Pods-ya2FA-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ya2FA-umbrella.h"; sourceTree = "<group>"; };
 		D8C74EB9E823B908331C4F43BA1C1AD3 /* CryptoSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CryptoSwift.modulemap; sourceTree = "<group>"; };
-		DC7EAC8E934BCDA03EDCE15A30FAD229 /* Pods_ya2FA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ya2FA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD35A21E2673F83B1030D05E5D3EFA75 /* Pods_OTPAutoFill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPAutoFill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC7EAC8E934BCDA03EDCE15A30FAD229 /* Pods_ya2FA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ya2FA.framework; path = "Pods-ya2FA.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD35A21E2673F83B1030D05E5D3EFA75 /* Pods_OTPAutoFill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OTPAutoFill.framework; path = "Pods-OTPAutoFill.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6A3928A82E6707E1B21C5EE1C485F6 /* BlockEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockEncryptor.swift; path = Sources/CryptoSwift/BlockEncryptor.swift; sourceTree = "<group>"; };
 		DF18C62B0B43184F298BC7895BBF2F28 /* HKDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HKDF.swift; path = Sources/CryptoSwift/HKDF.swift; sourceTree = "<group>"; };
 		E00B1B001027872C50592C8C1E985726 /* TOTP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TOTP.swift; path = SwiftOTP/TOTP.swift; sourceTree = "<group>"; };
@@ -334,7 +327,7 @@
 		EBE783CFBB213D53AFA5D357C11E27DD /* CryptoSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-umbrella.h"; sourceTree = "<group>"; };
 		EDE9FA1FD3B3013C1F7621A40AA9632F /* UInt64+Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt64+Data.swift"; path = "SwiftOTP/UInt64+Data.swift"; sourceTree = "<group>"; };
 		F0FCD827E7C36A0C47EAD9B92DD0BE78 /* Digest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = Sources/CryptoSwift/Digest.swift; sourceTree = "<group>"; };
-		F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CryptoSwift.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB633CE5444143649E7211C4C39A8284 /* Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Generator.swift; path = SwiftOTP/Generator.swift; sourceTree = "<group>"; };
 		FC2A49A3F8CC664FA4878A38D626FA1F /* Bit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bit.swift; path = Sources/CryptoSwift/Bit.swift; sourceTree = "<group>"; };
 		FF41E67785B967FE2517B09BB15BC637 /* GCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCM.swift; path = Sources/CryptoSwift/BlockMode/GCM.swift; sourceTree = "<group>"; };
@@ -342,14 +335,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0310F2973C4898D2C371E9F14B3F4DD2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F05C4F5DBDB041CE4CAE8F55EAAC6A14 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		550BBF8D933CCF21CE9AF2A45D426B11 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +350,14 @@
 				59C8A859BF0D96DD377BF07F47E69641 /* Foundation.framework in Frameworks */,
 				BFA9AFACE094FAFDFF9B7E3A9DAA9B7E /* QuartzCore.framework in Frameworks */,
 				C278931D70A95E1B62CF33DE431436DE /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B381A3E7FB9C391315A38FB96040D959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				646F0CECDC3BCE23AD199F51A3FD3BEC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +410,7 @@
 				EDE9FA1FD3B3013C1F7621A40AA9632F /* UInt64+Data.swift */,
 				FAB4329F959005A4B259447B3D044FD9 /* Support Files */,
 			);
+			name = SwiftOTP;
 			path = SwiftOTP;
 			sourceTree = "<group>";
 		};
@@ -444,6 +438,7 @@
 				0912876A8F5F2141311E3110CFB00558 /* ToastWindow.swift */,
 				39EF69F9E516EA9DDAA833E2859B628B /* Support Files */,
 			);
+			name = Toaster;
 			path = Toaster;
 			sourceTree = "<group>";
 		};
@@ -655,6 +650,7 @@
 				D5336E14D76F5FEC8331E0759FFF77E9 /* ZeroPadding.swift */,
 				AE7062DC89DE10398187DB71E8E0A710 /* Support Files */,
 			);
+			name = CryptoSwift;
 			path = CryptoSwift;
 			sourceTree = "<group>";
 		};
@@ -708,6 +704,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A2DCBA40019F5F66F99223A3363F5B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA98CCB26E8EE855E6F140324282EA5A /* Pods-OTPAutoFill-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3D98FBEDECB8F177BA915623DCD3E5DE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -733,14 +737,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7CBEC07A1C9E9D68A7EFC828407F5622 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D19A52CD1BF13D62BA02710D1B4741C9 /* Pods-OTPAutoFill-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E44460581B10473A068DA7195E29F46A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -754,19 +750,18 @@
 /* Begin PBXNativeTarget section */
 		55F89C6443034F496B99794BDF49CC7A /* Pods-OTPAutoFill */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8376771AE4A546944844C946656E447E /* Build configuration list for PBXNativeTarget "Pods-OTPAutoFill" */;
+			buildConfigurationList = 0CA605E6BE124A2F457A0AC8520DE9ED /* Build configuration list for PBXNativeTarget "Pods-OTPAutoFill" */;
 			buildPhases = (
-				7CBEC07A1C9E9D68A7EFC828407F5622 /* Headers */,
-				4FF1458F089C039A2412ED8C97C40ED3 /* Sources */,
-				0310F2973C4898D2C371E9F14B3F4DD2 /* Frameworks */,
-				2684703182B8769921E0794FC1F5394D /* Resources */,
+				3A2DCBA40019F5F66F99223A3363F5B4 /* Headers */,
+				626CE9C3384EF8947E67A8413B12E94F /* Sources */,
+				B381A3E7FB9C391315A38FB96040D959 /* Frameworks */,
+				8A0E80C478E2C2E752F451567821C63D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6ED36F82843751B1A056E1E83B4DDAC9 /* PBXTargetDependency */,
-				DD64ED8F69D8BFA05A981AF0F87A9B66 /* PBXTargetDependency */,
-				C63BAF64E91DAA606D2E278D771F70FF /* PBXTargetDependency */,
+				2CA11D1DD5CA0F0BA4599CF9E62E6F22 /* PBXTargetDependency */,
+				BB803E5A423F463C512CCBC42A1B9395 /* PBXTargetDependency */,
 			);
 			name = "Pods-OTPAutoFill";
 			productName = "Pods-OTPAutoFill";
@@ -920,13 +915,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2684703182B8769921E0794FC1F5394D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3448886775D5B7FEF887F18CBADD074A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -949,6 +937,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7ACD25997C01FD960F9B4331D0A5D21F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A0E80C478E2C2E752F451567821C63D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -988,11 +983,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FF1458F089C039A2412ED8C97C40ED3 /* Sources */ = {
+		626CE9C3384EF8947E67A8413B12E94F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A3037EDA7DBA282E14B3344BAAD080E /* Pods-OTPAutoFill-dummy.m in Sources */,
+				88BD0495E83C571CF2970707A7E48CAA /* Pods-OTPAutoFill-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1123,17 +1118,17 @@
 			target = AFA02167EA305598C96FED3F1E18FE0A /* Pods-ya2FA */;
 			targetProxy = 2771B08C7ED2AF2EAC73C0F6D297C515 /* PBXContainerItemProxy */;
 		};
+		2CA11D1DD5CA0F0BA4599CF9E62E6F22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoSwift;
+			target = 99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */;
+			targetProxy = D71E29DAE55637D49A4D36FE2B68BD4C /* PBXContainerItemProxy */;
+		};
 		56DBCE7CDC3790FFDFB9D9480786E4D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftOTP;
 			target = 58B9AD85FE03CF119B42720114874474 /* SwiftOTP */;
 			targetProxy = C9C73DABD7D5E7EAA680A6938BCA9B96 /* PBXContainerItemProxy */;
-		};
-		6ED36F82843751B1A056E1E83B4DDAC9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CryptoSwift;
-			target = 99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */;
-			targetProxy = FEE18D5E6D1FF54D81E779C9B24CEB22 /* PBXContainerItemProxy */;
 		};
 		864CB011964FDCF216C5E6B69D1886A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1147,17 +1142,11 @@
 			target = 99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */;
 			targetProxy = 6C937ADBCD8F7422FE25F9CBA2885C13 /* PBXContainerItemProxy */;
 		};
-		C63BAF64E91DAA606D2E278D771F70FF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Toaster;
-			target = B90AB98A7BC6A346D671B36DB990DAC2 /* Toaster */;
-			targetProxy = 32B051BE12A398A0C9DBDA03992FE9EC /* PBXContainerItemProxy */;
-		};
-		DD64ED8F69D8BFA05A981AF0F87A9B66 /* PBXTargetDependency */ = {
+		BB803E5A423F463C512CCBC42A1B9395 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftOTP;
 			target = 58B9AD85FE03CF119B42720114874474 /* SwiftOTP */;
-			targetProxy = 5FD44D94CA1DEBA0FB0C925D9EEE5B5B /* PBXContainerItemProxy */;
+			targetProxy = E7683343F4285B4B273D52C442AFA7A4 /* PBXContainerItemProxy */;
 		};
 		F9FC8E44B10CCE0852EBAB3376B575AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1461,11 +1450,13 @@
 			};
 			name = Release;
 		};
-		94591E5AE05FF8CC66D170CFB29537D8 /* Release */ = {
+		815DE45306C01B2D9626AFB113D8ABBE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7738B6617181D843B4C876A0EE5B7C2D /* Toaster.xcconfig */;
+			baseConfigurationReference = 74941F06B5D3387D185E55F5BC9B0A6C /* Pods-OTPAutoFill.release.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1475,28 +1466,68 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Toaster/Toaster-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Toaster/Toaster-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/Toaster/Toaster.modulemap";
-				PRODUCT_MODULE_NAME = Toaster;
-				PRODUCT_NAME = Toaster;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		97ED28E6CE68756AD13D6BAB327866F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86AA433819E7D6E80CB74EC8A3A98017 /* Pods-OTPAutoFill.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		9B9091F9B487BAB4C6AEAA5D56B7B0D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1634,13 +1665,10 @@
 			};
 			name = Release;
 		};
-		DF0F7BA5B28BD596902C1CD137D6E081 /* Release */ = {
+		C974F4E36035CE5E5E9D01160FEA8EA6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74941F06B5D3387D185E55F5BC9B0A6C /* Pods-OTPAutoFill.release.xcconfig */;
+			baseConfigurationReference = 7738B6617181D843B4C876A0EE5B7C2D /* Toaster.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1650,23 +1678,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Toaster/Toaster-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toaster/Toaster-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Toaster/Toaster.modulemap";
+				PRODUCT_MODULE_NAME = Toaster;
+				PRODUCT_NAME = Toaster;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1674,13 +1701,10 @@
 			};
 			name = Release;
 		};
-		E2E65427DAEDFDDCCBA242B6B4996E6D /* Debug */ = {
+		E413722AEF1D56511B6B9A76D6A9ECDA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86AA433819E7D6E80CB74EC8A3A98017 /* Pods-OTPAutoFill.debug.xcconfig */;
+			baseConfigurationReference = 7738B6617181D843B4C876A0EE5B7C2D /* Toaster.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1690,23 +1714,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Toaster/Toaster-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toaster/Toaster-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Toaster/Toaster.modulemap";
+				PRODUCT_MODULE_NAME = Toaster;
+				PRODUCT_NAME = Toaster;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1751,42 +1774,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		FAB360DE9228AC3ECF9FA2015EEAC2CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7738B6617181D843B4C876A0EE5B7C2D /* Toaster.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Toaster/Toaster-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Toaster/Toaster-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Toaster/Toaster.modulemap";
-				PRODUCT_MODULE_NAME = Toaster;
-				PRODUCT_NAME = Toaster;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		FF58E1F9AFFA0EB058669B66D49A507E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1839,6 +1826,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		0CA605E6BE124A2F457A0AC8520DE9ED /* Build configuration list for PBXNativeTarget "Pods-OTPAutoFill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97ED28E6CE68756AD13D6BAB327866F5 /* Debug */,
+				815DE45306C01B2D9626AFB113D8ABBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1ED549A46A1D75DE4AB616303257D800 /* Build configuration list for PBXNativeTarget "Pods-ya2FA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1860,17 +1856,8 @@
 		7F7D586D0C9967BE7BE79E98769B7FD9 /* Build configuration list for PBXNativeTarget "Toaster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FAB360DE9228AC3ECF9FA2015EEAC2CD /* Debug */,
-				94591E5AE05FF8CC66D170CFB29537D8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8376771AE4A546944844C946656E447E /* Build configuration list for PBXNativeTarget "Pods-OTPAutoFill" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E2E65427DAEDFDDCCBA242B6B4996E6D /* Debug */,
-				DF0F7BA5B28BD596902C1CD137D6E081 /* Release */,
+				E413722AEF1D56511B6B9A76D6A9ECDA /* Debug */,
+				C974F4E36035CE5E5E9D01160FEA8EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
