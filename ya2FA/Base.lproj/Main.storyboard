@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Two-Factor Tokens-->
         <scene sceneID="6KE-Oi-PHT">
             <objects>
                 <tableViewController id="ZGM-N9-9eW" customClass="OTPTableViewController" customModule="ya2FA" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
                             <outlet property="delegate" destination="ZGM-N9-9eW" id="2Lh-0r-3bM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1zG-6d-9m1">
+                    <navigationItem key="navigationItem" title="Two-Factor Tokens" id="1zG-6d-9m1">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="qLa-0k-has">
                             <connections>
                                 <segue destination="ZIG-NR-GuP" kind="show" identifier="AddItem" id="Uw6-y8-01f"/>
