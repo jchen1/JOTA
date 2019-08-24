@@ -78,9 +78,15 @@ class OTPTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            otps.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            try! OTPLoader.saveOTPs(otps: otps)
+            let alert = UIAlertController(title: "Delete OTP", message: "Are you sure? Be sure to disable 2FA before removing.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (_) in
+                self.otps.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                try! OTPLoader.saveOTPs(otps: self.otps)
+            }))
+            
+            self.present(alert, animated: true)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
@@ -90,7 +96,7 @@ class OTPTableViewController: UITableViewController {
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        
+     
     }
     */
     
