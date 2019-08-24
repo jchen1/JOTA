@@ -8,8 +8,11 @@
 - [x] tap to copy
 - [x] safari action extension
 - [x] support html autocomplete
-- [ ] otp suggestions
-  - [ ] dynamic suggestions (based on previous usages)
 - [ ] ux
   - [ ] icon
   - [ ] ...
+
+# v2
+
+- [ ] otp suggestions
+  - [ ] dynamic suggestions (based on previous usages)

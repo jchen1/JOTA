@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Action View Controller-->
+        <!--Two-Factor Tokens-->
         <scene sceneID="ajy-r5-yUx">
             <objects>
                 <tableViewController id="3Ir-EX-Vf8" customClass="ActionViewController" customModule="OTPAutoFill" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,8 +74,9 @@
                             <outlet property="delegate" destination="3Ir-EX-Vf8" id="IZj-Sw-8bC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="h4g-40-bxJ">
+                    <navigationItem key="navigationItem" title="Two-Factor Tokens" id="h4g-40-bxJ">
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="XWT-4I-Dl8">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="cancel" destination="3Ir-EX-Vf8" id="tEa-uX-ulG"/>
                             </connections>
@@ -94,6 +95,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0HH-Zm-2Ao">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1333333333" green="0.8980392157" blue="0.42352941179999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

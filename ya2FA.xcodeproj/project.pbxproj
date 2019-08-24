@@ -868,6 +868,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6FBA3ED8305AEDECBC1E4DCA /* Pods-OTPAutoFill.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OTPAutoFill/OTPAutoFill.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45A594478C;
@@ -889,6 +890,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 084EDF0844096FB670C4283E /* Pods-OTPAutoFill.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OTPAutoFill/OTPAutoFill.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45A594478C;
