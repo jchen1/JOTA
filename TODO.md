@@ -4,8 +4,8 @@
 - [x] add OTP from QR code
 - [x] otp tableview
 - [x] TOTP
-- [ ] HOTP
-- [ ] tap to copy
+- [x] HOTP
+- [x] tap to copy
 - [x] safari action extension
 - [x] support html autocomplete
 - [ ] otp suggestions
