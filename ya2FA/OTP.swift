@@ -15,11 +15,6 @@ public class OTP: NSObject,NSCoding {
         case HOTP = 1
     }
     
-    public enum InputData {
-        case Date(Date)
-        case Counter(UInt64)
-    }
-    
     public enum OTPError: Error {
         case unableToCreateOTP
         case invalidURL
@@ -28,12 +23,13 @@ public class OTP: NSObject,NSCoding {
         case invalidOrMissingSecret
         case unimplemented
         case unableToGenerateCode
+        case unsupportedAlgorithm
         case wrongOTPType
     }
     
     public enum OTPContainer {
         case TOTP(TOTP)
-        case HOTP(HOTP)
+        case HOTP(HOTP, UInt64)
     }
     
     private enum Keys: String {
@@ -43,6 +39,7 @@ public class OTP: NSObject,NSCoding {
         case label = "Label"
         case digits = "Digits"
         case timeInterval = "Time Interval"
+        case counter = "Counter"
         case algorithm = "Algorithm"
     }
     
@@ -50,7 +47,7 @@ public class OTP: NSObject,NSCoding {
     public let user: String?
     public var otpContainer: Optional<OTPContainer> = .none
     
-    public init(type: OTPType, secret: Data, user: String?, label: String?, digits: Int?, timeInterval: Int?, algorithm: OTPAlgorithm?) throws {
+    public init(type: OTPType, secret: Data, user: String?, label: String?, digits: Int?, timeInterval: Int?, counter: UInt64?, algorithm: OTPAlgorithm?) throws {
         self.user = user
         self.label = label
 
@@ -63,7 +60,10 @@ public class OTP: NSObject,NSCoding {
             guard let hotp = HOTP(secret: secret, digits: digits, algorithm: algorithm) else {
                 throw OTPError.unableToCreateOTP
             }
-            otpContainer = .HOTP(hotp)
+            guard let counter: UInt64 = counter else {
+                throw OTPError.unableToCreateOTP
+            }
+            otpContainer = .HOTP(hotp, counter)
             break
         case .TOTP:
             guard let totp = TOTP(secret: secret, digits: digits, timeInterval: timeInterval, algorithm: algorithm) else {
@@ -74,8 +74,8 @@ public class OTP: NSObject,NSCoding {
         }
     }
     
-    public convenience init(type: OTPType, secret: Data, user: String?, label: String?) throws {
-        try self.init(type: type, secret: secret, user: user, label: label, digits: nil, timeInterval: nil, algorithm: nil)
+    public convenience init(type: OTPType, secret: Data, user: String?, label: String?, counter: UInt64?) throws {
+        try self.init(type: type, secret: secret, user: user, label: label, digits: nil, timeInterval: nil, counter: counter, algorithm: nil)
     }
     
     public convenience init(url: URL) throws {
@@ -112,9 +112,17 @@ public class OTP: NSObject,NSCoding {
         }
         let digits = Int(queryDict["digits"] ?? "")
         let timeInterval = Int(queryDict["interval"] ?? "")
-        let algorithm: OTPAlgorithm? = nil // TODO
+        let counter = UInt64(queryDict["counter"] ?? "0")
+        let algorithm: OTPAlgorithm = try {
+            switch queryDict["algorithm"] ?? "sha1" {
+            case "sha1": return OTPAlgorithm.sha1
+            case "sha256": return OTPAlgorithm.sha256
+            case "sha512": return OTPAlgorithm.sha512
+            default: throw OTPError.unsupportedAlgorithm
+            }
+        }()
         
-        try self.init(type: otpType, secret: secret, user: user, label: label, digits: digits, timeInterval: timeInterval, algorithm: algorithm)
+        try self.init(type: otpType, secret: secret, user: user, label: label, digits: digits, timeInterval: timeInterval, counter: counter, algorithm: algorithm)
     }
     
     public convenience init(url: String) throws {
@@ -140,22 +148,30 @@ public class OTP: NSObject,NSCoding {
                 return nil
             }
         }()
+        let counter: UInt64? = {
+            switch type {
+            case .TOTP:
+                return nil
+            case .HOTP:
+                return coder.decodeObject(forKey: Keys.counter.rawValue) as? UInt64
+            }
+        }()
         let algorithm = OTPAlgorithm(rawValue: coder.decodeInt32(forKey: Keys.algorithm.rawValue))!
         
         do {
-            try self.init(type: type, secret: secret, user: user, label: label, digits: digits, timeInterval: timeInterval, algorithm: algorithm)
+            try self.init(type: type, secret: secret, user: user, label: label, digits: digits, timeInterval: timeInterval, counter: counter, algorithm: algorithm)
         } catch {
             return nil
         }
-        
     }
     
     public func encode(with coder: NSCoder) {
         switch otpContainer! {
-        case .HOTP(let hotp):
+        case .HOTP(let hotp, let counter):
             coder.encode(OTPType.HOTP.rawValue, forKey: Keys.type.rawValue)
             coder.encode(hotp.secret.base32EncodedString, forKey: Keys.secret.rawValue)
             coder.encode(hotp.digits, forKey: Keys.digits.rawValue)
+            coder.encode(counter, forKey: Keys.counter.rawValue)
             coder.encode(hotp.algorithm.rawValue, forKey: Keys.algorithm.rawValue)
             break
         case .TOTP(let totp):
@@ -183,33 +199,34 @@ public class OTP: NSObject,NSCoding {
         }
     }
     
-    public func generate(counter: UInt64) throws -> String {
-        switch otpContainer! {
-        case .HOTP(let hotp):
-            if let code = hotp.generate(counter: counter) {
-                return code
-            }
-            throw OTPError.unableToGenerateCode
-        case .TOTP:
-            throw OTPError.wrongOTPType
-        }
-    }
-    
-    public func generate(data: InputData) throws -> String {
-        switch data {
-        case .Counter(let counter):
-            return try generate(counter: counter)
-        case .Date(let time):
-            return try generate(time: time)
-        }
-    }
-    
     public func generate() throws -> String {
         switch otpContainer! {
-        case .HOTP:
-            throw OTPError.unimplemented
+        case .HOTP(let hotp, let counter):
+            guard let code = hotp.generate(counter: counter) else {
+                throw OTPError.unableToGenerateCode
+            }
+            return code
         case .TOTP:
             return try generate(time: Date())
+        }
+    }
+    
+    public func confirmGeneration() {
+        switch otpContainer! {
+        case .HOTP(let hotp, let counter):
+            otpContainer = .HOTP(hotp, counter + 1)
+            break
+        case .TOTP:
+            break
+        }
+    }
+    
+    public func type() -> OTPType {
+        switch otpContainer! {
+        case .HOTP:
+            return OTPType.HOTP
+        case .TOTP:
+            return OTPType.TOTP
         }
     }
 }
