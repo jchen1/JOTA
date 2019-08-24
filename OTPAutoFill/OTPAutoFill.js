@@ -4,7 +4,8 @@ var OTPAutoFill = function() {};
 var elementSelectors = [
     "input[autocomplete=\"one-time-code\"]",                        // ...
     "#challenge_response",                                          // Twitter
-    "input[type]:not([type=\"hidden\"]):not([type=\"submit\"])"     // Any non-hidden text input
+    "input[type]:not([type=\"hidden\"]):not([type=\"submit\"])",    // Any non-hidden text input
+    "input[name=\"otp\"]"
 ];
 
 OTPAutoFill.prototype = {
@@ -21,8 +22,7 @@ OTPAutoFill.prototype = {
                     this.setNativeValue(element, code);
                     element.dispatchEvent(new Event('input', { bubbles: true }));
                 } else {
-                    console.log(":(");
-                    throw new Exception("Couldn't find a valid input element!");
+                    throw new Error("Couldn't find a valid input element!");
                 }
             }
         } catch(error) {
