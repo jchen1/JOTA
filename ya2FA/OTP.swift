@@ -31,7 +31,7 @@ public class OTP: NSObject,NSCoding {
         case wrongOTPType
     }
     
-    private enum OTPContainer {
+    public enum OTPContainer {
         case TOTP(TOTP)
         case HOTP(HOTP)
     }
@@ -46,9 +46,9 @@ public class OTP: NSObject,NSCoding {
         case algorithm = "Algorithm"
     }
     
-    private let label: String?
-    private let user: String?
-    private var otpContainer: Optional<OTPContainer> = .none
+    public let label: String?
+    public let user: String?
+    public var otpContainer: Optional<OTPContainer> = .none
     
     public init(type: OTPType, secret: Data, user: String?, label: String?, digits: Int?, timeInterval: Int?, algorithm: OTPAlgorithm?) throws {
         self.user = user
@@ -96,7 +96,8 @@ public class OTP: NSObject,NSCoding {
         }()
         
         let paths = components.path.split(separator: ":")
-        let label: String? = paths.count > 0 ? String(paths[0]) : nil;
+        // remove leading '/'
+        let label: String? = paths.count > 0 ? String(paths[0].suffix(from: paths[0].index(paths[0].startIndex, offsetBy: 1))) : nil;
         let user: String? = paths.count > 1 ? String(paths[1]) : nil;
         
         var queryDict = [String:String]()
@@ -105,7 +106,7 @@ public class OTP: NSObject,NSCoding {
                 queryDict[item.name] = item.value!
             }
         }
-        
+                
         guard let secret = queryDict["secret"]?.base32DecodedData else {
             throw OTPError.invalidOrMissingSecret
         }

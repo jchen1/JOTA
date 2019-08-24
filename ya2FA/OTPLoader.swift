@@ -11,24 +11,17 @@ import Foundation
 class OTPLoader {
     public static func loadOTPs() -> [OTP] {
         let userDefaults = UserDefaults.init(suiteName: "group.dev.jeffchen.ya2fa")
-        var otps: [OTP] = []
         if let otpData = userDefaults?.object(forKey: "otps") as? NSData {
             NSKeyedUnarchiver.setClass(OTP.self, forClassName: "ya2FA.OTP")
             NSKeyedUnarchiver.setClass(OTP.self, forClassName: "OTP")
-            guard let a = NSKeyedUnarchiver.unarchiveObject(with: otpData as Data) as? [OTP] else {
+            guard let otps = NSKeyedUnarchiver.unarchiveObject(with: otpData as Data) as? [OTP] else {
                 fatalError("corrupt data!")
             }
-            // hmm...
-            otps = a
+            
+            return otps
         }
         
-        // lol yolo
-        if (otps.count == 1) {
-            otps.append(try! OTP(url: "otpauth://totp/Twitter:@iambald?secret=7A3H374INDJGYDBY&issuer=Twitter"))
-            otps.append(try! OTP(url: "otpauth://totp/Rippling:Ladder%20Financial%20Inc.%20-%20hello%40jeff.yt?secret=XH57TYXTYVF007LQ&issuer=Rippling"))
-        }
-        
-        return otps
+        return [OTP]()
     }
     
     public static func saveOTPs(otps: [OTP]) throws {
