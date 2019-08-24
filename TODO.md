@@ -8,9 +8,9 @@
 - [x] tap to copy
 - [x] safari action extension
 - [x] support html autocomplete
-- [ ] ux
-  - [ ] icon
-  - [ ] ...
+- [x] ux
+  - [x] icon
+  - [x] ...
 
 # v2
 
