@@ -7,6 +7,7 @@ target 'OTPAutoFill' do
 
   # Pods for OTPAutoFill
   pod 'SwiftOTP'
+  pod 'Toaster'
 
 end
 
@@ -16,6 +17,7 @@ target 'ya2FA' do
 
   # Pods for ya2FA
   pod 'SwiftOTP'
+  pod 'Toaster'
 
   target 'ya2FATests' do
     inherit! :search_paths

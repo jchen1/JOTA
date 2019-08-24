@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toaster
 
 class OTPTableViewController: UITableViewController {
 //    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -21,6 +22,7 @@ class OTPTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = UIView()
         setup()
     
         // Uncomment the following line to preserve selection between presentations
@@ -90,6 +92,16 @@ class OTPTableViewController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let otp = otps[indexPath.row]
+        guard let code = try? otp.generate() else { return }
+        
+        UIPasteboard.general.string = code
+        Toast(text: "Copied to clipboard").show()
+//        self.view.makeToast("Copied to clipboard", duration: 3.0, position: .bottom)
+//        self.view.makeToast("Copied to clipboard")
     }
  
 
