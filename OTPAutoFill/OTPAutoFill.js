@@ -2,10 +2,14 @@ var OTPAutoFill = function() {};
 
 // In priority order
 var elementSelectors = [
-    "input[autocomplete=\"one-time-code\"]",                        // ...
+    // Specific sites
     "#challenge_response",                                          // Twitter
-    "input[type]:not([type=\"hidden\"]):not([type=\"submit\"])",    // Any non-hidden text input
-    "input[name=\"otp\"]"
+    "input[name=\"otp\"]:not([type=\"hidden\"])",                   // Github
+    "input[name=\"verificationCode\"]",                             // LastPass
+    "input[name=\"yubikeyotp\"]",                                   // LastPass alt
+    // Generic inputs
+    "input[autocomplete=\"one-time-code\"]",                        // ...
+    "input[type]:not([type=\"hidden\"]):not([type=\"submit\"])"     // Any non-hidden text input
 ];
 
 OTPAutoFill.prototype = {
