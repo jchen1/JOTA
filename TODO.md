@@ -10,7 +10,7 @@
 - [x] support html autocomplete
 - [x] ux
   - [x] icon
-  - [ ] launch screen
+  - [x] launch screen
 
 # v2
 
