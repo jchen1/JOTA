@@ -14,7 +14,7 @@ var elementSelectors = [
 
 OTPAutoFill.prototype = {
     run: function(arguments) {
-        arguments.completionFunction();
+        arguments.completionFunction({"host": window.location.host});
     },
     
     finalize: function(arguments) {

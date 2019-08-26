@@ -10,9 +10,9 @@
 - [x] support html autocomplete
 - [x] ux
   - [x] icon
-  - [x] ...
+  - [ ] launch screen
 
 # v2
 
-- [ ] otp suggestions
+- [x] otp suggestions
   - [ ] dynamic suggestions (based on previous usages)

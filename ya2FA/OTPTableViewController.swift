@@ -87,7 +87,7 @@ class OTPTableViewController: UITableViewController {
     private func setup() {
         self.otps = OTPLoader.loadOTPs()
         
-        timer = Timer(fireAt: Date(timeInterval: 0.1, since: Date()), interval: 1.0, target: self, selector: #selector(updateOTPs), userInfo: nil, repeats: true)
+        timer = Timer(fireAt: Date(timeInterval: 0.1, since: Date()), interval: 0.1, target: self, selector: #selector(updateOTPs), userInfo: nil, repeats: true)
         RunLoop.current.add(timer!, forMode: RunLoop.Mode.default)
     }
     

@@ -62,6 +62,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="otpCodeLabel" destination="RrO-re-4zC" id="P1I-Am-MAs"/>
                                     <outlet property="otpLabelLabel" destination="NKA-eO-Pmk" id="TWy-JB-z5O"/>
