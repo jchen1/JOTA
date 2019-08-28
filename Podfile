@@ -9,20 +9,20 @@ target 'OTPAutoFill' do
   pod 'SwiftOTP'
 end
 
-target 'ya2FA' do
+target 'JOTA' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for ya2FA
+  # Pods for JOTA
   pod 'SwiftOTP'
   pod 'Toaster'
 
-  target 'ya2FATests' do
+  target 'JOTATests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'ya2FAUITests' do
+  target 'JOTAUITests' do
     inherit! :search_paths
     # Pods for testing
   end

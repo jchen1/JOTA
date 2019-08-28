@@ -1,3 +1,5 @@
-# ya2FA
+# jota
 
-yet another 2FA app for iOS
+Jeff's One Time (password) Authenticator
+
+...
