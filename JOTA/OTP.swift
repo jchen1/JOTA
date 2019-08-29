@@ -88,7 +88,7 @@ public class OTP: NSObject,NSCoding {
         }
         
         let otpType = try { () -> OTPType in
-            switch components.host {
+            switch components.host?.lowercased() {
             case "totp": return OTPType.TOTP
             case "hotp": return OTPType.HOTP
             default: throw OTPError.invalidOrMissingType
@@ -114,7 +114,7 @@ public class OTP: NSObject,NSCoding {
         let timeInterval = Int(queryDict["interval"] ?? "")
         let counter = UInt64(queryDict["counter"] ?? "0")
         let algorithm: OTPAlgorithm = try {
-            switch queryDict["algorithm"] ?? "sha1" {
+            switch queryDict["algorithm"]?.lowercased() ?? "sha1" {
             case "sha1": return OTPAlgorithm.sha1
             case "sha256": return OTPAlgorithm.sha256
             case "sha512": return OTPAlgorithm.sha512
