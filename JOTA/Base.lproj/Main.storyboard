@@ -13,13 +13,13 @@
         <!--Two-Factor Tokens-->
         <scene sceneID="6KE-Oi-PHT">
             <objects>
-                <tableViewController id="ZGM-N9-9eW" customClass="OTPTableViewController" customModule="ya2FA" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ZGM-N9-9eW" customClass="OTPTableViewController" customModule="JOTA" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Owx-K5-QqD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OTPTableViewCell" rowHeight="100" id="LXK-Fb-lCj" customClass="OTPTableViewCell" customModule="ya2FA" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OTPTableViewCell" rowHeight="100" id="LXK-Fb-lCj" customClass="OTPTableViewCell" customModule="JOTA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LXK-Fb-lCj" id="4iT-ta-wK1">
@@ -92,7 +92,7 @@
         <!--Scan QR Code-->
         <scene sceneID="oET-qe-lDR">
             <objects>
-                <viewController id="ZIG-NR-GuP" customClass="ScannerViewController" customModule="ya2FA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZIG-NR-GuP" customClass="ScannerViewController" customModule="JOTA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gxe-0m-DCu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,6 +162,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Uw6-y8-01f"/>
+        <segue reference="rQj-qg-tC9"/>
     </inferredMetricsTieBreakers>
 </document>
