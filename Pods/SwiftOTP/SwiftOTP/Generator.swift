@@ -53,7 +53,7 @@ internal class Generator {
 		let counterMessage = counter.bigEndian.data
 		
 		// HMAC hash counter data with secret key
-		let hmac = try! HMAC(key: key, variant: algorithm.hmacVariant).authenticate(counterMessage.bytes)
+		guard let hmac = try? HMAC(key: key, variant: algorithm.hmacVariant).authenticate(counterMessage.bytes) else { return nil }
 		
 		// Get last 4 bits of hash as offset
 		let offset = Int((hmac.last ?? 0x00) & 0x0f)
@@ -62,7 +62,7 @@ internal class Generator {
 		let truncatedHMAC = Array(hmac[offset...offset + 3])
 		
 		// Convert byte array of the truncated hash to data
-		let data =  Data(bytes: truncatedHMAC)
+		let data =  Data(truncatedHMAC)
 		
 		// Convert data to UInt32
 		var number = UInt32(strtoul(data.toHexString(), nil, 16))

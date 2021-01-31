@@ -156,7 +156,7 @@ public class OTP: NSObject,NSCoding {
                 return coder.decodeObject(forKey: Keys.counter.rawValue) as? UInt64
             }
         }()
-        let algorithm = OTPAlgorithm(rawValue: coder.decodeInt32(forKey: Keys.algorithm.rawValue))!
+        let algorithm = (try? Self.algoRawValueToOTPAlgorithm(rawValue: coder.decodeInt32(forKey: Keys.algorithm.rawValue))) ?? OTPAlgorithm.sha1
         
         do {
             try self.init(type: type, secret: secret, user: user, label: label, digits: digits, timeInterval: timeInterval, counter: counter, algorithm: algorithm)
@@ -172,14 +172,14 @@ public class OTP: NSObject,NSCoding {
             coder.encode(hotp.secret.base32EncodedString, forKey: Keys.secret.rawValue)
             coder.encode(hotp.digits, forKey: Keys.digits.rawValue)
             coder.encode(counter, forKey: Keys.counter.rawValue)
-            coder.encode(hotp.algorithm.rawValue, forKey: Keys.algorithm.rawValue)
+            coder.encode(OTP.OTPAlgorithmToRawValue(algo: hotp.algorithm), forKey: Keys.algorithm.rawValue)
             break
         case .TOTP(let totp):
             coder.encode(OTPType.TOTP.rawValue, forKey: Keys.type.rawValue)
             coder.encode(totp.secret.base32EncodedString, forKey: Keys.secret.rawValue)
             coder.encode(totp.digits, forKey: Keys.digits.rawValue)
             coder.encode(totp.timeInterval, forKey: Keys.timeInterval.rawValue)
-            coder.encode(totp.algorithm.rawValue, forKey: Keys.algorithm.rawValue)
+            coder.encode(OTP.OTPAlgorithmToRawValue(algo: totp.algorithm), forKey: Keys.algorithm.rawValue)
             break
         }
         
@@ -227,6 +227,30 @@ public class OTP: NSObject,NSCoding {
             return OTPType.HOTP
         case .TOTP:
             return OTPType.TOTP
+        }
+    }
+    
+    private static func algoRawValueToOTPAlgorithm(rawValue: Int32) throws -> OTPAlgorithm {
+        switch (rawValue) {
+        case 0:
+            return OTPAlgorithm.sha1
+        case 1:
+            return OTPAlgorithm.sha256
+        case 2:
+            return OTPAlgorithm.sha512
+        default:
+            throw OTPError.unsupportedAlgorithm
+        }
+    }
+    
+    private static func OTPAlgorithmToRawValue(algo: OTPAlgorithm) -> Int32 {
+        switch (algo) {
+        case OTPAlgorithm.sha1:
+            return 0
+        case OTPAlgorithm.sha256:
+            return 1
+        case OTPAlgorithm.sha512:
+            return 2
         }
     }
 }

@@ -61,8 +61,9 @@ class OTPTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            let otp = self.otps[indexPath.row]
             // Delete the row from the data source
-            let alert = UIAlertController(title: "Delete OTP", message: "Are you sure? Be sure to disable 2FA before removing.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Delete OTP (\(otp.label ?? otp.description ?? ""))", message: "Are you sure? Be sure to disable 2FA before removing.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (_) in
                 self.otps.remove(at: indexPath.row)
@@ -85,7 +86,9 @@ class OTPTableViewController: UITableViewController {
     }
     
     private func setup() {
-        self.otps = OTPLoader.loadOTPs()
+        self.otps = OTPLoader.loadOTPs().sorted(by: { (a, b) -> Bool in
+            a.label?.lowercased() ?? "" < b.label?.lowercased() ?? ""
+        })
         
         timer = Timer(fireAt: Date(timeInterval: 0.1, since: Date()), interval: 0.1, target: self, selector: #selector(updateOTPs), userInfo: nil, repeats: true)
         RunLoop.current.add(timer!, forMode: RunLoop.Mode.default)
@@ -102,8 +105,11 @@ class OTPTableViewController: UITableViewController {
     
     @IBAction func unwindToOTPList(sender: UIStoryboardSegue) {
         if let source = sender.source as? ScannerViewController, let otp = source.otp {
-            let newIndexPath = IndexPath(row: otps.count, section: 0)
-            otps.append(otp)
+            let index = self.otps.firstIndex { (tableOTP) -> Bool in
+                tableOTP.label?.lowercased() ?? "" >= otp.label?.lowercased() ?? ""
+            } ?? self.otps.count
+            let newIndexPath = IndexPath(row: index, section: 0)
+            otps.insert(otp, at: index)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
     }
