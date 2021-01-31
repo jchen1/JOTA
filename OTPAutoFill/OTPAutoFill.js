@@ -9,6 +9,7 @@ var elementSelectors = [
     "input[name=\"yubikeyotp\"]",                                   // LastPass alt
     // Generic inputs
     "input[autocomplete=\"one-time-code\"]",                        // ...
+    "input[data-input=\"token\"]",                                  // Rippling
     "input[type]:not([type=\"hidden\"]):not([type=\"submit\"])"     // Any non-hidden text input
 ];
 
@@ -50,16 +51,18 @@ OTPAutoFill.prototype = {
         return null;
     },
     setNativeValue: function(input, value) {
-        const previousValue = input.value;
+        var previousValue = input.value;
         input.value = value;
         
-        const tracker = input._valueTracker;
+        var tracker = input._valueTracker;
         if (tracker) {
             tracker.setValue(previousValue);
         }
+        var event = new Event("input", { bubbles: true });
+        event.simulated = true;
         
         // 'change' instead of 'input', see https://github.com/facebook/react/issues/11488#issuecomment-381590324
-        input.dispatchEvent(new Event('change', { bubbles: true }));
+        input.dispatchEvent(event);
     }
 };
 
