@@ -45,11 +45,14 @@ public class OTP: NSObject,NSCoding {
     
     public let label: String?
     public let user: String?
+    public let id: String?
+    
     public var otpContainer: Optional<OTPContainer> = .none
     
     public init(type: OTPType, secret: Data, user: String?, label: String?, digits: Int?, timeInterval: Int?, counter: UInt64?, algorithm: OTPAlgorithm?) throws {
         self.user = user
         self.label = label
+        self.id = (self.label ?? "") + "-" + (self.user ?? "")
 
         let digits = digits ?? 6
         let timeInterval = timeInterval ?? 30

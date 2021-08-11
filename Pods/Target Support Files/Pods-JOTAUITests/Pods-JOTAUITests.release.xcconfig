@@ -1,8 +1,8 @@
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftOTP" "${PODS_CONFIGURATION_BUILD_DIR}/Toaster"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift-iOS" "${PODS_CONFIGURATION_BUILD_DIR}/KeychainAccess-iOS" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftOTP-iOS" "${PODS_CONFIGURATION_BUILD_DIR}/Toaster"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift/CryptoSwift.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftOTP/SwiftOTP.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Toaster/Toaster.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "CryptoSwift" -framework "Foundation" -framework "QuartzCore" -framework "SwiftOTP" -framework "Toaster" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift-iOS/CryptoSwift.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/KeychainAccess-iOS/KeychainAccess.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftOTP-iOS/SwiftOTP.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Toaster/Toaster.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "CryptoSwift" -framework "Foundation" -framework "KeychainAccess" -framework "QuartzCore" -framework "SwiftOTP" -framework "Toaster" -framework "UIKit"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

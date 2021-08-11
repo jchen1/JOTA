@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-JOTA/Pods-JOTA-frameworks.sh
-${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework
-${BUILT_PRODUCTS_DIR}/SwiftOTP/SwiftOTP.framework
+${BUILT_PRODUCTS_DIR}/CryptoSwift-iOS/CryptoSwift.framework
+${BUILT_PRODUCTS_DIR}/KeychainAccess-iOS/KeychainAccess.framework
+${BUILT_PRODUCTS_DIR}/SwiftOTP-iOS/SwiftOTP.framework
 ${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework

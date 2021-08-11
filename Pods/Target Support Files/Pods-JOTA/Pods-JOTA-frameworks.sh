@@ -175,13 +175,15 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SwiftOTP/SwiftOTP.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift-iOS/CryptoSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/KeychainAccess-iOS/KeychainAccess.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftOTP-iOS/SwiftOTP.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SwiftOTP/SwiftOTP.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift-iOS/CryptoSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/KeychainAccess-iOS/KeychainAccess.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftOTP-iOS/SwiftOTP.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

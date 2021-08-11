@@ -29,7 +29,14 @@
 		4BA1C2BE256A6D783E373D89 /* Pods_OTPAutoFill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFE03E4DC62F56688C82627 /* Pods_OTPAutoFill.framework */; };
 		6303D6A0F51E8DD8A682F027 /* Pods_JOTAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD88D14E60F5B4DC6B49DC07 /* Pods_JOTAUITests.framework */; };
 		661A97B96E6DB88C107E6EE2 /* Pods_JOTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4CC6A538643CC117A7D912 /* Pods_JOTA.framework */; };
+		8729C6E026C453B3006970C9 /* JOTA_macOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8729C6DF26C453B3006970C9 /* JOTA_macOSApp.swift */; };
+		8729C6E226C453B3006970C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8729C6E126C453B3006970C9 /* ContentView.swift */; };
+		8729C6E426C453B4006970C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8729C6E326C453B4006970C9 /* Assets.xcassets */; };
+		8729C6E726C453B4006970C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8729C6E626C453B4006970C9 /* Preview Assets.xcassets */; };
+		8729C6ED26C45698006970C9 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4D890230DE02700701EB8 /* OTP.swift */; };
+		8729C6EE26C4569A006970C9 /* OTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD62230E1C8A000535F5 /* OTPLoader.swift */; };
 		8F1A6273DCE126277CE7EAE2 /* Pods_JOTATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F668536B714F23A65C91BF /* Pods_JOTATests.framework */; };
+		C5E2CF9BFBD098F1A19CE77E /* Pods_JOTA_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB09DA95E4E57E643DB42FE4 /* Pods_JOTA_macOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05B0B1A756D6772FB4AACB0F /* Pods-JOTA-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTA-macOS.debug.xcconfig"; path = "Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		084EDF0844096FB670C4283E /* Pods-OTPAutoFill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPAutoFill.release.xcconfig"; path = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.release.xcconfig"; sourceTree = "<group>"; };
 		0F9F6EE399A790CB4D47F20A /* Pods-JOTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTA.release.xcconfig"; path = "Target Support Files/Pods-JOTA/Pods-JOTA.release.xcconfig"; sourceTree = "<group>"; };
 		1F35AD60230E100C000535F5 /* OTPAutoFill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OTPAutoFill.entitlements; sourceTree = "<group>"; };
@@ -99,18 +107,27 @@
 		1F816238230DBA3700DF9578 /* OTPAutoFill.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = OTPAutoFill.js; sourceTree = "<group>"; };
 		1FE4D890230DE02700701EB8 /* OTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTP.swift; sourceTree = "<group>"; };
 		2BFE03E4DC62F56688C82627 /* Pods_OTPAutoFill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPAutoFill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4362760D270A0CB32B351DAA /* Pods-JOTA-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTA-macOS.release.xcconfig"; path = "Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		57FDC54AA351157D630A5297 /* Pods-JOTAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTAUITests.release.xcconfig"; path = "Target Support Files/Pods-JOTAUITests/Pods-JOTAUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6B4CC6A538643CC117A7D912 /* Pods_JOTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JOTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1E5C8688F9AC32989C3895 /* Pods-ya2FATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ya2FATests.release.xcconfig"; path = "Target Support Files/Pods-ya2FATests/Pods-ya2FATests.release.xcconfig"; sourceTree = "<group>"; };
 		6FBA3ED8305AEDECBC1E4DCA /* Pods-OTPAutoFill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPAutoFill.debug.xcconfig"; path = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.debug.xcconfig"; sourceTree = "<group>"; };
 		72B419E1C141FAE759EB5AD6 /* Pods-ya2FA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ya2FA.debug.xcconfig"; path = "Target Support Files/Pods-ya2FA/Pods-ya2FA.debug.xcconfig"; sourceTree = "<group>"; };
 		85DCCC2B70CB7281B43E0F5F /* Pods-ya2FATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ya2FATests.debug.xcconfig"; path = "Target Support Files/Pods-ya2FATests/Pods-ya2FATests.debug.xcconfig"; sourceTree = "<group>"; };
+		8729C6DD26C453B3006970C9 /* JOTA-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JOTA-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8729C6DF26C453B3006970C9 /* JOTA_macOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JOTA_macOSApp.swift; sourceTree = "<group>"; };
+		8729C6E126C453B3006970C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8729C6E326C453B4006970C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8729C6E626C453B4006970C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8729C6E826C453B4006970C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8729C6E926C453B4006970C9 /* JOTA_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JOTA_macOS.entitlements; sourceTree = "<group>"; };
 		A7BC6DD5E03A8B7D4CB47029 /* Pods-ya2FAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ya2FAUITests.debug.xcconfig"; path = "Target Support Files/Pods-ya2FAUITests/Pods-ya2FAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB33F0A814D2649C8073F793 /* Pods-JOTATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTATests.debug.xcconfig"; path = "Target Support Files/Pods-JOTATests/Pods-JOTATests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF66DF6161D92D796B02BE1E /* Pods-JOTAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTAUITests.debug.xcconfig"; path = "Target Support Files/Pods-JOTAUITests/Pods-JOTAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2AAA3A3395CF0372E54CA1B /* Pods-JOTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTA.debug.xcconfig"; path = "Target Support Files/Pods-JOTA/Pods-JOTA.debug.xcconfig"; sourceTree = "<group>"; };
 		B39BA2345BAB38B25A3CB78E /* Pods-JOTATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTATests.release.xcconfig"; path = "Target Support Files/Pods-JOTATests/Pods-JOTATests.release.xcconfig"; sourceTree = "<group>"; };
 		CD88D14E60F5B4DC6B49DC07 /* Pods_JOTAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JOTAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB09DA95E4E57E643DB42FE4 /* Pods_JOTA_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JOTA_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8066916819827C8DA9A15D /* Pods-ya2FAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ya2FAUITests.release.xcconfig"; path = "Target Support Files/Pods-ya2FAUITests/Pods-ya2FAUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F1F668536B714F23A65C91BF /* Pods_JOTATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JOTATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E144DEDB671793E071BE8E /* Pods-ya2FA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ya2FA.release.xcconfig"; path = "Target Support Files/Pods-ya2FA/Pods-ya2FA.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +166,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8729C6DA26C453B3006970C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5E2CF9BFBD098F1A19CE77E /* Pods_JOTA_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -159,6 +184,7 @@
 				1F816209230DB6DF00DF9578 /* JOTATests */,
 				1F816214230DB6DF00DF9578 /* JOTAUITests */,
 				1F816228230DB89700DF9578 /* OTPAutoFill */,
+				8729C6DE26C453B3006970C9 /* JOTA-macOS */,
 				1F8161F3230DB6DE00DF9578 /* Products */,
 				808477CBB01654BB26ED8006 /* Pods */,
 				A0B13C8EE61F1320319FBB8D /* Frameworks */,
@@ -172,6 +198,7 @@
 				1F816206230DB6DF00DF9578 /* JOTATests.xctest */,
 				1F816211230DB6DF00DF9578 /* JOTAUITests.xctest */,
 				1F816227230DB89700DF9578 /* OTPAutoFill.appex */,
+				8729C6DD26C453B3006970C9 /* JOTA-macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,8 +269,31 @@
 				B39BA2345BAB38B25A3CB78E /* Pods-JOTATests.release.xcconfig */,
 				AF66DF6161D92D796B02BE1E /* Pods-JOTAUITests.debug.xcconfig */,
 				57FDC54AA351157D630A5297 /* Pods-JOTAUITests.release.xcconfig */,
+				05B0B1A756D6772FB4AACB0F /* Pods-JOTA-macOS.debug.xcconfig */,
+				4362760D270A0CB32B351DAA /* Pods-JOTA-macOS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8729C6DE26C453B3006970C9 /* JOTA-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				8729C6DF26C453B3006970C9 /* JOTA_macOSApp.swift */,
+				8729C6E126C453B3006970C9 /* ContentView.swift */,
+				8729C6E326C453B4006970C9 /* Assets.xcassets */,
+				8729C6E826C453B4006970C9 /* Info.plist */,
+				8729C6E926C453B4006970C9 /* JOTA_macOS.entitlements */,
+				8729C6E526C453B4006970C9 /* Preview Content */,
+			);
+			path = "JOTA-macOS";
+			sourceTree = "<group>";
+		};
+		8729C6E526C453B4006970C9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8729C6E626C453B4006970C9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		A0B13C8EE61F1320319FBB8D /* Frameworks */ = {
@@ -253,6 +303,7 @@
 				6B4CC6A538643CC117A7D912 /* Pods_JOTA.framework */,
 				F1F668536B714F23A65C91BF /* Pods_JOTATests.framework */,
 				CD88D14E60F5B4DC6B49DC07 /* Pods_JOTAUITests.framework */,
+				DB09DA95E4E57E643DB42FE4 /* Pods_JOTA_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -337,13 +388,32 @@
 			productReference = 1F816227230DB89700DF9578 /* OTPAutoFill.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		8729C6DC26C453B3006970C9 /* JOTA-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8729C6EA26C453B4006970C9 /* Build configuration list for PBXNativeTarget "JOTA-macOS" */;
+			buildPhases = (
+				599A04689F8FB25830141BF8 /* [CP] Check Pods Manifest.lock */,
+				8729C6D926C453B3006970C9 /* Sources */,
+				8729C6DA26C453B3006970C9 /* Frameworks */,
+				8729C6DB26C453B3006970C9 /* Resources */,
+				5FB8AE173324E40BDEE5AC4F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JOTA-macOS";
+			productName = "JOTA-macOS";
+			productReference = 8729C6DD26C453B3006970C9 /* JOTA-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1F8161EA230DB6DE00DF9578 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Jeff Chen";
 				TargetAttributes = {
@@ -375,6 +445,9 @@
 							};
 						};
 					};
+					8729C6DC26C453B3006970C9 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 				};
 			};
 			buildConfigurationList = 1F8161ED230DB6DE00DF9578 /* Build configuration list for PBXProject "JOTA" */;
@@ -394,6 +467,7 @@
 				1F816205230DB6DF00DF9578 /* JOTATests */,
 				1F816210230DB6DF00DF9578 /* JOTAUITests */,
 				1F816226230DB89700DF9578 /* OTPAutoFill */,
+				8729C6DC26C453B3006970C9 /* JOTA-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -430,6 +504,15 @@
 				1F816239230DBA3700DF9578 /* OTPAutoFill.js in Resources */,
 				1F81622A230DB89700DF9578 /* Media.xcassets in Resources */,
 				1F81622F230DB89700DF9578 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8729C6DB26C453B3006970C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8729C6E726C453B4006970C9 /* Preview Assets.xcassets in Resources */,
+				8729C6E426C453B4006970C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +561,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		599A04689F8FB25830141BF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JOTA-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FB8AE173324E40BDEE5AC4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		71171FCFDB00860CFB23B69F /* [CP] Embed Pods Frameworks */ = {
@@ -581,6 +703,17 @@
 				1F35AD5F230E074F000535F5 /* OTP.swift in Sources */,
 				1F81622C230DB89700DF9578 /* ActionViewController.swift in Sources */,
 				1F35AD762310BB23000535F5 /* OTPTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8729C6D926C453B3006970C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8729C6EE26C4569A006970C9 /* OTPLoader.swift in Sources */,
+				8729C6ED26C45698006970C9 /* OTP.swift in Sources */,
+				8729C6E226C453B3006970C9 /* ContentView.swift in Sources */,
+				8729C6E026C453B3006970C9 /* JOTA_macOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -932,6 +1065,60 @@
 			};
 			name = Release;
 		};
+		8729C6EB26C453B4006970C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05B0B1A756D6772FB4AACB0F /* Pods-JOTA-macOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = "JOTA-macOS/JOTA_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"JOTA-macOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 45A594478C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "JOTA-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.jeffchen.JOTA-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8729C6EC26C453B4006970C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4362760D270A0CB32B351DAA /* Pods-JOTA-macOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = "JOTA-macOS/JOTA_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"JOTA-macOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 45A594478C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "JOTA-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.jeffchen.JOTA-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -976,6 +1163,15 @@
 			buildConfigurations = (
 				1F816235230DB89700DF9578 /* Debug */,
 				1F816236230DB89700DF9578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8729C6EA26C453B4006970C9 /* Build configuration list for PBXNativeTarget "JOTA-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8729C6EB26C453B4006970C9 /* Debug */,
+				8729C6EC26C453B4006970C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -113,3 +113,5 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+.DS_Store

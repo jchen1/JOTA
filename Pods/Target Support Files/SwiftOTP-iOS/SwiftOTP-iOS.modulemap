@@ -1,0 +1,6 @@
+framework module SwiftOTP {
+  umbrella header "SwiftOTP-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,5 +1,5 @@
 framework module SwiftOTP {
-  umbrella header "SwiftOTP-umbrella.h"
+  umbrella header "SwiftOTP-macOS-umbrella.h"
 
   export *
   module * { export * }
