@@ -44,7 +44,11 @@ class OTPTableViewController: UITableViewController {
         if (timeLeft <= 5 && otp.type() == .TOTP) {
             cell.otpCodeLabel?.textColor = UIColor.red
         } else {
-            cell.otpCodeLabel?.textColor = UIColor.black
+            if self.traitCollection.userInterfaceStyle == .dark {
+                cell.otpCodeLabel?.textColor = UIColor.white
+            } else {
+                cell.otpCodeLabel?.textColor = UIColor.black
+            }
         }
         
         cell.timeLeftLabel?.text = {
