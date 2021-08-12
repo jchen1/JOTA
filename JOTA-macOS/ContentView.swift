@@ -9,7 +9,19 @@
 import SwiftUI
 import LocalAuthentication
 
+class ContentViewShownModel: ObservableObject {
+    @Published var isShown = false
+    
+    func setShown(shown: Bool) {
+        isShown = shown
+    }
+}
+
 struct ContentView: View {
+    let AUTH_COOLDOWN_SECONDS: TimeInterval = 60 * 10 // 10 minutes
+    
+    @ObservedObject var shownModel = ContentViewShownModel()
+    
     @State private var lastUnlockTime: Date? = nil
     @State private var isUnlocked = false
     @State var timeLeft = 30 - (Int64(Date().timeIntervalSince1970) % 30)
@@ -62,11 +74,21 @@ struct ContentView: View {
                 }
             }
             .padding(.bottom)
+            .onReceive(timer, perform: { now in
+                if isUnlocked && now.timeIntervalSince(lastUnlockTime!) >= AUTH_COOLDOWN_SECONDS {
+                    isUnlocked = false
+                }
+            })
             
             if copyTime != nil && Date().timeIntervalSince(copyTime!) < 2 {
                 Text("Copied to clipboard!").frame(maxHeight: .infinity, alignment: .bottom)
             }
-        }.onAppear(perform: authenticate)
+        }
+        .onReceive(shownModel.$isShown, perform: { shown in
+            if shown && !isUnlocked {
+                authenticate()
+            }
+        })
     }
     
     func authenticate() {
