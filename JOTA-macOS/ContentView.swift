@@ -7,8 +7,14 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct ContentView: View {
+    
+    let BIOMETRIC_COOLDOWN_SECONDS: TimeInterval = 60 * 10 // 10 mins
+    
+    @State private var lastUnlockTime: Date? = nil
+    @State private var isUnlocked = false
     @State var timeLeft = 30 - (Int64(Date().timeIntervalSince1970) % 30)
     @State var copyTime: Date? = nil
     @Environment(\.colorScheme) var currentMode
@@ -30,34 +36,71 @@ struct ContentView: View {
                 HStack {
                     Text("Two-Factor Tokens").font(Font.title3.bold()).foregroundColor(Color.white).frame(maxWidth: .infinity).padding(.top).padding(.bottom, 12)
                 }.background(Color(red: 0.133, green: 0.895, blue: 0.422))
-
-                List {
-                    ForEach(otps, id: \.id) { otp in
-                        VStack {
-                            Text(otp.label ?? "").font(Font.body.bold()).frame(maxWidth: .infinity, alignment: .leading)
-                            Text(try! otp.generate()).font(.largeTitle).foregroundColor(timeLeft <= 5 ? .red : currentMode == .dark ? .white : .black).frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, 0.1)
-                            HStack {
-                                Text(otp.user ?? "").frame(maxWidth: .infinity, alignment: .leading)
-                                Text(String(timeLeft)).onReceive(timer, perform: { now in
-                                    timeLeft = 30 - (Int64(now.timeIntervalSince1970) % 30)
-                                }).frame(maxWidth: .infinity, alignment: .trailing)
-                            }.frame(maxWidth: .infinity)
-                            
-                            Divider()
-                        }.frame(maxWidth: .infinity).contentShape(Rectangle()).onTapGesture {
-                            let pasteboard = NSPasteboard.general
-                            pasteboard.declareTypes([.string], owner: nil)
-                            pasteboard.setString(try! otp.generate(), forType: .string)
-                            copyTime = Date()
+                
+                if isUnlocked {
+                    List {
+                        ForEach(otps, id: \.id) { otp in
+                            VStack {
+                                Text(otp.label ?? "").font(Font.body.bold()).frame(maxWidth: .infinity, alignment: .leading)
+                                Text(try! otp.generate()).font(.largeTitle).foregroundColor(timeLeft <= 5 ? .red : currentMode == .dark ? .white : .black).frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, 0.1)
+                                HStack {
+                                    Text(otp.user ?? "").frame(maxWidth: .infinity, alignment: .leading)
+                                    Text(String(timeLeft)).onReceive(timer, perform: { now in
+                                        timeLeft = 30 - (Int64(now.timeIntervalSince1970) % 30)
+                                    }).frame(maxWidth: .infinity, alignment: .trailing)
+                                }.frame(maxWidth: .infinity)
+                                
+                                Divider()
+                            }.frame(maxWidth: .infinity).contentShape(Rectangle()).onTapGesture {
+                                let pasteboard = NSPasteboard.general
+                                pasteboard.declareTypes([.string], owner: nil)
+                                pasteboard.setString(try! otp.generate(), forType: .string)
+                                copyTime = Date()
+                            }
                         }
                     }
+                } else {
+                    Text("Locked...")
+                    Spacer()
                 }
             }
             .padding(.bottom)
+            .onReceive(timer, perform: { now in
+                if isUnlocked && lastUnlockTime != nil {
+                    isUnlocked = (now.timeIntervalSince(lastUnlockTime!) < BIOMETRIC_COOLDOWN_SECONDS)
+                }
+            })
             
             if copyTime != nil && Date().timeIntervalSince(copyTime!) < 2 {
                 Text("Copied to clipboard!").frame(maxHeight: .infinity, alignment: .bottom)
             }
+        }.onAppear(perform: authenticate)
+    }
+    
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
+
+        // check whether biometric authentication is possible
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            // it's possible, so go ahead and use it
+            let reason = "unlock MFA codes."
+
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                // authentication has now completed
+                DispatchQueue.main.async {
+                    if success {
+                        self.lastUnlockTime = Date()
+                        self.isUnlocked = true
+                    } else {
+                        // there was a problem
+                    }
+                }
+            }
+        } else {
+            // todo...
+            self.lastUnlockTime = Date()
+            self.isUnlocked = true
         }
     }
 }
