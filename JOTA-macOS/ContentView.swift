@@ -10,9 +10,6 @@ import SwiftUI
 import LocalAuthentication
 
 struct ContentView: View {
-    
-    let BIOMETRIC_COOLDOWN_SECONDS: TimeInterval = 60 * 10 // 10 mins
-    
     @State private var lastUnlockTime: Date? = nil
     @State private var isUnlocked = false
     @State var timeLeft = 30 - (Int64(Date().timeIntervalSince1970) % 30)
@@ -65,11 +62,6 @@ struct ContentView: View {
                 }
             }
             .padding(.bottom)
-            .onReceive(timer, perform: { now in
-                if isUnlocked && lastUnlockTime != nil {
-                    isUnlocked = (now.timeIntervalSince(lastUnlockTime!) < BIOMETRIC_COOLDOWN_SECONDS)
-                }
-            })
             
             if copyTime != nil && Date().timeIntervalSince(copyTime!) < 2 {
                 Text("Copied to clipboard!").frame(maxHeight: .infinity, alignment: .bottom)
