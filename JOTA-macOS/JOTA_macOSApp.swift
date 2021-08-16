@@ -45,20 +45,36 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named: "Icon")
             button.action = #selector(togglePopover(_:))
         }
-        
-        NSApp.activate(ignoringOtherApps: true)
+    }
+    
+    func applicationWillResignActive(_ notification: Notification) {
+        if (!self.contentView.viewModel.isAuthenticating) {
+            hidePopover(nil)
+        }
+    }
+    
+    func hidePopover(_ sender: AnyObject?) {
+        if self.popover.isShown {
+            self.popover.performClose(sender)
+            self.contentView.viewModel.setShown(shown: false)
+        }
+    }
+    
+    func showPopover(_ sender: AnyObject?) {
+        if let button = self.statusBarItem.button {
+            if !self.popover.isShown {
+                NSApp.activate(ignoringOtherApps: true)
+
+                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+                self.popover.contentViewController?.view.window?.becomeKey()
+                self.contentView.viewModel.setShown(shown: true)
+            }
+        }
     }
     
     @objc func togglePopover(_ sender: AnyObject?) {
-        if let button = self.statusBarItem.button {
-            if self.popover.isShown {
-                self.popover.performClose(sender)
-                self.contentView.shownModel.setShown(shown: false)
-            } else {
-                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-                self.popover.contentViewController?.view.window?.becomeKey()
-                self.contentView.shownModel.setShown(shown: true)
-            }
+        if self.statusBarItem.button != nil {
+            self.popover.isShown ? hidePopover(sender) : showPopover(sender)
         }
     }
     

@@ -9,23 +9,29 @@
 import SwiftUI
 import LocalAuthentication
 
-class ContentViewShownModel: ObservableObject {
+class ContentViewModel: ObservableObject {
     @Published var isShown = false
+    @Published var isAuthenticating = false
     
     func setShown(shown: Bool) {
         isShown = shown
+    }
+    
+    func setAuthenticating(authenticating: Bool) {
+        isAuthenticating = authenticating
     }
 }
 
 struct ContentView: View {
     let AUTH_COOLDOWN_SECONDS: TimeInterval = 60 * 10 // 10 minutes
     
-    @ObservedObject var shownModel = ContentViewShownModel()
+    @ObservedObject var viewModel = ContentViewModel()
     
     @State private var lastUnlockTime: Date? = nil
     @State private var isUnlocked = false
     @State var timeLeft = 30 - (Int64(Date().timeIntervalSince1970) % 30)
     @State var copyTime: Date? = nil
+    
     @Environment(\.colorScheme) var currentMode
     
     let timer = Timer.publish(every: 0.1, on: .current, in: .common).autoconnect()
@@ -84,7 +90,7 @@ struct ContentView: View {
                 Text("Copied to clipboard!").frame(maxHeight: .infinity, alignment: .bottom)
             }
         }
-        .onReceive(shownModel.$isShown, perform: { shown in
+        .onReceive(viewModel.$isShown, perform: { shown in
             if shown && !isUnlocked {
                 authenticate()
             }
@@ -97,12 +103,14 @@ struct ContentView: View {
 
         // check whether biometric authentication is possible
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            self.viewModel.setAuthenticating(authenticating: true)
             // it's possible, so go ahead and use it
             let reason = "unlock MFA codes"
 
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
                 // authentication has now completed
                 DispatchQueue.main.async {
+                    self.viewModel.setAuthenticating(authenticating: false)
                     if success {
                         self.lastUnlockTime = Date()
                         self.isUnlocked = true
