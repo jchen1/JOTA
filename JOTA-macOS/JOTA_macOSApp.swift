@@ -22,12 +22,15 @@ struct JOTA_macOSApp: App {
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate {
+    static private(set) var instance: AppDelegate! = nil
 
     var contentView: ContentView!
     var popover: NSPopover!
     var statusBarItem: NSStatusItem!
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        AppDelegate.instance = self
+
         // Create the SwiftUI view that provides the window contents.
         contentView = ContentView()
 
@@ -47,12 +50,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    func applicationWillResignActive(_ notification: Notification) {
-        if (!self.contentView.viewModel.isAuthenticating) {
-            hidePopover(nil)
-        }
-    }
-    
     func hidePopover(_ sender: AnyObject?) {
         if self.popover.isShown {
             self.popover.performClose(sender)
@@ -64,9 +61,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = self.statusBarItem.button {
             if !self.popover.isShown {
                 NSApp.activate(ignoringOtherApps: true)
-
                 self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-                self.popover.contentViewController?.view.window?.becomeKey()
+                self.popover.contentViewController?.view.window?.makeKey()
                 self.contentView.viewModel.setShown(shown: true)
             }
         }
