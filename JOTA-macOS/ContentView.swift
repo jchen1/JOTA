@@ -30,7 +30,8 @@ struct ContentView: View {
     @State private var lastUnlockTime: Date? = nil
     @State private var isUnlocked = false
     @State var timeLeft = 30 - (Int64(Date().timeIntervalSince1970) % 30)
-    @State var copyTime: Date? = nil
+    @State var toastTime: Date? = nil
+    @State var toastText: String = ""
     var isPreview: Bool
     
     @Environment(\.colorScheme) var currentMode
@@ -38,7 +39,7 @@ struct ContentView: View {
     
     let timer = Timer.publish(every: 0.1, on: .current, in: .common).autoconnect()
     
-    let otps = OTPLoader.loadOTPs()
+    @State var otps = OTPLoader.loadOTPs()
     
     init(isPreview: Bool = false) {
         self.isPreview = isPreview
@@ -61,7 +62,14 @@ struct ContentView: View {
                             Text("Two-Factor Tokens").font(.largeTitle).fontWeight(.bold).foregroundColor(primary).padding(.bottom)
                             Spacer()
                         }
-                        ForEach(otps, id: \.id) { otp in
+                        ForEach(Array(otps.enumerated()), id: \.1.id) { index, otp in
+                            let copyAction = {
+                                let pasteboard = NSPasteboard.general
+                                pasteboard.declareTypes([.string], owner: nil)
+                                pasteboard.setString(try! otp.generate(), forType: .string)
+                                toastTime = Date()
+                                toastText = "Copied to clipboard!"
+                            }
                             VStack {
                                 Text(otp.label ?? "").font(.body).fontWeight(.semibold).frame(maxWidth: .infinity, alignment: .leading)
                                 Text(try! otp.generate()).font(.largeTitle).fontWeight(.semibold).foregroundColor(timeLeft <= 5 ? .red : primary).frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, 0.1)
@@ -73,11 +81,12 @@ struct ContentView: View {
                                 }.frame(maxWidth: .infinity)
                                 
                                 Divider()
-                            }.frame(maxWidth: .infinity).contentShape(Rectangle()).onTapGesture {
-                                let pasteboard = NSPasteboard.general
-                                pasteboard.declareTypes([.string], owner: nil)
-                                pasteboard.setString(try! otp.generate(), forType: .string)
-                                copyTime = Date()
+                            }.frame(maxWidth: .infinity).contentShape(Rectangle()).onTapGesture(perform: copyAction).contextMenu {
+                                Button("Copy to clipboard", action: copyAction)
+                                Button("Delete", action: {
+                                    otps.remove(at: index)
+                                    try! OTPLoader.saveOTPs(otps: otps)
+                                })
                             }
                         }
                     }
@@ -89,10 +98,48 @@ struct ContentView: View {
                 }
                 
                 HStack {
-                    Button(action: {}) {
+                    Button(action: {
+                        // leave popover open
+                        AppDelegate.instance.popover.behavior = .applicationDefined
+
+                        let panel = NSOpenPanel()
+                        panel.message = "Choose Image"
+                        panel.prompt = "Choose"
+                        panel.allowsMultipleSelection = false
+                        panel.canChooseDirectories = false
+                        panel.canCreateDirectories = false
+                        panel.canChooseFiles = true
+                        panel.allowedFileTypes = ["png", "jpg", "jpeg", "gif"]
+                        panel.begin { (result) -> Void in
+                            if result.rawValue == NSApplication.ModalResponse.OK.rawValue {
+                                let path = panel.url!.path
+                                let img = CIImage(contentsOf: URL(fileURLWithPath: path))
+                                let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: nil)
+                                if let features = detector?.features(in: img!) {
+                                    if features.count == 0 {
+                                        toastTime = Date()
+                                        toastText = "Couldn't add OTP."
+                                    }
+                                    for feature in features {
+                                        if let otp = try? OTP(url: (feature as! CIQRCodeFeature).messageString!) {
+                                            try! OTPLoader.saveOTPs(otps: otps + [otp])
+                                            otps = OTPLoader.loadOTPs()
+                                            toastTime = Date()
+                                            toastText = "Added OTP!"
+                                        }
+                                    }
+                                } else {
+                                    toastTime = Date()
+                                    toastText = "Couldn't add OTP."
+                                }
+                            }
+                            AppDelegate.instance.popover.behavior = .transient
+
+                        }
+                    }) {
                         Image(systemName: "plus.circle").foregroundColor(.white).padding(.leading).font(.title2).padding(.vertical, 10)
                     }.buttonStyle(PlainButtonStyle())
-                    let text = copyTime != nil && Date().timeIntervalSince(copyTime!) < 2 ? "Copied to clipboard!" : ""
+                    let text = toastTime != nil && Date().timeIntervalSince(toastTime!) < 2 ? toastText : ""
                     
                     Spacer()
                     Text(text).padding(.vertical, 10).foregroundColor(.white)

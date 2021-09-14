@@ -39,6 +39,7 @@ class OTPLoader {
                                 
                     NSKeyedUnarchiver.setClass(OTP.self, forClassName: "jota.OTP")
                     NSKeyedUnarchiver.setClass(OTP.self, forClassName: "JOTA.OTP")
+                    NSKeyedUnarchiver.setClass(OTP.self, forClassName: "JOTA_macOS.OTP")
                     NSKeyedUnarchiver.setClass(OTP.self, forClassName: "OTP")
                     guard let otps = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as? [OTP] else {
                         fatalError("corrupt data!")
@@ -58,6 +59,7 @@ class OTPLoader {
             if let otpData = userDefaults?.object(forKey: "otps") as? NSData {
                 NSKeyedUnarchiver.setClass(OTP.self, forClassName: "jota.OTP")
                 NSKeyedUnarchiver.setClass(OTP.self, forClassName: "JOTA.OTP")
+                NSKeyedUnarchiver.setClass(OTP.self, forClassName: "JOTA_macOS.OTP")
                 NSKeyedUnarchiver.setClass(OTP.self, forClassName: "OTP")
                 guard let otps = NSKeyedUnarchiver.unarchiveObject(with: otpData as Data) as? [OTP] else {
                     fatalError("corrupt data!")
