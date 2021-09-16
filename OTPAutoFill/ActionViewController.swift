@@ -101,10 +101,14 @@ class ActionViewController: UITableViewController {
         cell.otpCodeLabel?.text = try! otp.generate()
         
         let timeLeft = 30 - (Int64(Date().timeIntervalSince1970) % 30)
-        if (timeLeft <= 5) {
+        if (timeLeft <= 5 && otp.type() == .TOTP) {
             cell.otpCodeLabel?.textColor = UIColor.red
         } else {
-            cell.otpCodeLabel?.textColor = UIColor.black
+            if self.traitCollection.userInterfaceStyle == .dark {
+                cell.otpCodeLabel?.textColor = UIColor.white
+            } else {
+                cell.otpCodeLabel?.textColor = UIColor.black
+            }
         }
         cell.timeLeftLabel?.text = String(timeLeft)
         
