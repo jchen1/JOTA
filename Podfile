@@ -43,4 +43,5 @@ target 'JOTA-macOS' do
   # Pods for JOTA-macOS
   pod 'KeychainAccess'
   pod 'SwiftOTP'
+  pod 'Introspect'
 end

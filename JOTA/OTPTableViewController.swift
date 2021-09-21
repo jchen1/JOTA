@@ -12,6 +12,8 @@ import Toaster
 class OTPTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+
         tableView.tableFooterView = UIView()
         setup()
     }
@@ -67,7 +69,7 @@ class OTPTableViewController: UITableViewController {
         if editingStyle == .delete {
             let otp = self.otps[indexPath.row]
             // Delete the row from the data source
-            let alert = UIAlertController(title: "Delete OTP (\(otp.label ?? otp.description ?? ""))", message: "Are you sure? Be sure to disable 2FA before removing.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Delete OTP (\(otp.label ?? otp.description))", message: "Are you sure? Be sure to disable 2FA before removing.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (_) in
                 self.otps.remove(at: indexPath.row)

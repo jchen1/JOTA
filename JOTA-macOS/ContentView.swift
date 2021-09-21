@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Introspect
 import LocalAuthentication
 
 class ContentViewModel: ObservableObject {
@@ -19,6 +20,35 @@ class ContentViewModel: ObservableObject {
     
     func setAuthenticating(authenticating: Bool) {
         isAuthenticating = authenticating
+    }
+}
+
+extension List {
+  /// List on macOS uses an opaque background with no option for
+  /// removing/changing it. listRowBackground() doesn't work either.
+  /// This workaround works because List is backed by NSTableView.
+  func removeBackground() -> some View {
+    return introspectTableView { tableView in
+        tableView.backgroundColor = .clear
+        tableView.enclosingScrollView!.drawsBackground = false
+    
+    }
+  }
+}
+
+let green = Color(red: 0.133, green: 0.895, blue: 0.422)
+
+
+struct TokenGroupBoxStyle: GroupBoxStyle {
+    var background: some View {
+        RoundedRectangle(cornerRadius: 10)
+            .fill(Color.white)
+    }
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.content
+            .padding(1)
+            .background(background)
     }
 }
 
@@ -36,66 +66,68 @@ struct ContentView: View {
     
     @Environment(\.colorScheme) var currentMode
     var primary = Color.black
+    var listBackground = Color.white
     
     let timer = Timer.publish(every: 0.1, on: .current, in: .common).autoconnect()
+    
     
     @State var otps = OTPLoader.loadOTPs()
     
     init(isPreview: Bool = false) {
         self.isPreview = isPreview
         self.primary = currentMode == .dark ? Color.white : Color.black
+        self.listBackground = currentMode == .dark ? Color(red: 0.121, green: 0.121, blue: 0.18) : Color.white
     }
     
     @ViewBuilder
     var body: some View {
         ZStack {
-            if currentMode == .dark {
-                // apparently what a `List` uses in dark mode
-                Color(red: 0.121, green: 0.121, blue: 0.18).ignoresSafeArea()
-            } else {
-                Color.white.ignoresSafeArea()
-            }
+            green.ignoresSafeArea()
             VStack {
-                if isUnlocked || isPreview {
-                    List {
-                        HStack {
-                            Text("Two-Factor Tokens").font(.largeTitle).fontWeight(.bold).foregroundColor(primary).padding(.bottom)
-                            Spacer()
-                        }
-                        ForEach(Array(otps.enumerated()), id: \.1.id) { index, otp in
-                            let copyAction = {
-                                let pasteboard = NSPasteboard.general
-                                pasteboard.declareTypes([.string], owner: nil)
-                                pasteboard.setString(try! otp.generate(), forType: .string)
-                                toastTime = Date()
-                                toastText = "Copied to clipboard!"
+                HStack {
+                    Text("Two-Factor Tokens").font(.largeTitle).fontWeight(.bold).foregroundColor(Color.white).padding(.top)
+                    Spacer()
+                }.padding([.horizontal, .top])
+                
+                GroupBox {
+                    if isUnlocked || isPreview {
+                        List {
+                            ForEach(Array(otps.enumerated()), id: \.1.id) { index, otp in
+                                let copyAction = {
+                                    let pasteboard = NSPasteboard.general
+                                    pasteboard.declareTypes([.string], owner: nil)
+                                    pasteboard.setString(try! otp.generate(), forType: .string)
+                                    toastTime = Date()
+                                    toastText = "Copied to clipboard!"
+                                }
+                                VStack {
+                                    Text(otp.label ?? "").font(.body).fontWeight(.semibold).frame(maxWidth: .infinity, alignment: .leading)
+                                    Text(try! otp.generate()).font(.largeTitle).fontWeight(.semibold).foregroundColor(timeLeft <= 5 ? .red : primary).frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, 0.1)
+                                    HStack {
+                                        Text(otp.user ?? "").frame(maxWidth: .infinity, alignment: .leading)
+                                        Text(String(timeLeft)).onReceive(timer, perform: { now in
+                                            timeLeft = 30 - (Int64(now.timeIntervalSince1970) % 30)
+                                        }).frame(alignment: .trailing)
+                                    }.frame(maxWidth: .infinity)
+                                    
+                                    Divider()
+                                }.listRowBackground(Color.clear).frame(maxWidth: .infinity).contentShape(Rectangle()).onTapGesture(perform: copyAction).contextMenu {
+                                    Button("Copy to clipboard", action: copyAction)
+                                    Button("Delete", action: {
+                                        otps.remove(at: index)
+                                        try! OTPLoader.saveOTPs(otps: otps)
+                                    })
+                                }
                             }
-                            VStack {
-                                Text(otp.label ?? "").font(.body).fontWeight(.semibold).frame(maxWidth: .infinity, alignment: .leading)
-                                Text(try! otp.generate()).font(.largeTitle).fontWeight(.semibold).foregroundColor(timeLeft <= 5 ? .red : primary).frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, 0.1)
-                                HStack {
-                                    Text(otp.user ?? "").frame(maxWidth: .infinity, alignment: .leading)
-                                    Text(String(timeLeft)).onReceive(timer, perform: { now in
-                                        timeLeft = 30 - (Int64(now.timeIntervalSince1970) % 30)
-                                    }).frame(alignment: .trailing)
-                                }.frame(maxWidth: .infinity)
-                                
-                                Divider()
-                            }.frame(maxWidth: .infinity).contentShape(Rectangle()).onTapGesture(perform: copyAction).contextMenu {
-                                Button("Copy to clipboard", action: copyAction)
-                                Button("Delete", action: {
-                                    otps.remove(at: index)
-                                    try! OTPLoader.saveOTPs(otps: otps)
-                                })
-                            }
-                        }
+                            
+                        }.removeBackground()
+                    } else {
+                        Spacer()
+                        Text("Locked...")
+                            .font(.headline)
+                        Spacer()
                     }
-                } else {
-                    Spacer()
-                    Text("Locked...")
-                        .font(.headline)
-                    Spacer()
-                }
+                }.groupBoxStyle(TokenGroupBoxStyle()).padding(.horizontal, 10.0)
                 
                 HStack {
                     Button(action: {

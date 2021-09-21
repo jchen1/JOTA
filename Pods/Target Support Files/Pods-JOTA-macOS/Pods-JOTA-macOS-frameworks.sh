@@ -178,11 +178,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift-macOS/CryptoSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KeychainAccess-macOS/KeychainAccess.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftOTP-macOS/SwiftOTP.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Introspect/Introspect.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift-macOS/CryptoSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KeychainAccess-macOS/KeychainAccess.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftOTP-macOS/SwiftOTP.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Introspect/Introspect.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
