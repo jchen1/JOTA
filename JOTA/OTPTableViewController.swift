@@ -9,24 +9,86 @@
 import UIKit
 import Toaster
 
+extension UIImage {
+    func imageWithColor(color1: UIColor) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+        color1.setFill()
+
+        let context = UIGraphicsGetCurrentContext()
+        context?.translateBy(x: 0, y: self.size.height)
+        context?.scaleBy(x: 1.0, y: -1.0)
+        context?.setBlendMode(CGBlendMode.normal)
+
+        let rect = CGRect(origin: .zero, size: CGSize(width: self.size.width, height: self.size.height))
+        context?.clip(to: rect, mask: self.cgImage!)
+        context?.fill(rect)
+
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return newImage!
+    }
+}
+
 class OTPTableViewController: UITableViewController {
+    let searchController = UISearchController(searchResultsController: nil)
+    // MARK: - Table view data source
+    var timer: Timer?
+
+    var otps = [OTP]()
+    var filteredOTPs = [OTP]()
+    var isSearchBarEmpty: Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    var isFiltering: Bool {
+      return searchController.isActive && !isSearchBarEmpty
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
 
         tableView.tableFooterView = UIView()
         setup()
-    }
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
 
-    // MARK: - Table view data source
-    var otps = [OTP]()
-    var timer: Timer?
+        // placeholder & icon color
+        searchController.searchBar.searchTextField.textColor = UIColor.white
+        
+        searchController.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: searchController.searchBar.searchTextField.placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        searchController.searchBar.searchTextField.leftView?.tintColor = UIColor.white
+        
+        if let clearButton = searchController.searchBar.searchTextField.value(forKey: "_clearButton") as? UIButton {
+            if let img3 = clearButton.image(for: .highlighted) {
+                clearButton.isHidden = false
+                let tintedClearImage = img3.imageWithColor(color1: UIColor.white)
+                clearButton.setImage(tintedClearImage, for: .normal)
+                clearButton.setImage(tintedClearImage, for: .highlighted)
+            }else{
+               clearButton.isHidden = true
+            }
+        }
+        
+        // cancel text
+        let appearance = UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+        appearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (isFiltering) {
+            return filteredOTPs.count
+        }
         return otps.count
     }
 
@@ -36,7 +98,8 @@ class OTPTableViewController: UITableViewController {
             fatalError("not a OTPTableViewCell :(")
         }
         
-        let otp = otps[indexPath.row]
+        let otp = isFiltering ? filteredOTPs[indexPath.row] : otps[indexPath.row]
+        
         cell.otpLabelLabel?.text = otp.label ?? ""
         // todo handle HOTP...
         cell.userLabel?.text = otp.user
@@ -84,7 +147,7 @@ class OTPTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let otp = otps[indexPath.row]
+        let otp = isFiltering ? filteredOTPs[indexPath.row] : otps[indexPath.row]
         guard let code = try? otp.generate() else { return }
         
         UIPasteboard.general.string = code
@@ -119,5 +182,27 @@ class OTPTableViewController: UITableViewController {
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
     }
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filteredOTPs = otps.filter { otp in
+            (otp.label?.lowercased().contains(searchText.lowercased()) ?? false) ||
+            (otp.user?.lowercased().contains(searchText.lowercased()) ?? false)
+        }
+      
+      tableView.reloadData()
+    }
 
+}
+
+
+extension OTPTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        // probably we want this on a viewdidload for the searchbar but i'm lazy
+        if searchBar.searchTextField.textColor != UIColor.white {
+            searchBar.searchTextField.textColor = UIColor.white
+        }
+
+        filterContentForSearchText(searchBar.text!)
+    }
 }
