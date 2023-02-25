@@ -204,36 +204,39 @@ struct ContentView: View {
         var error: NSError?
 
         // check whether biometric authentication is possible
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            // keep the popover open while touchid runs...
-            AppDelegate.instance.popover.behavior = .applicationDefined
-            
-            self.viewModel.setAuthenticating(authenticating: true)
-            // it's possible, so go ahead and use it
-            let reason = "unlock MFA codes"
-
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-                // authentication has now completed
-                DispatchQueue.main.async {
-                    
-                    // allow the popover to hide on click again
-                    NSApp.activate(ignoringOtherApps: true)
-                    AppDelegate.instance.popover.behavior = .transient
-
-                    self.viewModel.setAuthenticating(authenticating: false)
-                    if success {
-                        self.lastUnlockTime = Date()
-                        self.isUnlocked = true
-                    } else {
-                        // there was a problem
-                    }
-                }
-            }
-        } else {
-            // todo...
-            self.lastUnlockTime = Date()
-            self.isUnlocked = true
-        }
+//        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+//            // keep the popover open while touchid runs...
+//            AppDelegate.instance.popover.behavior = .applicationDefined
+//
+//            self.viewModel.setAuthenticating(authenticating: true)
+//            // it's possible, so go ahead and use it
+//            let reason = "unlock MFA codes"
+//
+//            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+//                // authentication has now completed
+//                DispatchQueue.main.async {
+//
+//                    // allow the popover to hide on click again
+//                    NSApp.activate(ignoringOtherApps: true)
+//                    AppDelegate.instance.popover.behavior = .transient
+//
+//                    self.viewModel.setAuthenticating(authenticating: false)
+//                    if success {
+//                        self.lastUnlockTime = Date()
+//                        self.isUnlocked = true
+//                    } else {
+//                        // there was a problem
+//                    }
+//                }
+//            }
+//        } else {
+//            // todo...
+//            self.lastUnlockTime = Date()
+//            self.isUnlocked = true
+//        }
+        
+        self.lastUnlockTime = Date()
+        self.isUnlocked = true
     }
 }
 

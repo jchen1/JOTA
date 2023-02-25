@@ -30,6 +30,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         AppDelegate.instance = self
+        
+        // Close main app window
+        if let window = NSApplication.shared.windows.first {
+            window.close()
+        }
 
         // Create the SwiftUI view that provides the window contents.
         contentView = ContentView()
