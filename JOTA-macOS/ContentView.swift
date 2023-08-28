@@ -36,6 +36,14 @@ extension List {
   }
 }
 
+extension NSTextField {
+    /// Disables focus ring for all NSTextFields
+    open override var focusRingType: NSFocusRingType {
+        get { .none }
+        set { }
+    }
+}
+
 let green = Color(red: 0.133, green: 0.895, blue: 0.422)
 
 
@@ -59,9 +67,12 @@ struct ContentView: View {
     
     @State private var lastUnlockTime: Date? = nil
     @State private var isUnlocked = false
-    @State var timeLeft = 30 - (Int64(Date().timeIntervalSince1970) % 30)
-    @State var toastTime: Date? = nil
-    @State var toastText: String = ""
+    @State private var timeLeft = 30 - (Int64(Date().timeIntervalSince1970) % 30)
+    @State private var toastTime: Date? = nil
+    @State private var toastText: String = ""
+    @State private var query: String = ""
+    @FocusState private var queryFocused: Bool
+    
     var isPreview: Bool
     
     @Environment(\.colorScheme) var currentMode
@@ -72,6 +83,14 @@ struct ContentView: View {
     
     
     @State var otps = OTPLoader.loadOTPs()
+    
+    var filteredOtps: [OTP] {
+        if query.isEmpty {
+            return otps
+        } else {
+            return otps.filter { $0.label?.lowercased().contains(query.lowercased()) ?? false || $0.user?.lowercased().contains(query.lowercased()) ?? false }
+        }
+    }
     
     init(isPreview: Bool = false) {
         self.isPreview = isPreview
@@ -91,8 +110,22 @@ struct ContentView: View {
                 
                 GroupBox {
                     if isUnlocked || isPreview {
+                        TextField(
+                            "Search",
+                            text: $query
+                        )
+                        .focused($queryFocused)
+                        .onAppear {
+                            queryFocused = true
+                        }
+                        .textFieldStyle(.plain)
+                        .padding(.horizontal, 10.0)
+                        .padding(.vertical, 4.0)
+                        .background(Color.clear)
+                    
+                        
                         List {
-                            ForEach(Array(otps.enumerated()), id: \.1.id) { index, otp in
+                            ForEach(Array(filteredOtps.enumerated()), id: \.1.id) { index, otp in
                                 let copyAction = {
                                     let pasteboard = NSPasteboard.general
                                     pasteboard.declareTypes([.string], owner: nil)
@@ -120,14 +153,16 @@ struct ContentView: View {
                                 }
                             }
                             
-                        }.removeBackground()
+                        }
+                        .removeBackground()
                     } else {
                         Spacer()
                         Text("Locked...")
                             .font(.headline)
                         Spacer()
                     }
-                }.groupBoxStyle(TokenGroupBoxStyle()).padding(.horizontal, 10.0)
+                }
+                .groupBoxStyle(TokenGroupBoxStyle()).padding(.horizontal, 10.0)
                 
                 HStack {
                     Button(action: {
@@ -189,8 +224,6 @@ struct ContentView: View {
                     isUnlocked = false
                 }
             })
-
-
         }
         .onReceive(viewModel.$isShown, perform: { shown in
             if shown && !isUnlocked {

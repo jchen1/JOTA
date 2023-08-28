@@ -39,7 +39,7 @@ target 'JOTA' do
 end
 
 target 'JOTA-macOS' do
-  platform :osx, '11.3'
+  platform :osx, '12.0'
     # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
