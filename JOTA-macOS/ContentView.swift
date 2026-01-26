@@ -72,6 +72,11 @@ struct ContentView: View {
     @State private var toastText: String = ""
     @State private var query: String = ""
     @FocusState private var queryFocused: Bool
+
+    @State private var editingOTP: OTP? = nil
+    @State private var editingIndex: Int? = nil
+    @State private var editLabel: String = ""
+    @State private var editUser: String = ""
     
     var isPreview: Bool
     
@@ -118,6 +123,15 @@ struct ContentView: View {
                         .onAppear {
                             queryFocused = true
                         }
+                        .onSubmit {
+                            if filteredOtps.count == 1 {
+                                let otp = filteredOtps[0]
+                                let pasteboard = NSPasteboard.general
+                                pasteboard.declareTypes([.string], owner: nil)
+                                pasteboard.setString(try! otp.generate(), forType: .string)
+                                AppDelegate.instance.hidePopover(nil)
+                            }
+                        }
                         .textFieldStyle(.plain)
                         .padding(.horizontal, 10.0)
                         .padding(.vertical, 4.0)
@@ -146,10 +160,17 @@ struct ContentView: View {
                                     Divider()
                                 }.listRowBackground(Color.clear).frame(maxWidth: .infinity).contentShape(Rectangle()).onTapGesture(perform: copyAction).contextMenu {
                                     Button("Copy to clipboard", action: copyAction)
-                                    Button("Delete", action: {
+                                    Button("Edit") {
+                                        editingOTP = otp
+                                        editingIndex = index
+                                        editLabel = otp.label ?? ""
+                                        editUser = otp.user ?? ""
+                                    }
+                                    Divider()
+                                    Button("Delete", role: .destructive) {
                                         otps.remove(at: index)
                                         try! OTPLoader.saveOTPs(otps: otps)
-                                    })
+                                    }
                                 }
                             }
                             
@@ -226,10 +247,52 @@ struct ContentView: View {
             })
         }
         .onReceive(viewModel.$isShown, perform: { shown in
-            if shown && !isUnlocked {
-                authenticate()
+            if shown {
+                otps = OTPLoader.loadOTPs()
+                if !isUnlocked {
+                    authenticate()
+                }
             }
         })
+        .sheet(isPresented: Binding(
+            get: { editingOTP != nil },
+            set: { if !$0 { editingOTP = nil; editingIndex = nil } }
+        )) {
+            if let otp = editingOTP {
+                EditOTPSheet(
+                    otp: otp,
+                    label: $editLabel,
+                    user: $editUser,
+                    onSave: { newLabel, newUser in
+                        if let index = editingIndex {
+                            do {
+                                let updatedOTP = try otp.copyWith(label: newLabel, user: newUser)
+                                otps[index] = updatedOTP
+                                try OTPLoader.saveOTPs(otps: otps)
+                                toastTime = Date()
+                                toastText = "Saved changes!"
+                            } catch {
+                                toastTime = Date()
+                                toastText = "Failed to save"
+                            }
+                        }
+                        editingOTP = nil
+                        editingIndex = nil
+                    },
+                    onCancel: {
+                        editingOTP = nil
+                        editingIndex = nil
+                    },
+                    onCopySecret: {
+                        let pasteboard = NSPasteboard.general
+                        pasteboard.declareTypes([.string], owner: nil)
+                        pasteboard.setString(otp.secretBase32, forType: .string)
+                        toastTime = Date()
+                        toastText = "Secret copied!"
+                    }
+                )
+            }
+        }
     }
     
     func authenticate() {
@@ -270,6 +333,78 @@ struct ContentView: View {
         
         self.lastUnlockTime = Date()
         self.isUnlocked = true
+    }
+}
+
+struct EditOTPSheet: View {
+    let otp: OTP
+    @Binding var label: String
+    @Binding var user: String
+    let onSave: (String?, String?) -> Void
+    let onCancel: () -> Void
+    let onCopySecret: () -> Void
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Edit OTP")
+                .font(.headline)
+                .padding(.top)
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Label")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                TextField("e.g., Google", text: $label)
+                    .textFieldStyle(.roundedBorder)
+            }
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text("User")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                TextField("e.g., user@example.com", text: $user)
+                    .textFieldStyle(.roundedBorder)
+            }
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Secret (click to copy)")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                Text(otp.maskedSecret)
+                    .font(.system(.body, design: .monospaced))
+                    .foregroundColor(.secondary)
+                    .padding(8)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.secondary.opacity(0.1))
+                    .cornerRadius(6)
+                    .onTapGesture {
+                        onCopySecret()
+                    }
+            }
+
+            Spacer()
+
+            HStack {
+                Button("Cancel") {
+                    onCancel()
+                }
+                .keyboardShortcut(.escape)
+
+                Spacer()
+
+                Button("Save") {
+                    onSave(
+                        label.isEmpty ? nil : label,
+                        user.isEmpty ? nil : user
+                    )
+                }
+                .keyboardShortcut(.return)
+                .buttonStyle(.borderedProminent)
+            }
+            .padding(.bottom)
+        }
+        .padding()
+        .frame(width: 350, height: 300)
     }
 }
 

@@ -7,9 +7,10 @@ var elementSelectors = [
     "input[name=\"otp\"]:not([type=\"hidden\"])",                   // Github
     "input[name=\"verificationCode\"]",                             // LastPass
     "input[name=\"yubikeyotp\"]",                                   // LastPass alt
+    "input[data-input=\"token\"]",                                  // Rippling
     // Generic inputs
     "input[autocomplete=\"one-time-code\"]",                        // ...
-    "input[data-input=\"token\"]",                                  // Rippling
+    "input[name=\"pin\"]",                                          // LinkedIn / generic
     "input[type]:not([type=\"hidden\"]):not([type=\"submit\"])"     // Any non-hidden text input
 ];
 

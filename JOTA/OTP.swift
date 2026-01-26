@@ -256,4 +256,82 @@ public class OTP: NSObject,NSCoding {
             return 2
         }
     }
+
+    // MARK: - Secret Access
+
+    public var secretData: Data {
+        switch otpContainer! {
+        case .TOTP(let totp):
+            return totp.secret
+        case .HOTP(let hotp, _):
+            return hotp.secret
+        }
+    }
+
+    public var secretBase32: String {
+        return secretData.base32EncodedString
+    }
+
+    public var maskedSecret: String {
+        let secret = secretBase32
+        if secret.count <= 8 {
+            return String(repeating: "*", count: secret.count)
+        }
+        let prefix = String(secret.prefix(4))
+        let suffix = String(secret.suffix(4))
+        return "\(prefix)****\(suffix)"
+    }
+
+    // MARK: - OTP Parameters
+
+    public var digits: Int {
+        switch otpContainer! {
+        case .TOTP(let totp):
+            return totp.digits
+        case .HOTP(let hotp, _):
+            return hotp.digits
+        }
+    }
+
+    public var timeInterval: Int? {
+        switch otpContainer! {
+        case .TOTP(let totp):
+            return totp.timeInterval
+        case .HOTP:
+            return nil
+        }
+    }
+
+    public var counter: UInt64? {
+        switch otpContainer! {
+        case .TOTP:
+            return nil
+        case .HOTP(_, let counter):
+            return counter
+        }
+    }
+
+    public var algorithm: OTPAlgorithm {
+        switch otpContainer! {
+        case .TOTP(let totp):
+            return totp.algorithm
+        case .HOTP(let hotp, _):
+            return hotp.algorithm
+        }
+    }
+
+    // MARK: - Edit Support
+
+    public func copyWith(label newLabel: String? = nil, user newUser: String? = nil) throws -> OTP {
+        return try OTP(
+            type: self.type(),
+            secret: self.secretData,
+            user: newUser ?? self.user,
+            label: newLabel ?? self.label,
+            digits: self.digits,
+            timeInterval: self.timeInterval,
+            counter: self.counter,
+            algorithm: self.algorithm
+        )
+    }
 }

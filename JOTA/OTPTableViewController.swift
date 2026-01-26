@@ -51,6 +51,13 @@ class OTPTableViewController: UITableViewController {
 
         tableView.tableFooterView = UIView()
         setup()
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(reloadOTPsFromStorage),
+            name: UIApplication.didBecomeActiveNotification,
+            object: nil
+        )
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -130,20 +137,146 @@ class OTPTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let otp = self.otps[indexPath.row]
-            // Delete the row from the data source
-            let alert = UIAlertController(title: "Delete OTP (\(otp.label ?? otp.description))", message: "Are you sure? Be sure to disable 2FA before removing.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (_) in
-                self.otps.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
-                try! OTPLoader.saveOTPs(otps: self.otps)
-            }))
-            
-            self.present(alert, animated: true)
+            confirmDelete(at: indexPath)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
+    }
+
+    // MARK: - Swipe Actions
+
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { [weak self] (_, _, completion) in
+            self?.presentEditModal(for: indexPath)
+            completion(true)
+        }
+        editAction.backgroundColor = .systemBlue
+        editAction.image = UIImage(systemName: "pencil")
+
+        return UISwipeActionsConfiguration(actions: [editAction])
+    }
+
+    // MARK: - Context Menu
+
+    override func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let otp = isFiltering ? filteredOTPs[indexPath.row] : otps[indexPath.row]
+
+        return UIContextMenuConfiguration(identifier: indexPath as NSIndexPath, previewProvider: nil) { [weak self] _ in
+            let copyAction = UIAction(title: "Copy Code", image: UIImage(systemName: "doc.on.doc")) { _ in
+                guard let code = try? otp.generate() else { return }
+                UIPasteboard.general.string = code
+                Toast(text: "Copied to clipboard").show()
+            }
+
+            let editAction = UIAction(title: "Edit", image: UIImage(systemName: "pencil")) { _ in
+                self?.presentEditModal(for: indexPath)
+            }
+
+            let deleteAction = UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive) { _ in
+                self?.confirmDelete(at: indexPath)
+            }
+
+            return UIMenu(children: [copyAction, editAction, deleteAction])
+        }
+    }
+
+    // MARK: - Edit Modal
+
+    private func presentEditModal(for indexPath: IndexPath) {
+        let actualIndex: Int
+        let otp: OTP
+
+        if isFiltering {
+            otp = filteredOTPs[indexPath.row]
+            actualIndex = otps.firstIndex(where: { $0.id == otp.id }) ?? indexPath.row
+        } else {
+            otp = otps[indexPath.row]
+            actualIndex = indexPath.row
+        }
+
+        let alert = UIAlertController(title: "Edit OTP", message: nil, preferredStyle: .alert)
+
+        alert.addTextField { textField in
+            textField.text = otp.label
+            textField.placeholder = "Label (e.g., Google)"
+        }
+
+        alert.addTextField { textField in
+            textField.text = otp.user
+            textField.placeholder = "User (e.g., user@example.com)"
+        }
+
+        alert.addTextField { [weak self] textField in
+            textField.text = otp.maskedSecret
+            textField.isEnabled = false
+            textField.textColor = .secondaryLabel
+            textField.placeholder = "Secret (tap to copy)"
+
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self?.secretFieldTapped(_:)))
+            textField.addGestureRecognizer(tapGesture)
+            textField.isUserInteractionEnabled = true
+            textField.tag = actualIndex
+        }
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Save", style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            let newLabel = alert.textFields?[0].text
+            let newUser = alert.textFields?[1].text
+
+            do {
+                let updatedOTP = try otp.copyWith(label: newLabel, user: newUser)
+                self.otps[actualIndex] = updatedOTP
+                try OTPLoader.saveOTPs(otps: self.otps)
+                self.filterContentForSearchText(self.searchController.searchBar.text ?? "")
+            } catch {
+                Toast(text: "Failed to save changes").show()
+            }
+        })
+
+        present(alert, animated: true)
+    }
+
+    @objc private func secretFieldTapped(_ gesture: UITapGestureRecognizer) {
+        guard let textField = gesture.view as? UITextField else { return }
+        let index = textField.tag
+        guard index < otps.count else { return }
+
+        UIPasteboard.general.string = otps[index].secretBase32
+        Toast(text: "Secret copied to clipboard").show()
+    }
+
+    // MARK: - Delete Confirmation
+
+    private func confirmDelete(at indexPath: IndexPath) {
+        let actualIndex: Int
+        let otp: OTP
+
+        if isFiltering {
+            otp = filteredOTPs[indexPath.row]
+            actualIndex = otps.firstIndex(where: { $0.id == otp.id }) ?? indexPath.row
+        } else {
+            otp = otps[indexPath.row]
+            actualIndex = indexPath.row
+        }
+
+        let alert = UIAlertController(
+            title: "Delete OTP (\(otp.label ?? otp.description))",
+            message: "Are you sure? Be sure to disable 2FA before removing.",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
+            guard let self = self else { return }
+            self.otps.remove(at: actualIndex)
+            if self.isFiltering {
+                self.filteredOTPs.remove(at: indexPath.row)
+            }
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            try? OTPLoader.saveOTPs(otps: self.otps)
+        })
+
+        present(alert, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -158,9 +291,16 @@ class OTPTableViewController: UITableViewController {
         self.otps = OTPLoader.loadOTPs().sorted(by: { (a, b) -> Bool in
             a.label?.lowercased() ?? "" < b.label?.lowercased() ?? ""
         })
-        
+
         timer = Timer(fireAt: Date(timeInterval: 0.1, since: Date()), interval: 0.1, target: self, selector: #selector(updateOTPs), userInfo: nil, repeats: true)
         RunLoop.current.add(timer!, forMode: RunLoop.Mode.default)
+    }
+
+    @objc private func reloadOTPsFromStorage() {
+        self.otps = OTPLoader.loadOTPs().sorted(by: { (a, b) -> Bool in
+            a.label?.lowercased() ?? "" < b.label?.lowercased() ?? ""
+        })
+        filterContentForSearchText(searchController.searchBar.text ?? "")
     }
     
     @objc private func updateOTPs() {
