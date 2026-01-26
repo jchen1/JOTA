@@ -162,14 +162,16 @@ struct ContentView: View {
                                     Button("Copy to clipboard", action: copyAction)
                                     Button("Edit") {
                                         editingOTP = otp
-                                        editingIndex = index
+                                        editingIndex = otps.firstIndex(where: { $0.id == otp.id })
                                         editLabel = otp.label ?? ""
                                         editUser = otp.user ?? ""
                                     }
                                     Divider()
                                     Button("Delete", role: .destructive) {
-                                        otps.remove(at: index)
-                                        try! OTPLoader.saveOTPs(otps: otps)
+                                        if let actualIndex = otps.firstIndex(where: { $0.id == otp.id }) {
+                                            otps.remove(at: actualIndex)
+                                            try! OTPLoader.saveOTPs(otps: otps)
+                                        }
                                     }
                                 }
                             }
