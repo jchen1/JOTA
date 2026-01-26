@@ -1,29 +1,29 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '10.0'
 
-DEPLOYMENT_TARGET_IOS = '10.0'
-DEPLOYMENT_TARGET_MACOS = '11.3'
+DEPLOYMENT_TARGET_IOS = '13.0'
+DEPLOYMENT_TARGET_MACOS = '12.0'
 
 target 'OTPAutoFill' do
-  platform :ios, '10.0'
+  platform :ios, '13.0'
 
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for OTPAutoFill
   pod 'KeychainAccess'
-  pod 'SwiftOTP'
+  pod 'SwiftOTP', '~> 3.0'
 end
 
 target 'JOTA' do
-  platform :ios, '10.0'
+  platform :ios, '13.0'
 
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for JOTA
   pod 'KeychainAccess'
-  pod 'SwiftOTP'
+  pod 'SwiftOTP', '~> 3.0'
   pod 'Toaster'
 
   target 'JOTATests' do
@@ -45,7 +45,7 @@ target 'JOTA-macOS' do
 
   # Pods for JOTA-macOS
   pod 'KeychainAccess'
-  pod 'SwiftOTP'
+  pod 'SwiftOTP', '~> 3.0'
   pod 'Introspect'
 end
 
