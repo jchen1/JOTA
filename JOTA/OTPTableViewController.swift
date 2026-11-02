@@ -307,19 +307,20 @@ class OTPTableViewController: UITableViewController {
         if !self.tableView.isEditing {
             self.tableView.reloadData()
         }
-        
-        // this happens every second and probably doesn't need to
-        try! OTPLoader.saveOTPs(otps: self.otps)
     }
-    
+
     @IBAction func unwindToOTPList(sender: UIStoryboardSegue) {
         if let source = sender.source as? ScannerViewController, let otp = source.otp {
-            let index = self.otps.firstIndex { (tableOTP) -> Bool in
-                tableOTP.label?.lowercased() ?? "" >= otp.label?.lowercased() ?? ""
-            } ?? self.otps.count
-            let newIndexPath = IndexPath(row: index, section: 0)
-            otps.insert(otp, at: index)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            // Start from the stored list so entries synced from other devices aren't overwritten.
+            var updated = OTPLoader.loadOTPs()
+            updated.append(otp)
+            do {
+                try OTPLoader.saveOTPs(otps: updated)
+            } catch {
+                Toast(text: "Failed to save new OTP").show()
+                return
+            }
+            reloadOTPsFromStorage()
         }
     }
     
