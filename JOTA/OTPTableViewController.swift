@@ -8,6 +8,7 @@
 
 import UIKit
 import Toaster
+import UniformTypeIdentifiers
 
 extension UIImage {
     func imageWithColor(color1: UIColor) -> UIImage {
@@ -86,6 +87,81 @@ class OTPTableViewController: UITableViewController {
         
         navigationItem.searchController = searchController
         definesPresentationContext = true
+
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "gearshape"),
+            menu: UIMenu(children: [
+                UIAction(title: "AutoFill Face ID…", image: UIImage(systemName: "faceid")) { [weak self] _ in
+                    self?.showAutoFillSettings()
+                },
+                UIAction(title: "Export Backup…", image: UIImage(systemName: "square.and.arrow.up")) { [weak self] _ in
+                    self?.exportBackup()
+                },
+                UIAction(title: "Import Backup…", image: UIImage(systemName: "square.and.arrow.down")) { [weak self] _ in
+                    self?.importBackup()
+                },
+            ])
+        )
+    }
+
+    // MARK: - Backup
+
+    private func exportBackup() {
+        AutoFillLock.authenticate(reason: "Export all OTP secrets", allowGracePeriod: false) { [weak self] success in
+            guard let self = self, success else { return }
+            let otps = OTPLoader.loadOTPs()
+            let text: String
+            do {
+                text = try OTPBackup.export(otps)
+            } catch {
+                Toast(text: error.localizedDescription).show()
+                return
+            }
+
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd-HHmmss"
+            let url = FileManager.default.temporaryDirectory
+                .appendingPathComponent("JOTA-backup-\(formatter.string(from: Date())).txt")
+            do {
+                try text.write(to: url, atomically: true, encoding: .utf8)
+            } catch {
+                Toast(text: "Failed to write backup").show()
+                return
+            }
+
+            let share = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+            share.popoverPresentationController?.barButtonItem = self.navigationItem.leftBarButtonItem
+            share.completionWithItemsHandler = { _, completed, _, _ in
+                try? FileManager.default.removeItem(at: url)
+                if completed {
+                    Toast(text: "Exported \(otps.count) codes").show()
+                }
+            }
+            self.present(share, animated: true)
+        }
+    }
+
+    private func importBackup() {
+        let picker = UIDocumentPickerViewController(forOpeningContentTypes: [.plainText, .text])
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+
+    private func showAutoFillSettings() {
+        let sheet = UIAlertController(
+            title: "Require Face ID for AutoFill",
+            message: "Enable JOTA under Settings › General › AutoFill & Passwords to fill codes from the keyboard.",
+            preferredStyle: .actionSheet
+        )
+        for timeout in AutoFillLock.Timeout.allCases {
+            let title = timeout == AutoFillLock.timeout ? "✓ \(timeout.title)" : timeout.title
+            sheet.addAction(UIAlertAction(title: title, style: .default) { _ in
+                AutoFillLock.timeout = timeout
+            })
+        }
+        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        sheet.popoverPresentationController?.barButtonItem = navigationItem.leftBarButtonItem
+        present(sheet, animated: true)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -228,6 +304,7 @@ class OTPTableViewController: UITableViewController {
                 let updatedOTP = try otp.copyWith(label: newLabel, user: newUser)
                 self.otps[actualIndex] = updatedOTP
                 try OTPLoader.saveOTPs(otps: self.otps)
+                AutoFillIdentities.sync(otps: self.otps)
                 self.filterContentForSearchText(self.searchController.searchBar.text ?? "")
             } catch {
                 Toast(text: "Failed to save changes").show()
@@ -274,6 +351,7 @@ class OTPTableViewController: UITableViewController {
             }
             self.tableView.deleteRows(at: [indexPath], with: .fade)
             try? OTPLoader.saveOTPs(otps: self.otps)
+            AutoFillIdentities.sync(otps: self.otps)
         })
 
         present(alert, animated: true)
@@ -300,6 +378,7 @@ class OTPTableViewController: UITableViewController {
         self.otps = OTPLoader.loadOTPs().sorted(by: { (a, b) -> Bool in
             a.label?.lowercased() ?? "" < b.label?.lowercased() ?? ""
         })
+        AutoFillIdentities.sync(otps: otps)
         filterContentForSearchText(searchController.searchBar.text ?? "")
     }
     
@@ -335,6 +414,36 @@ class OTPTableViewController: UITableViewController {
 
 }
 
+
+extension OTPTableViewController: UIDocumentPickerDelegate {
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let url = urls.first else { return }
+        let accessing = url.startAccessingSecurityScopedResource()
+        defer {
+            if accessing { url.stopAccessingSecurityScopedResource() }
+        }
+        guard let text = try? String(contentsOf: url, encoding: .utf8) else {
+            Toast(text: "Couldn't read backup file").show()
+            return
+        }
+
+        let result = OTPBackup.merge(text, into: OTPLoader.loadOTPs())
+        if result.added > 0 {
+            do {
+                try OTPLoader.saveOTPs(otps: result.merged)
+            } catch {
+                Toast(text: "Failed to save imported codes").show()
+                return
+            }
+            reloadOTPsFromStorage()
+        }
+
+        var summary = "Imported \(result.added)"
+        if result.duplicates > 0 { summary += ", \(result.duplicates) already present" }
+        if result.invalidLines > 0 { summary += ", \(result.invalidLines) unreadable" }
+        Toast(text: summary).show()
+    }
+}
 
 extension OTPTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {

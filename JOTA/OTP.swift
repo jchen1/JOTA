@@ -98,23 +98,31 @@ public class OTP: NSObject,NSCoding {
             }
         }()
         
-        let paths = components.path.split(separator: ":")
-        // remove leading '/'
-        let label: String? = paths.count > 0 ? String(paths[0].suffix(from: paths[0].index(paths[0].startIndex, offsetBy: 1))) : nil;
-        let user: String? = paths.count > 1 ? String(paths[1]) : nil;
-        
         var queryDict = [String:String]()
         if let queryItems = components.queryItems {
             for item in queryItems {
-                queryDict[item.name] = item.value!
+                queryDict[item.name] = item.value ?? ""
             }
+        }
+
+        let path = components.path.hasPrefix("/") ? String(components.path.dropFirst()) : components.path
+        let label: String?
+        let user: String?
+        if let issuer = queryDict["issuer"], !issuer.isEmpty, path.hasPrefix(issuer + ":") {
+            // The issuer parameter disambiguates labels that themselves contain ':'.
+            label = issuer
+            user = String(path.dropFirst(issuer.count + 1))
+        } else {
+            let paths = path.split(separator: ":", omittingEmptySubsequences: false)
+            label = paths.count > 0 ? String(paths[0]) : nil
+            user = paths.count > 1 ? String(paths[1]) : nil
         }
                 
         guard let secret = queryDict["secret"]?.base32DecodedData else {
             throw OTPError.invalidOrMissingSecret
         }
         let digits = Int(queryDict["digits"] ?? "")
-        let timeInterval = Int(queryDict["interval"] ?? "")
+        let timeInterval = Int(queryDict["period"] ?? queryDict["interval"] ?? "")
         let counter = UInt64(queryDict["counter"] ?? "0")
         let algorithm: OTPAlgorithm = try {
             switch queryDict["algorithm"]?.lowercased() ?? "sha1" {

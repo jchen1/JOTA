@@ -47,19 +47,10 @@ class ActionViewController: UITableViewController {
         RunLoop.current.add(timer!, forMode: RunLoop.Mode.default)
     }
     
-    private func canonicalize(str: String?) -> String {
-        let characterSet = CharacterSet(charactersIn: "qwertyuiopasdfghjklzxcvbnm")
-        return str?.lowercased().components(separatedBy: characterSet.inverted).joined() ?? ""
-    }
-    
     private func makeSections(otps: [OTP], host: String?) -> [OTPSection] {
-        let host = canonicalize(str: host) // todo remove special chars...
-        
         var sections = [OTPSection]()
-        let suggestedOTPs = otps.filter({ (otp) in
-            return host.contains(canonicalize(str: otp.label))
-        })
-        
+        let suggestedOTPs = OTPMatcher.suggestions(from: otps, host: host)
+
         if suggestedOTPs.count > 0 {
             sections += [OTPSection(index: sections.count, heading: "Suggestions", otps: suggestedOTPs)]
         }
@@ -98,9 +89,10 @@ class ActionViewController: UITableViewController {
         cell.otpLabelLabel?.text = otp.label ?? ""
         // todo handle HOTP...
         cell.userLabel?.text = otp.user
-        cell.otpCodeLabel?.text = try! otp.generate()
-        
-        let timeLeft = 30 - (Int64(Date().timeIntervalSince1970) % 30)
+        cell.otpCodeLabel?.text = (try? otp.generate()) ?? "------"
+
+        let period = Int64(otp.timeInterval ?? 30)
+        let timeLeft = period - (Int64(Date().timeIntervalSince1970) % period)
         if (timeLeft <= 5 && otp.type() == .TOTP) {
             cell.otpCodeLabel?.textColor = UIColor.red
         } else {
@@ -110,7 +102,7 @@ class ActionViewController: UITableViewController {
                 cell.otpCodeLabel?.textColor = UIColor.black
             }
         }
-        cell.timeLeftLabel?.text = String(timeLeft)
+        cell.timeLeftLabel?.text = otp.type() == .TOTP ? String(timeLeft) : ""
         
         return cell
     }

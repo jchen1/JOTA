@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BE9AE8A6F61F2CD131F4E03 /* OTPCredentialProvider.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D978A24AB54AD8163781349F /* OTPCredentialProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0E6598975D5F632693F0638B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE23C5FF4D2A15E5DE77BAE1 /* Foundation.framework */; };
 		1F35AD5F230E074F000535F5 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4D890230DE02700701EB8 /* OTP.swift */; };
 		1F35AD63230E1C8A000535F5 /* OTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD62230E1C8A000535F5 /* OTPLoader.swift */; };
 		1F35AD64230E1D5D000535F5 /* OTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD62230E1C8A000535F5 /* OTPLoader.swift */; };
@@ -26,17 +28,30 @@
 		1F816233230DB89700DF9578 /* OTPAutoFill.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1F816227230DB89700DF9578 /* OTPAutoFill.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1F816239230DBA3700DF9578 /* OTPAutoFill.js in Resources */ = {isa = PBXBuildFile; fileRef = 1F816238230DBA3700DF9578 /* OTPAutoFill.js */; };
 		1FE4D891230DE02700701EB8 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4D890230DE02700701EB8 /* OTP.swift */; };
+		390E51E746F8DF51B201A0C4 /* AutoFillLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE230E94BDFCDC932E4D438 /* AutoFillLock.swift */; };
+		4A9FB6E74A567B8B81D0E719 /* OTPMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB5D992993292D91F53D52 /* OTPMatcher.swift */; };
 		4BA1C2BE256A6D783E373D89 /* Pods_OTPAutoFill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFE03E4DC62F56688C82627 /* Pods_OTPAutoFill.framework */; };
+		5E1537358FEC5599D12580FE /* AutoFillLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE230E94BDFCDC932E4D438 /* AutoFillLock.swift */; };
+		5E7828AC3299916033F2F19D /* AutoFillIdentities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2948C13E0AB8956CAE81A56E /* AutoFillIdentities.swift */; };
+		6129E348DE121BF1A2183C6F /* OTPMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB5D992993292D91F53D52 /* OTPMatcher.swift */; };
 		6303D6A0F51E8DD8A682F027 /* Pods_JOTAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD88D14E60F5B4DC6B49DC07 /* Pods_JOTAUITests.framework */; };
 		661A97B96E6DB88C107E6EE2 /* Pods_JOTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4CC6A538643CC117A7D912 /* Pods_JOTA.framework */; };
+		771E64101BB12755A7374151 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA284369E1654DA01DA8ED90 /* SceneDelegate.swift */; };
+		7F3A78A2071FBEA9041E9548 /* OTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD62230E1C8A000535F5 /* OTPLoader.swift */; };
 		8729C6E026C453B3006970C9 /* JOTA_macOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8729C6DF26C453B3006970C9 /* JOTA_macOSApp.swift */; };
 		8729C6E226C453B3006970C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8729C6E126C453B3006970C9 /* ContentView.swift */; };
 		8729C6E426C453B4006970C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8729C6E326C453B4006970C9 /* Assets.xcassets */; };
 		8729C6E726C453B4006970C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8729C6E626C453B4006970C9 /* Preview Assets.xcassets */; };
 		8729C6ED26C45698006970C9 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4D890230DE02700701EB8 /* OTP.swift */; };
 		8729C6EE26C4569A006970C9 /* OTPLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35AD62230E1C8A000535F5 /* OTPLoader.swift */; };
+		875422C09888180AD2CF10A1 /* AutoFillIdentities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2948C13E0AB8956CAE81A56E /* AutoFillIdentities.swift */; };
 		8F1A6273DCE126277CE7EAE2 /* Pods_JOTATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F668536B714F23A65C91BF /* Pods_JOTATests.framework */; };
+		952B94ADA85D5A176B8251AD /* OTPBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFAD72C55ED0BC1054FC895 /* OTPBackup.swift */; };
+		95D07DD01DF9A5BBF1D1BFD9 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4D890230DE02700701EB8 /* OTP.swift */; };
+		96E5850964F8645FA6C95098 /* Pods_OTPCredentialProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2DA46D6D3D8C6517B7D4C3 /* Pods_OTPCredentialProvider.framework */; };
 		C5E2CF9BFBD098F1A19CE77E /* Pods_JOTA_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB09DA95E4E57E643DB42FE4 /* Pods_JOTA_macOS.framework */; };
+		C7989F885B608038B754B4E9 /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6AC0D11FFB644C9E7FAAD5 /* CredentialProviderViewController.swift */; };
+		D6F310DDA0F94FCD90F28754 /* OTPMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB5D992993292D91F53D52 /* OTPMatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +76,13 @@
 			remoteGlobalIDString = 1F816226230DB89700DF9578;
 			remoteInfo = OTPAutoFill;
 		};
+		222672365B8688E1E5EC0277 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F8161EA230DB6DE00DF9578 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 105714D8D772A2E1958AE31A;
+			remoteInfo = OTPCredentialProvider;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +93,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				1F816233230DB89700DF9578 /* OTPAutoFill.appex in Embed Foundation Extensions */,
+				0BE9AE8A6F61F2CD131F4E03 /* OTPCredentialProvider.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +103,7 @@
 /* Begin PBXFileReference section */
 		05B0B1A756D6772FB4AACB0F /* Pods-JOTA-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTA-macOS.debug.xcconfig"; path = "Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		084EDF0844096FB670C4283E /* Pods-OTPAutoFill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPAutoFill.release.xcconfig"; path = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.release.xcconfig"; sourceTree = "<group>"; };
+		0C23095200D652623D7C83B6 /* OTPCredentialProvider.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = OTPCredentialProvider.entitlements; sourceTree = "<group>"; };
 		0F9F6EE399A790CB4D47F20A /* Pods-JOTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTA.release.xcconfig"; path = "Target Support Files/Pods-JOTA/Pods-JOTA.release.xcconfig"; sourceTree = "<group>"; };
 		1F35AD60230E100C000535F5 /* OTPAutoFill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OTPAutoFill.entitlements; sourceTree = "<group>"; };
 		1F35AD61230E102B000535F5 /* JOTA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JOTA.entitlements; sourceTree = "<group>"; };
@@ -106,10 +130,15 @@
 		1F816230230DB89700DF9578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F816238230DBA3700DF9578 /* OTPAutoFill.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = OTPAutoFill.js; sourceTree = "<group>"; };
 		1FE4D890230DE02700701EB8 /* OTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTP.swift; sourceTree = "<group>"; };
+		2948C13E0AB8956CAE81A56E /* AutoFillIdentities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AutoFillIdentities.swift; sourceTree = "<group>"; };
 		2BFE03E4DC62F56688C82627 /* Pods_OTPAutoFill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPAutoFill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		424F681DE48B1AF7FD89C51E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4362760D270A0CB32B351DAA /* Pods-JOTA-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTA-macOS.release.xcconfig"; path = "Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		4E86F8ADCC1497EBF6B874E1 /* Pods-OTPCredentialProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPCredentialProvider.release.xcconfig"; path = "Target Support Files/Pods-OTPCredentialProvider/Pods-OTPCredentialProvider.release.xcconfig"; sourceTree = "<group>"; };
 		57FDC54AA351157D630A5297 /* Pods-JOTAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTAUITests.release.xcconfig"; path = "Target Support Files/Pods-JOTAUITests/Pods-JOTAUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5F2DA46D6D3D8C6517B7D4C3 /* Pods_OTPCredentialProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPCredentialProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B4CC6A538643CC117A7D912 /* Pods_JOTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JOTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6AC0D11FFB644C9E7FAAD5 /* CredentialProviderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CredentialProviderViewController.swift; sourceTree = "<group>"; };
 		6E1E5C8688F9AC32989C3895 /* Pods-ya2FATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ya2FATests.release.xcconfig"; path = "Target Support Files/Pods-ya2FATests/Pods-ya2FATests.release.xcconfig"; sourceTree = "<group>"; };
 		6FBA3ED8305AEDECBC1E4DCA /* Pods-OTPAutoFill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPAutoFill.debug.xcconfig"; path = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.debug.xcconfig"; sourceTree = "<group>"; };
 		72B419E1C141FAE759EB5AD6 /* Pods-ya2FA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ya2FA.debug.xcconfig"; path = "Target Support Files/Pods-ya2FA/Pods-ya2FA.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,9 +155,16 @@
 		AF66DF6161D92D796B02BE1E /* Pods-JOTAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTAUITests.debug.xcconfig"; path = "Target Support Files/Pods-JOTAUITests/Pods-JOTAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2AAA3A3395CF0372E54CA1B /* Pods-JOTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTA.debug.xcconfig"; path = "Target Support Files/Pods-JOTA/Pods-JOTA.debug.xcconfig"; sourceTree = "<group>"; };
 		B39BA2345BAB38B25A3CB78E /* Pods-JOTATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JOTATests.release.xcconfig"; path = "Target Support Files/Pods-JOTATests/Pods-JOTATests.release.xcconfig"; sourceTree = "<group>"; };
+		BAE230E94BDFCDC932E4D438 /* AutoFillLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AutoFillLock.swift; sourceTree = "<group>"; };
+		BBFAD72C55ED0BC1054FC895 /* OTPBackup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OTPBackup.swift; sourceTree = "<group>"; };
+		BE23C5FF4D2A15E5DE77BAE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CD88D14E60F5B4DC6B49DC07 /* Pods_JOTAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JOTAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBB5D992993292D91F53D52 /* OTPMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OTPMatcher.swift; sourceTree = "<group>"; };
+		D56100A05BC94B4A24C77BFF /* Pods-OTPCredentialProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPCredentialProvider.debug.xcconfig"; path = "Target Support Files/Pods-OTPCredentialProvider/Pods-OTPCredentialProvider.debug.xcconfig"; sourceTree = "<group>"; };
+		D978A24AB54AD8163781349F /* OTPCredentialProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OTPCredentialProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB09DA95E4E57E643DB42FE4 /* Pods_JOTA_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JOTA_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8066916819827C8DA9A15D /* Pods-ya2FAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ya2FAUITests.release.xcconfig"; path = "Target Support Files/Pods-ya2FAUITests/Pods-ya2FAUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EA284369E1654DA01DA8ED90 /* SceneDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F1F668536B714F23A65C91BF /* Pods_JOTATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JOTATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E144DEDB671793E071BE8E /* Pods-ya2FA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ya2FA.release.xcconfig"; path = "Target Support Files/Pods-ya2FA/Pods-ya2FA.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +210,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7BE11B92E679B3DB0EC83B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6598975D5F632693F0638B /* Foundation.framework in Frameworks */,
+				96E5850964F8645FA6C95098 /* Pods_OTPCredentialProvider.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -185,6 +230,7 @@
 				1F816214230DB6DF00DF9578 /* JOTAUITests */,
 				1F816228230DB89700DF9578 /* OTPAutoFill */,
 				8729C6DE26C453B3006970C9 /* JOTA-macOS */,
+				31CAA7E40DCB75AEAF23DAFE /* OTPCredentialProvider */,
 				1F8161F3230DB6DE00DF9578 /* Products */,
 				808477CBB01654BB26ED8006 /* Pods */,
 				A0B13C8EE61F1320319FBB8D /* Frameworks */,
@@ -199,6 +245,7 @@
 				1F816211230DB6DF00DF9578 /* JOTAUITests.xctest */,
 				1F816227230DB89700DF9578 /* OTPAutoFill.appex */,
 				8729C6DD26C453B3006970C9 /* JOTA-macOS.app */,
+				D978A24AB54AD8163781349F /* OTPCredentialProvider.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +264,11 @@
 				1FE4D890230DE02700701EB8 /* OTP.swift */,
 				1F35AD62230E1C8A000535F5 /* OTPLoader.swift */,
 				1F35AD68230F8DC1000535F5 /* OTPTableViewController.swift */,
+				CEBB5D992993292D91F53D52 /* OTPMatcher.swift */,
+				BAE230E94BDFCDC932E4D438 /* AutoFillLock.swift */,
+				2948C13E0AB8956CAE81A56E /* AutoFillIdentities.swift */,
+				BBFAD72C55ED0BC1054FC895 /* OTPBackup.swift */,
+				EA284369E1654DA01DA8ED90 /* SceneDelegate.swift */,
 			);
 			path = JOTA;
 			sourceTree = "<group>";
@@ -252,6 +304,17 @@
 			path = OTPAutoFill;
 			sourceTree = "<group>";
 		};
+		31CAA7E40DCB75AEAF23DAFE /* OTPCredentialProvider */ = {
+			isa = PBXGroup;
+			children = (
+				6B6AC0D11FFB644C9E7FAAD5 /* CredentialProviderViewController.swift */,
+				424F681DE48B1AF7FD89C51E /* Info.plist */,
+				0C23095200D652623D7C83B6 /* OTPCredentialProvider.entitlements */,
+			);
+			name = OTPCredentialProvider;
+			path = OTPCredentialProvider;
+			sourceTree = "<group>";
+		};
 		808477CBB01654BB26ED8006 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +334,8 @@
 				57FDC54AA351157D630A5297 /* Pods-JOTAUITests.release.xcconfig */,
 				05B0B1A756D6772FB4AACB0F /* Pods-JOTA-macOS.debug.xcconfig */,
 				4362760D270A0CB32B351DAA /* Pods-JOTA-macOS.release.xcconfig */,
+				4E86F8ADCC1497EBF6B874E1 /* Pods-OTPCredentialProvider.release.xcconfig */,
+				D56100A05BC94B4A24C77BFF /* Pods-OTPCredentialProvider.debug.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -296,6 +361,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		939C7F017D9734A275DF6DAD /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BE23C5FF4D2A15E5DE77BAE1 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		A0B13C8EE61F1320319FBB8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +377,8 @@
 				F1F668536B714F23A65C91BF /* Pods_JOTATests.framework */,
 				CD88D14E60F5B4DC6B49DC07 /* Pods_JOTAUITests.framework */,
 				DB09DA95E4E57E643DB42FE4 /* Pods_JOTA_macOS.framework */,
+				939C7F017D9734A275DF6DAD /* iOS */,
+				5F2DA46D6D3D8C6517B7D4C3 /* Pods_OTPCredentialProvider.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -311,6 +386,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		105714D8D772A2E1958AE31A /* OTPCredentialProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13BE76FF9E75583C7D1C735A /* Build configuration list for PBXNativeTarget "OTPCredentialProvider" */;
+			buildPhases = (
+				134023036CFF12EE09616A57 /* [CP] Check Pods Manifest.lock */,
+				BA063ACCE00A120F6D759CCD /* Sources */,
+				F7BE11B92E679B3DB0EC83B4 /* Frameworks */,
+				29E17B75DFEAC45D732B581B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTPCredentialProvider;
+			productName = OTPCredentialProvider;
+			productReference = D978A24AB54AD8163781349F /* OTPCredentialProvider.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		1F8161F1230DB6DE00DF9578 /* JOTA */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F81621A230DB6DF00DF9578 /* Build configuration list for PBXNativeTarget "JOTA" */;
@@ -326,6 +419,7 @@
 			);
 			dependencies = (
 				1F816232230DB89700DF9578 /* PBXTargetDependency */,
+				9335A7BBCF0C7BCC7AE35638 /* PBXTargetDependency */,
 			);
 			name = JOTA;
 			productName = ya2FA;
@@ -468,6 +562,7 @@
 				1F816210230DB6DF00DF9578 /* JOTAUITests */,
 				1F816226230DB89700DF9578 /* OTPAutoFill */,
 				8729C6DC26C453B3006970C9 /* JOTA-macOS */,
+				105714D8D772A2E1958AE31A /* OTPCredentialProvider */,
 			);
 		};
 /* End PBXProject section */
@@ -507,6 +602,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29E17B75DFEAC45D732B581B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8729C6DB26C453B3006970C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,6 +637,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-OTPAutoFill-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		134023036CFF12EE09616A57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OTPCredentialProvider-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -593,13 +717,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -614,13 +734,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JOTA/Pods-JOTA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JOTA/Pods-JOTA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -684,6 +800,11 @@
 				1F35AD732310BB23000535F5 /* ScannerViewController.swift in Sources */,
 				1F8161F6230DB6DE00DF9578 /* AppDelegate.swift in Sources */,
 				1F35AD752310BB23000535F5 /* OTPTableViewCell.swift in Sources */,
+				4A9FB6E74A567B8B81D0E719 /* OTPMatcher.swift in Sources */,
+				390E51E746F8DF51B201A0C4 /* AutoFillLock.swift in Sources */,
+				5E7828AC3299916033F2F19D /* AutoFillIdentities.swift in Sources */,
+				952B94ADA85D5A176B8251AD /* OTPBackup.swift in Sources */,
+				771E64101BB12755A7374151 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,6 +832,7 @@
 				1F35AD5F230E074F000535F5 /* OTP.swift in Sources */,
 				1F81622C230DB89700DF9578 /* ActionViewController.swift in Sources */,
 				1F35AD762310BB23000535F5 /* OTPTableViewCell.swift in Sources */,
+				D6F310DDA0F94FCD90F28754 /* OTPMatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +844,19 @@
 				8729C6ED26C45698006970C9 /* OTP.swift in Sources */,
 				8729C6E226C453B3006970C9 /* ContentView.swift in Sources */,
 				8729C6E026C453B3006970C9 /* JOTA_macOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA063ACCE00A120F6D759CCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7989F885B608038B754B4E9 /* CredentialProviderViewController.swift in Sources */,
+				95D07DD01DF9A5BBF1D1BFD9 /* OTP.swift in Sources */,
+				7F3A78A2071FBEA9041E9548 /* OTPLoader.swift in Sources */,
+				6129E348DE121BF1A2183C6F /* OTPMatcher.swift in Sources */,
+				5E1537358FEC5599D12580FE /* AutoFillLock.swift in Sources */,
+				875422C09888180AD2CF10A1 /* AutoFillIdentities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +877,12 @@
 			isa = PBXTargetDependency;
 			target = 1F816226230DB89700DF9578 /* OTPAutoFill */;
 			targetProxy = 1F816231230DB89700DF9578 /* PBXContainerItemProxy */;
+		};
+		9335A7BBCF0C7BCC7AE35638 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OTPCredentialProvider;
+			target = 105714D8D772A2E1958AE31A /* OTPCredentialProvider */;
+			targetProxy = 222672365B8688E1E5EC0277 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -825,7 +966,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -881,7 +1022,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -902,7 +1043,7 @@
 				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 45A594478C;
 				INFOPLIST_FILE = "$(SRCROOT)/JOTA/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -927,7 +1068,7 @@
 				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 45A594478C;
 				INFOPLIST_FILE = "$(SRCROOT)/JOTA/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1077,6 +1218,34 @@
 			};
 			name = Release;
 		};
+		6CD208896C3C23882CE52DE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D56100A05BC94B4A24C77BFF /* Pods-OTPCredentialProvider.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = OTPCredentialProvider/OTPCredentialProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = 45A594478C;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OTPCredentialProvider/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.7;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.jeffchen.JOTA.OTPCredentialProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		8729C6EB26C453B4006970C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05B0B1A756D6772FB4AACB0F /* Pods-JOTA-macOS.debug.xcconfig */;
@@ -1143,9 +1312,47 @@
 			};
 			name = Release;
 		};
+		EA4B515F38B4DD241A6719E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E86F8ADCC1497EBF6B874E1 /* Pods-OTPCredentialProvider.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = OTPCredentialProvider/OTPCredentialProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = 45A594478C;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OTPCredentialProvider/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.7;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.jeffchen.JOTA.OTPCredentialProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		13BE76FF9E75583C7D1C735A /* Build configuration list for PBXNativeTarget "OTPCredentialProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA4B515F38B4DD241A6719E0 /* Release */,
+				6CD208896C3C23882CE52DE8 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1F8161ED230DB6DE00DF9578 /* Build configuration list for PBXProject "JOTA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
