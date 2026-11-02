@@ -2,7 +2,7 @@
 # platform :ios, '10.0'
 
 DEPLOYMENT_TARGET_IOS = '18.0'
-DEPLOYMENT_TARGET_MACOS = '12.0'
+DEPLOYMENT_TARGET_MACOS = '15.0'
 
 target 'OTPAutoFill' do
   platform :ios, '18.0'
@@ -47,7 +47,7 @@ target 'JOTA' do
 end
 
 target 'JOTA-macOS' do
-  platform :osx, '12.0'
+  platform :osx, '15.0'
     # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -55,6 +55,14 @@ target 'JOTA-macOS' do
   pod 'KeychainAccess'
   pod 'SwiftOTP', '~> 3.0'
   pod 'Introspect'
+end
+
+target 'OTPCredentialProvider-macOS' do
+  platform :osx, '15.0'
+  use_frameworks!
+
+  pod 'KeychainAccess'
+  pod 'SwiftOTP', '~> 3.0'
 end
 
 post_install do |installer|

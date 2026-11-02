@@ -181,12 +181,8 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
         }
     }
 
-    /// OTPs previously filled on this site win; otherwise fall back to label matching.
     private func suggestions(for hosts: [String]) -> [OTP] {
-        var seen = Set<String>()
-        let learned = hosts.flatMap { AutoFillIdentities.otps(learnedFor: $0, in: otps) }
-        let candidates = learned.isEmpty ? hosts.flatMap { OTPMatcher.suggestions(from: otps, host: $0) } : learned
-        return candidates.filter { seen.insert($0.autofillRecordID).inserted }
+        AutoFillIdentities.suggestions(for: hosts, in: otps)
     }
 
     private func showPicker(hosts: [String]) {

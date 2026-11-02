@@ -11,15 +11,15 @@
 		07EDC54264D0D7DF86E14FA75E89B4A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0BF1736BADBB1A9142615AA03EA4CC /* Foundation.framework */; };
 		1439E0593139A6A9E9F6740DB0570281 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C0A67953ECD873B7D955BEDEFC0BE /* Toast.swift */; };
 		191722B8FC667351ABA3400612BAFBB0 /* KeychainAccess-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0753481431E6073CFEC8D3745A31C53E /* KeychainAccess-macOS-dummy.m */; };
-		1AAD67CD63C3EEF0AB7C3E0CCFCA9C67 /* Pods-OTPCredentialProvider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D25D435B5C2EB57E1DF4184047DAD1CE /* Pods-OTPCredentialProvider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AAD67CD63C3EEF0AB7C3E0CCFCA9C67 /* Pods-OTPCredentialProvider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BEFCC5D02324EB5E084A0A1B81045CC /* Pods-OTPCredentialProvider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F500E82C8089939D5BAB1F8BB9344AC /* TOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018600BB14FB8453B5A46DC753E1F663 /* TOTP.swift */; };
 		20D47172FDB1E46172EBA25740C2279F /* SwiftOTP.h in Headers */ = {isa = PBXBuildFile; fileRef = A759B30BC203413979B685AB65F1A61C /* SwiftOTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2680D102F0CB43ED40D8E394E7202341 /* OTPAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA0D3F67B070B3A6191D0E844F4FFD3 /* OTPAlgorithm.swift */; };
 		2734AD6462418EC67F93CE97852A04ED /* UInt64+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B29CA27A622B890E7F74BE1056FE7E /* UInt64+Data.swift */; };
-		290B0D2AAA0AB53F8EA0C49939554AF0 /* Pods-OTPAutoFill-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8775205683FF486EB36CDD0B3ECFE770 /* Pods-OTPAutoFill-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		317CD521F675F5C460CA847A244F547F /* Pods-JOTATests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5267AB1201734D97A9FDB891CBF408F /* Pods-JOTATests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		290B0D2AAA0AB53F8EA0C49939554AF0 /* Pods-OTPAutoFill-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E7553179C2BC7990F324E33689CAF14 /* Pods-OTPAutoFill-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		317CD521F675F5C460CA847A244F547F /* Pods-JOTATests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A0397C78AB15BF930E329CB09C5F800 /* Pods-JOTATests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36BA8E4D5AAD10963EF4A056D33673FF /* HOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E693BB1A07E1499E1B9280C7EC76FCAB /* HOTP.swift */; };
-		3727343BE118CCF4AD3BCCA8182D4936 /* Pods-JOTA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D86E590BE2F6795A2C8A431EB7D739E3 /* Pods-JOTA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3727343BE118CCF4AD3BCCA8182D4936 /* Pods-JOTA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B78780C7E94C2CED3C668858E4455DD /* Pods-JOTA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A071E13C140973A350B43D50348D66E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0BF1736BADBB1A9142615AA03EA4CC /* Foundation.framework */; };
 		3E28AC401FD015D034036FF1FD15EA90 /* Introspect-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 125B84F8F25135C1A2E2A14378737DA9 /* Introspect-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E61B9F591F31FDEA8B9DD23685C41D8 /* SwiftOTP-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB33EE73FE7D9CBB184C17D316642B4 /* SwiftOTP-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,16 +29,16 @@
 		50C7199E25AB254D5411AAB112B2897D /* SwiftOTP-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 659528686AB05BBA0BA392C2F2C7429D /* SwiftOTP-macOS-dummy.m */; };
 		53A84D6994EE61540D11284D5D53EED7 /* ToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D192FCFD969501CF97D0BF9B6910729 /* ToastWindow.swift */; };
 		542686358CD49742678404D857C12ADC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0BF1736BADBB1A9142615AA03EA4CC /* Foundation.framework */; };
-		54F855C13D0E74C4B3D29C190EFF829B /* Pods-JOTA-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC3FB25034DB491EE056D74926CD248 /* Pods-JOTA-macOS-dummy.m */; };
+		54F855C13D0E74C4B3D29C190EFF829B /* Pods-JOTA-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEA1299C3122932895B27D813F66271 /* Pods-JOTA-macOS-dummy.m */; };
 		5BFA932D83852F0D258853B246A0CD5E /* Toaster-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6FC990B8866FDBD4CFF9A7C660E52A /* Toaster-dummy.m */; };
 		5C0F70D65EA2502E7C122254E9B3988F /* HOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E693BB1A07E1499E1B9280C7EC76FCAB /* HOTP.swift */; };
 		5DB8589D6F838D1F889B63D717280A32 /* Toaster-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CECAFBE73F57DAAF9563B9EBA0AB7CBD /* Toaster-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65117025324BC8F74C6C6F92FA07B888 /* Pods-JOTA-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B036A86A5095D45C86A36F48401246B /* Pods-JOTA-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		661E4551520DBB0F697570AA30089E4A /* Pods-JOTATests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A58A16E07C5A43D8403BD8528B4A7BCC /* Pods-JOTATests-dummy.m */; };
+		65117025324BC8F74C6C6F92FA07B888 /* Pods-JOTA-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC7B9A4F79489D8483222D08941B4C91 /* Pods-JOTA-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		661E4551520DBB0F697570AA30089E4A /* Pods-JOTATests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 669F4179CC7D8CCA95696F0CA1D728BB /* Pods-JOTATests-dummy.m */; };
 		6645B6CB92BE667A7B61DDB1742CF5C7 /* UIKitIntrospectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D70B36357BC62A6CBF7F23D79156E74 /* UIKitIntrospectionViewController.swift */; };
 		7534D2449B6F185FEE11ED95D66708F0 /* KeychainAccess-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24D223AAC13DDD98A29112153CA02B6B /* KeychainAccess-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		788A8B2AABC3810D3EE5C73D674E12CD /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D9CC9D8383D14C1AB7C2A0468E67B /* Generator.swift */; };
-		79F00B1E6F7644BE4BA6DCE816CA0E54 /* Pods-JOTAUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F58DE55EAC408559458D7C450DBE99F /* Pods-JOTAUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79F00B1E6F7644BE4BA6DCE816CA0E54 /* Pods-JOTAUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BEBB7F186AB23038A53825C71C378597 /* Pods-JOTAUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7CCF610B4399DB8A54AFF72A13F0F56F /* UIApplication+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AD0F76D52DD24287B052CA88D84C45 /* UIApplication+Load.swift */; };
 		8639E62F723020A4D69A9A8D778D6606 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA2A06DAB4E47A15B477498ACBFB68 /* StringExtension.swift */; };
 		86CF44AC566BB21CB695C840DBF1F858 /* UInt64+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B29CA27A622B890E7F74BE1056FE7E /* UInt64+Data.swift */; };
@@ -48,12 +48,14 @@
 		8EDFECE9A1F9C88DB8526084FB927F90 /* Introspect-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EC987FE0437792668FE89580860ABA /* Introspect-dummy.m */; };
 		8F70DBED24694C3CBB8C867A441ECA87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58292E11C27BB9A3ECCDBABC8053949D /* UIKit.framework */; };
 		94BB746A0F301D189BB893AB11D78783 /* SwiftOTP.h in Headers */ = {isa = PBXBuildFile; fileRef = A759B30BC203413979B685AB65F1A61C /* SwiftOTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		958497EBA7AC00E83F677028F9C62FBC /* Pods-OTPCredentialProvider-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E24EF5DC14C11A54600EDA6A6145D5E /* Pods-OTPCredentialProvider-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96C732AE031D0AFF72BA0D2F11EE4E07 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA142A5DBC37AC290302F7214AD94467 /* Cocoa.framework */; };
-		9FEB1A4AC68675D37E05C192D45E6D56 /* Pods-JOTAUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A50B6D7E57A590AE80D6A56CDB579A /* Pods-JOTAUITests-dummy.m */; };
+		9FEB1A4AC68675D37E05C192D45E6D56 /* Pods-JOTAUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4353AED4F293BECEB6D7C1E7F8BB1F /* Pods-JOTAUITests-dummy.m */; };
 		A17301927E5DD1C1D88D9B08CF0856E1 /* ToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449C3F3EA509BE7DB5EDAAD25531C41 /* ToastCenter.swift */; };
 		A2C73EA441592E4E9405DBB5FEBECF6F /* KeychainAccess-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB7CED814C64E01A78525086B510BE /* KeychainAccess-iOS-dummy.m */; };
 		A58B45ABB794A81DE94E6D7B5939EE72 /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B593B4DD92F00B59D4F5C10AED85AC /* Base32.swift */; };
-		ABD96A73E86946CD23BFE8CB624A7E19 /* Pods-OTPCredentialProvider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0334A0234617663588FADCE36250145F /* Pods-OTPCredentialProvider-dummy.m */; };
+		ABD96A73E86946CD23BFE8CB624A7E19 /* Pods-OTPCredentialProvider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1BCA8C33D91773A843A193E20DFD96 /* Pods-OTPCredentialProvider-dummy.m */; };
+		ABF6D2AB965F47BB1D59CCD5E4B22A8A /* Pods-OTPCredentialProvider-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 382F43AEFA2E374218FD41EF4493590B /* Pods-OTPCredentialProvider-macOS-dummy.m */; };
 		B426E2E9D800A63055BF539804E19DA3 /* Data+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6576130D833B5282829878FF44BB47 /* Data+Utilities.swift */; };
 		BE56A66E948E2EF8D13B1BB22C10332E /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B593B4DD92F00B59D4F5C10AED85AC /* Base32.swift */; };
 		C043940E5ACF7C2AE7FE60A8C3126345 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0BF1736BADBB1A9142615AA03EA4CC /* Foundation.framework */; };
@@ -68,10 +70,11 @@
 		DE48ECE1A9B0D4AC9874F27F477D2C5E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA2A06DAB4E47A15B477498ACBFB68 /* StringExtension.swift */; };
 		DF10A5C461388D389D1B85090E21C5D3 /* Introspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CFE93EE2E98DA5D9AEA184C8DB35A /* Introspect.swift */; };
 		E0646ECBA0AE8358C0265B124D56E6C2 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60D9CC9D8383D14C1AB7C2A0468E67B /* Generator.swift */; };
+		E08D51F7AF7876649E435135BBE2D3D7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA142A5DBC37AC290302F7214AD94467 /* Cocoa.framework */; };
 		E16B3E77CA07045FAFB08B3FA3F13DE0 /* TOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018600BB14FB8453B5A46DC753E1F663 /* TOTP.swift */; };
-		E4765AD78DA9DD35FCAE9CE4CD1A5E2D /* Pods-OTPAutoFill-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DE0F5471BEB18A29722EA42CB125F2 /* Pods-OTPAutoFill-dummy.m */; };
+		E4765AD78DA9DD35FCAE9CE4CD1A5E2D /* Pods-OTPAutoFill-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADED18C9F9975C5874D51EB7D34DE418 /* Pods-OTPAutoFill-dummy.m */; };
 		F0288FCA35893DE3C0DD37D4AEA62A78 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010051AE53EA969C92FB1EE909CD28C0 /* ToastView.swift */; };
-		F29FCBDB649301D80C9562DA7D37F93B /* Pods-JOTA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D4A5BFE499346CB0685C0CA466BFC /* Pods-JOTA-dummy.m */; };
+		F29FCBDB649301D80C9562DA7D37F93B /* Pods-JOTA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA91F5419F7108173EA420135F22CFC /* Pods-JOTA-dummy.m */; };
 		F734D36910FFA503C02FC316009A8D91 /* OTPAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA0D3F67B070B3A6191D0E844F4FFD3 /* OTPAlgorithm.swift */; };
 		F89C04BA76AD24BAFB1984C2F2DD5242 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA142A5DBC37AC290302F7214AD94467 /* Cocoa.framework */; };
 		FA6FA70050CEA5C8A79096E641FB7A6E /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65E9683209BF273950D8E3B6B3C018C /* ViewExtensions.swift */; };
@@ -80,6 +83,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		03197C21F829CEB278ECFB22655488A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DFD96858AE53EAD6C9D8FEC84E2D447;
+			remoteInfo = "SwiftOTP-macOS";
+		};
 		0BCFD74AC9842147FF2D2F4081F0B156 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -100,6 +110,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7DB03B74CC4B954A8ABEF95C6B6DC3D8;
 			remoteInfo = "KeychainAccess-iOS";
+		};
+		7C17A48DBEA4CF5A36755CE2962CD302 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C09BE69C6CD34FD7823532D303EAF8C;
+			remoteInfo = "KeychainAccess-macOS";
 		};
 		85FDC806BEC6ECB6F95E8DA75F7362A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -169,135 +186,144 @@
 /* Begin PBXFileReference section */
 		010051AE53EA969C92FB1EE909CD28C0 /* ToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastView.swift; path = Sources/ToastView.swift; sourceTree = "<group>"; };
 		018600BB14FB8453B5A46DC753E1F663 /* TOTP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TOTP.swift; path = SwiftOTP/TOTP.swift; sourceTree = "<group>"; };
+		0292C87A7E9535E5AE984E3C17DFD563 /* Pods-OTPCredentialProvider-macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPCredentialProvider-macOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		029894E2CF12C865363C94409D2D47D2 /* Introspect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Introspect.debug.xcconfig; sourceTree = "<group>"; };
 		02EE45CF04F8F5EA7F78C62D92C947D0 /* SwiftOTP-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SwiftOTP-iOS.modulemap"; sourceTree = "<group>"; };
-		0334A0234617663588FADCE36250145F /* Pods-OTPCredentialProvider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTPCredentialProvider-dummy.m"; sourceTree = "<group>"; };
 		0350CFD39EBC95C769DCF90AAEBD53B2 /* SwiftOTP-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftOTP-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		041F413BF839AF454D44DF3E9BEDC436 /* Pods-OTPCredentialProvider-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPCredentialProvider-acknowledgements.plist"; sourceTree = "<group>"; };
 		0508F1337BAD063B5CC912B1C25E2BF9 /* Pods-JOTA */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-JOTA"; path = Pods_JOTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		058BBA2F494D993CC3292EF27D891C15 /* KeychainAccess-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "KeychainAccess-macOS.modulemap"; path = "../KeychainAccess-macOS/KeychainAccess-macOS.modulemap"; sourceTree = "<group>"; };
 		0753481431E6073CFEC8D3745A31C53E /* KeychainAccess-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "KeychainAccess-macOS-dummy.m"; path = "../KeychainAccess-macOS/KeychainAccess-macOS-dummy.m"; sourceTree = "<group>"; };
-		0F58DE55EAC408559458D7C450DBE99F /* Pods-JOTAUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JOTAUITests-umbrella.h"; sourceTree = "<group>"; };
+		0B5DEB27FC75C287C866541D6B94193F /* Pods-JOTA-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTA-Info.plist"; sourceTree = "<group>"; };
 		125B84F8F25135C1A2E2A14378737DA9 /* Introspect-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Introspect-umbrella.h"; sourceTree = "<group>"; };
 		13CC7263D21C92B046DD238FE3DDE528 /* Introspect-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Introspect-Info.plist"; sourceTree = "<group>"; };
 		13DFAF9C671888BFC5A269126E32A201 /* Introspect-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Introspect-prefix.pch"; sourceTree = "<group>"; };
-		1484EC070A9B90910FFD42E8C1B9C60C /* Pods-JOTA-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTA-acknowledgements.plist"; sourceTree = "<group>"; };
-		1589D3D52B31E4C4AF89A6A7CBD0E4C2 /* Pods-JOTATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTATests.debug.xcconfig"; sourceTree = "<group>"; };
-		1607EE4BBBE8BFC769AC5428D599CE5F /* Pods-JOTATests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JOTATests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		16DE0F5471BEB18A29722EA42CB125F2 /* Pods-OTPAutoFill-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTPAutoFill-dummy.m"; sourceTree = "<group>"; };
+		15D476EED5BCD58341772DED49677572 /* Pods-OTPCredentialProvider-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPCredentialProvider-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		166194DF1CA06DD840B79F2D70A6F661 /* Pods-JOTA-macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTA-macOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		1735A5C55D210E31CD38C5C530C7F1A4 /* Pods-OTPAutoFill-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTPAutoFill-acknowledgements.markdown"; sourceTree = "<group>"; };
+		17AEFF24D1001B2AD68F260B9E31E068 /* Pods-OTPCredentialProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPCredentialProvider.release.xcconfig"; sourceTree = "<group>"; };
+		1900E3707209E0BDFE22A64083355AF2 /* Pods-JOTA-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTA-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		19993A77F1AD8D391D209AEB939247DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		1C77473B7EBC114F7CC1982BD7AB85BD /* Pods-OTPCredentialProvider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTPCredentialProvider.modulemap"; sourceTree = "<group>"; };
-		1FE95FF961EB036B7392E921696FFD74 /* Pods-JOTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTA.release.xcconfig"; sourceTree = "<group>"; };
+		1A0397C78AB15BF930E329CB09C5F800 /* Pods-JOTATests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JOTATests-umbrella.h"; sourceTree = "<group>"; };
 		21B76E5801817865597BDB77EC4CAEE6 /* SwiftOTP-macOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "SwiftOTP-macOS"; path = SwiftOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		220754C91DBD978DB60F8531E4E9AF7B /* Pods-JOTA-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTA-Info.plist"; sourceTree = "<group>"; };
-		23CD48C136D626EB012FCCF05A3C0A48 /* Pods-OTPAutoFill-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTPAutoFill-acknowledgements.markdown"; sourceTree = "<group>"; };
-		243FECB258A4D6570F5A794B49E9782C /* Pods-JOTA-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTA-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		24D223AAC13DDD98A29112153CA02B6B /* KeychainAccess-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "KeychainAccess-macOS-umbrella.h"; path = "../KeychainAccess-macOS/KeychainAccess-macOS-umbrella.h"; sourceTree = "<group>"; };
-		252968712867ACABDEBCF94296A483F8 /* Pods-OTPAutoFill-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPAutoFill-acknowledgements.plist"; sourceTree = "<group>"; };
-		287797D8B85F9DD18A3CABF5F7BA40E7 /* Pods-JOTA-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JOTA-frameworks.sh"; sourceTree = "<group>"; };
+		27D96F1A28E50EE652C55515D66C3399 /* Pods-JOTA.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JOTA.modulemap"; sourceTree = "<group>"; };
 		2A6FC990B8866FDBD4CFF9A7C660E52A /* Toaster-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toaster-dummy.m"; sourceTree = "<group>"; };
 		2A9C5F35B9143F439B5E41A56426696A /* SwiftOTP-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOTP-iOS-umbrella.h"; sourceTree = "<group>"; };
-		346881C1EF2DDCDAB9EE27AB29458C77 /* Pods-OTPCredentialProvider-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPCredentialProvider-acknowledgements.plist"; sourceTree = "<group>"; };
-		3AE2161D818F1F3AF3F7512FCE630B6A /* Pods-JOTAUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTAUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		3D1B0BB2A42D4FD1B13CD899B2CDE3F0 /* Pods-JOTA-macOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTA-macOS-Info.plist"; sourceTree = "<group>"; };
+		2B398507752CE4966CC56008545AFAB1 /* Pods-JOTAUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTAUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2B4353AED4F293BECEB6D7C1E7F8BB1F /* Pods-JOTAUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JOTAUITests-dummy.m"; sourceTree = "<group>"; };
+		2CBDAD290C623073CD2AB94D39295196 /* Pods-OTPCredentialProvider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTPCredentialProvider.modulemap"; sourceTree = "<group>"; };
+		382F43AEFA2E374218FD41EF4493590B /* Pods-OTPCredentialProvider-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTPCredentialProvider-macOS-dummy.m"; sourceTree = "<group>"; };
+		3BC3ECB02B3F9948EC6A9C4F848F4A10 /* Pods-JOTAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTAUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3D4D3D9767004D93B9AE3A66434F39B3 /* Pods-JOTATests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JOTATests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4258420E36F44AC7534545E88542D232 /* SwiftOTP-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SwiftOTP-macOS.release.xcconfig"; path = "../SwiftOTP-macOS/SwiftOTP-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		4449C3F3EA509BE7DB5EDAAD25531C41 /* ToastCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastCenter.swift; path = Sources/ToastCenter.swift; sourceTree = "<group>"; };
 		45EC987FE0437792668FE89580860ABA /* Introspect-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Introspect-dummy.m"; sourceTree = "<group>"; };
+		468A1912A50A5CE43B74F4E523834D2C /* Pods-JOTA-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JOTA-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4746E338CAC36B47F998CB05C4CB6D1B /* Pods-OTPAutoFill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPAutoFill.debug.xcconfig"; sourceTree = "<group>"; };
 		4B0BF1736BADBB1A9142615AA03EA4CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4C7312358D579B68DDB28BC06626C76D /* Pods-OTPAutoFill.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTPAutoFill.modulemap"; sourceTree = "<group>"; };
+		4CC5CAB8B0088953748590B778E79AF0 /* Pods-JOTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTA.release.xcconfig"; sourceTree = "<group>"; };
 		4D70B36357BC62A6CBF7F23D79156E74 /* UIKitIntrospectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIKitIntrospectionViewController.swift; path = Introspect/UIKitIntrospectionViewController.swift; sourceTree = "<group>"; };
-		56886F2CB6FC178C3BA1652605C88552 /* Pods-JOTATests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTATests-acknowledgements.plist"; sourceTree = "<group>"; };
+		51F9DC339BA3281F7A6237A9D6A9CB8B /* Pods-JOTA-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTA-acknowledgements.plist"; sourceTree = "<group>"; };
 		58292E11C27BB9A3ECCDBABC8053949D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		59559CBA4853798DAA46DACFE011D795 /* AppKitIntrospectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppKitIntrospectionView.swift; path = Introspect/AppKitIntrospectionView.swift; sourceTree = "<group>"; };
-		5B036A86A5095D45C86A36F48401246B /* Pods-JOTA-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JOTA-macOS-umbrella.h"; sourceTree = "<group>"; };
 		5CB022D09DF947404FD8B997B4BEF160 /* SwiftOTP-macOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "SwiftOTP-macOS-Info.plist"; path = "../SwiftOTP-macOS/SwiftOTP-macOS-Info.plist"; sourceTree = "<group>"; };
 		5EA0D3F67B070B3A6191D0E844F4FFD3 /* OTPAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OTPAlgorithm.swift; path = SwiftOTP/OTPAlgorithm.swift; sourceTree = "<group>"; };
 		5F7AF41BF6170A4F2EC7325655B755FD /* SwiftOTP-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SwiftOTP-macOS.modulemap"; path = "../SwiftOTP-macOS/SwiftOTP-macOS.modulemap"; sourceTree = "<group>"; };
 		60890ADA2A8E1DB00408918D4ECDFF14 /* KeychainAccess-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "KeychainAccess-macOS.debug.xcconfig"; path = "../KeychainAccess-macOS/KeychainAccess-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		63278BBB9F7D5347198C54D57876DC1E /* Pods-JOTAUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTAUITests-Info.plist"; sourceTree = "<group>"; };
+		6568E506F904A37E3694B91C217D3818 /* Pods-OTPCredentialProvider-macOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-OTPCredentialProvider-macOS"; path = Pods_OTPCredentialProvider_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		659528686AB05BBA0BA392C2F2C7429D /* SwiftOTP-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SwiftOTP-macOS-dummy.m"; path = "../SwiftOTP-macOS/SwiftOTP-macOS-dummy.m"; sourceTree = "<group>"; };
-		6654AC1C63F2EFE64E9CBD88F76825DF /* Pods-JOTAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTAUITests.release.xcconfig"; sourceTree = "<group>"; };
+		669F4179CC7D8CCA95696F0CA1D728BB /* Pods-JOTATests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JOTATests-dummy.m"; sourceTree = "<group>"; };
+		67B1FD537D6D39257B3CF21B285691C2 /* Pods-JOTATests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JOTATests.modulemap"; sourceTree = "<group>"; };
 		67E3F50C8B05CEFEA228DDBAEF6B483E /* Toaster.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Toaster.modulemap; sourceTree = "<group>"; };
 		6B6E63B67A0F97906751D9F538950D61 /* KeychainAccess-macOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "KeychainAccess-macOS-Info.plist"; path = "../KeychainAccess-macOS/KeychainAccess-macOS-Info.plist"; sourceTree = "<group>"; };
+		6BEFCC5D02324EB5E084A0A1B81045CC /* Pods-OTPCredentialProvider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTPCredentialProvider-umbrella.h"; sourceTree = "<group>"; };
 		6D89A7B00761B1CCBA3A73E90FCA7877 /* SwiftOTP-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SwiftOTP-macOS-prefix.pch"; path = "../SwiftOTP-macOS/SwiftOTP-macOS-prefix.pch"; sourceTree = "<group>"; };
-		6DFBBA465965DBC7B3F5657976F14DE8 /* Pods-JOTAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7004E7272BB031DDE338B74557442114 /* KeychainAccess-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-iOS-prefix.pch"; sourceTree = "<group>"; };
 		705CFE93EE2E98DA5D9AEA184C8DB35A /* Introspect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Introspect.swift; path = Introspect/Introspect.swift; sourceTree = "<group>"; };
+		70DD810F9872FFBDB0C8EF1BD8CBAAA4 /* Pods-OTPCredentialProvider-macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTPCredentialProvider-macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		71C1ED586113329E1230BC9D037FFA50 /* KeychainAccess-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "KeychainAccess-macOS-prefix.pch"; path = "../KeychainAccess-macOS/KeychainAccess-macOS-prefix.pch"; sourceTree = "<group>"; };
-		74A50B6D7E57A590AE80D6A56CDB579A /* Pods-JOTAUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JOTAUITests-dummy.m"; sourceTree = "<group>"; };
+		74764B11C5C46885F30C0FFA525561E7 /* Pods-JOTATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTATests.debug.xcconfig"; sourceTree = "<group>"; };
 		75BED07D3EF53529A37DF66BD3DF478A /* KeyboardObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardObserver.swift; path = Sources/KeyboardObserver.swift; sourceTree = "<group>"; };
-		78AF850A76DCEE3C84E558BC059BFF86 /* Pods-JOTA-macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JOTA-macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		79A3526BB3E7B7003054F9EAE812C519 /* Pods-OTPCredentialProvider-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPCredentialProvider-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7B3CE9FA229E5A1A0139DE2DEF836176 /* Pods-JOTA-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JOTA-frameworks.sh"; sourceTree = "<group>"; };
+		7B78780C7E94C2CED3C668858E4455DD /* Pods-JOTA-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JOTA-umbrella.h"; sourceTree = "<group>"; };
+		7BA91F5419F7108173EA420135F22CFC /* Pods-JOTA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JOTA-dummy.m"; sourceTree = "<group>"; };
+		7E24EF5DC14C11A54600EDA6A6145D5E /* Pods-OTPCredentialProvider-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTPCredentialProvider-macOS-umbrella.h"; sourceTree = "<group>"; };
 		7E9A4A2D02F4789E5B9323CD3E22BDD7 /* SwiftOTP-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOTP-iOS-prefix.pch"; sourceTree = "<group>"; };
 		80209AB719331A8C8680511832242275 /* Toaster-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-prefix.pch"; sourceTree = "<group>"; };
 		80AA71AD7A558EF4D9F52A6810D40B08 /* UIKitIntrospectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIKitIntrospectionView.swift; path = Introspect/UIKitIntrospectionView.swift; sourceTree = "<group>"; };
+		82E69AA16FE3A787C03AF96BF8A5F390 /* Pods-OTPCredentialProvider-macOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPCredentialProvider-macOS-Info.plist"; sourceTree = "<group>"; };
 		862C0A67953ECD873B7D955BEDEFC0BE /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Sources/Toast.swift; sourceTree = "<group>"; };
 		867940023BEC77AC1D3B4619AF946BE5 /* Pods-OTPCredentialProvider */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-OTPCredentialProvider"; path = Pods_OTPCredentialProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8775205683FF486EB36CDD0B3ECFE770 /* Pods-OTPAutoFill-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTPAutoFill-umbrella.h"; sourceTree = "<group>"; };
+		890936A88AA230509F0CC9DDBCB85CAE /* Pods-OTPCredentialProvider-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTPCredentialProvider-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8C8D29869BD2B03B9EFDEB33F749CC43 /* Pods-OTPAutoFill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPAutoFill.release.xcconfig"; sourceTree = "<group>"; };
 		8D192FCFD969501CF97D0BF9B6910729 /* ToastWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastWindow.swift; path = Sources/ToastWindow.swift; sourceTree = "<group>"; };
 		92B593B4DD92F00B59D4F5C10AED85AC /* Base32.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base32.swift; path = SwiftOTP/Base32/Base32.swift; sourceTree = "<group>"; };
-		95BE4D83D49EBB83F90F5AAA65C52BE7 /* Pods-OTPCredentialProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPCredentialProvider.debug.xcconfig"; sourceTree = "<group>"; };
+		9670F8E14E8D6E1339937432FEC5EA65 /* Pods-JOTAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		96B29CA27A622B890E7F74BE1056FE7E /* UInt64+Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt64+Data.swift"; path = "SwiftOTP/UInt64+Data.swift"; sourceTree = "<group>"; };
 		96CAABA67B33B767D495E2AD1C81F2C6 /* Introspect.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Introspect.modulemap; sourceTree = "<group>"; };
-		97DC456EF17AC74D4FECEDCE8D545B5B /* Pods-OTPCredentialProvider-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTPCredentialProvider-acknowledgements.markdown"; sourceTree = "<group>"; };
+		990A11DD08D206ECC7525DD7BEB8A6AB /* Pods-OTPCredentialProvider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPCredentialProvider-Info.plist"; sourceTree = "<group>"; };
 		994547B6380944D1ADACAE18827569F3 /* SwiftOTP-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftOTP-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		99714FF625649E4A4EEEFCCBD01843D2 /* Pods-JOTA-macOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-JOTA-macOS"; path = Pods_JOTA_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAB7CED814C64E01A78525086B510BE /* KeychainAccess-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainAccess-iOS-dummy.m"; sourceTree = "<group>"; };
 		9AD62F81DE21492E8846ED2303D8DD74 /* KeychainAccess-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "KeychainAccess-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		9ADFB7E60DA6299F4A958493C014A9FB /* Pods-JOTA-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTA-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E0CBC969C6728D43FE5FC41FE8479B7 /* KeychainAccess-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "KeychainAccess-iOS.modulemap"; sourceTree = "<group>"; };
+		9E7553179C2BC7990F324E33689CAF14 /* Pods-OTPAutoFill-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTPAutoFill-umbrella.h"; sourceTree = "<group>"; };
 		9F3C0A534D93B2D2B561FA5E7FD47B80 /* Toaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toaster.release.xcconfig; sourceTree = "<group>"; };
-		9F77D333EC2249B36536738F4278AE3D /* Pods-JOTAUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JOTAUITests.modulemap"; sourceTree = "<group>"; };
-		A152A53D3E303FD05419EED0FCBCBF00 /* Pods-JOTA-macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTA-macOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		A0707CF1C713725BBE0239B7BDF8BEAD /* Pods-OTPAutoFill-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPAutoFill-Info.plist"; sourceTree = "<group>"; };
 		A455FCA964AB6FD3D4CFE0840F840848 /* Toaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toaster.debug.xcconfig; sourceTree = "<group>"; };
-		A58A16E07C5A43D8403BD8528B4A7BCC /* Pods-JOTATests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JOTATests-dummy.m"; sourceTree = "<group>"; };
 		A65E9683209BF273950D8E3B6B3C018C /* ViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewExtensions.swift; path = Introspect/ViewExtensions.swift; sourceTree = "<group>"; };
 		A759B30BC203413979B685AB65F1A61C /* SwiftOTP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftOTP.h; path = SwiftOTP/SwiftOTP.h; sourceTree = "<group>"; };
-		AA31CA9211A6AF27868247C28255E93D /* Pods-OTPCredentialProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPCredentialProvider.release.xcconfig"; sourceTree = "<group>"; };
-		AABBE0C867D75778FDAA781B496D89DD /* Pods-JOTA.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JOTA.modulemap"; sourceTree = "<group>"; };
+		AB1BCA8C33D91773A843A193E20DFD96 /* Pods-OTPCredentialProvider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTPCredentialProvider-dummy.m"; sourceTree = "<group>"; };
+		AC645EB26EB3AE633E9D5803EEF4F2DE /* Pods-JOTAUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JOTAUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ADDBFD85B4BA1138871507CCE4E81D53 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Lib/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
+		ADED18C9F9975C5874D51EB7D34DE418 /* Pods-OTPAutoFill-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTPAutoFill-dummy.m"; sourceTree = "<group>"; };
+		AEDA689D738D25AEC1F7A1BEBE29C119 /* Pods-JOTA-macOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JOTA-macOS-frameworks.sh"; sourceTree = "<group>"; };
 		B5D984BD5D753732EF2BECF923DC3330 /* KeychainAccess-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-iOS-umbrella.h"; sourceTree = "<group>"; };
+		B7488CA4D213C4240994172E77CC6DD3 /* Pods-OTPAutoFill.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTPAutoFill.modulemap"; sourceTree = "<group>"; };
+		B86E064A50DD097A4464B311D31FF842 /* Pods-JOTATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTATests.release.xcconfig"; sourceTree = "<group>"; };
 		B8969B71C5A4E5DBC792DFE361BF879A /* Toaster.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Toaster.h; path = Sources/Toaster.h; sourceTree = "<group>"; };
+		BC7B9A4F79489D8483222D08941B4C91 /* Pods-JOTA-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JOTA-macOS-umbrella.h"; sourceTree = "<group>"; };
 		BD810337F4A305D60D9250A197AA1EF1 /* Toaster */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toaster; path = Toaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEBB7F186AB23038A53825C71C378597 /* Pods-JOTAUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JOTAUITests-umbrella.h"; sourceTree = "<group>"; };
 		BEF3D0846B03F202648EBE987CF8397A /* KeychainAccess-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeychainAccess-iOS-Info.plist"; sourceTree = "<group>"; };
+		C020F4ED098813590A33EE126FBA75FC /* Pods-OTPCredentialProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPCredentialProvider.debug.xcconfig"; sourceTree = "<group>"; };
+		C3AB6EF4F56795A2814050324DD7010E /* Pods-JOTA-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JOTA-macOS.modulemap"; sourceTree = "<group>"; };
+		C5350E03ED65A82E97156CFDBAB7CA56 /* Pods-JOTATests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTATests-Info.plist"; sourceTree = "<group>"; };
 		C724ED1D4713D9CE22C9CE213320B880 /* SwiftOTP-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftOTP-iOS-dummy.m"; sourceTree = "<group>"; };
 		CA142A5DBC37AC290302F7214AD94467 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		CB25FD3E668CF75759E4176A25C25F89 /* Pods-OTPAutoFill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPAutoFill.release.xcconfig"; sourceTree = "<group>"; };
-		CBC24ECE92E14C6B036BA0D5B15654AA /* Pods-JOTA-macOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JOTA-macOS-frameworks.sh"; sourceTree = "<group>"; };
 		CC6576130D833B5282829878FF44BB47 /* Data+Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Utilities.swift"; path = "SwiftOTP/Data+Utilities.swift"; sourceTree = "<group>"; };
 		CD055A0B2629B5786FA775CCFEE56E70 /* KeychainAccess-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "KeychainAccess-iOS"; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE427C2B818B0139F9F925D23302278A /* Pods-OTPAutoFill-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPAutoFill-Info.plist"; sourceTree = "<group>"; };
+		CD121632749CD271FC965B5CA43331E5 /* Pods-JOTATests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTATests-acknowledgements.plist"; sourceTree = "<group>"; };
 		CE7D2800F102E861EA3797C8A88EA6A0 /* KeychainAccess-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "KeychainAccess-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CEACB66CABA2CBC51B74FDC023708EBC /* Pods-JOTAUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-JOTAUITests"; path = Pods_JOTAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECAFBE73F57DAAF9563B9EBA0AB7CBD /* Toaster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-umbrella.h"; sourceTree = "<group>"; };
 		D035465661D76216863829FFC8F26A2C /* Pods-JOTATests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-JOTATests"; path = Pods_JOTATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A70003FD5E49B30CA83DAAFE03116B /* Introspect */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Introspect; path = Introspect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D25D435B5C2EB57E1DF4184047DAD1CE /* Pods-OTPCredentialProvider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTPCredentialProvider-umbrella.h"; sourceTree = "<group>"; };
-		D417872C2F3760595ABAB8F0C6C47787 /* Pods-JOTA-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JOTA-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D60D9CC9D8383D14C1AB7C2A0468E67B /* Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Generator.swift; path = SwiftOTP/Generator.swift; sourceTree = "<group>"; };
 		D75018E398AC9E6EA324BBE76114A009 /* KeychainAccess-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "KeychainAccess-macOS.release.xcconfig"; path = "../KeychainAccess-macOS/KeychainAccess-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		D86E590BE2F6795A2C8A431EB7D739E3 /* Pods-JOTA-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JOTA-umbrella.h"; sourceTree = "<group>"; };
 		D8E084A4475CA346DDDC5EAAA8F6169C /* SwiftOTP-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftOTP-iOS-Info.plist"; sourceTree = "<group>"; };
-		DCC3FB25034DB491EE056D74926CD248 /* Pods-JOTA-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JOTA-macOS-dummy.m"; sourceTree = "<group>"; };
+		DC869942C3BDF175B1155A63875135F6 /* Pods-JOTA-macOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTA-macOS-Info.plist"; sourceTree = "<group>"; };
 		DD35A21E2673F83B1030D05E5D3EFA75 /* Pods-OTPAutoFill */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-OTPAutoFill"; path = Pods_OTPAutoFill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4A423169D46E9332970A08C2D8B900 /* Pods-OTPAutoFill-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPAutoFill-acknowledgements.plist"; sourceTree = "<group>"; };
 		DDB33EE73FE7D9CBB184C17D316642B4 /* SwiftOTP-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SwiftOTP-macOS-umbrella.h"; path = "../SwiftOTP-macOS/SwiftOTP-macOS-umbrella.h"; sourceTree = "<group>"; };
-		E0C5E3136F9C983D106CD20A51EDC574 /* Pods-OTPCredentialProvider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPCredentialProvider-Info.plist"; sourceTree = "<group>"; };
 		E13772ABF62153DB9A91B49065F70719 /* KeychainAccess-macOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "KeychainAccess-macOS"; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E21C7506BD2CD76C28A5287A6A7E4A05 /* Pods-JOTA-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTA-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E32A16784A0327E6DC2AA4E7BD5730B7 /* Pods-JOTA-macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JOTA-macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E3353271106D43432461EC9A1F73AC34 /* Toaster-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Toaster-Info.plist"; sourceTree = "<group>"; };
-		E342E4F3892C5F78B8667488E73C954C /* Pods-JOTATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTATests.release.xcconfig"; sourceTree = "<group>"; };
-		E5267AB1201734D97A9FDB891CBF408F /* Pods-JOTATests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JOTATests-umbrella.h"; sourceTree = "<group>"; };
+		E3AE74D24115A5827EA15BDE743006EA /* Pods-JOTAUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JOTAUITests.modulemap"; sourceTree = "<group>"; };
 		E693BB1A07E1499E1B9280C7EC76FCAB /* HOTP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HOTP.swift; path = SwiftOTP/HOTP.swift; sourceTree = "<group>"; };
-		E6A0EFAC7112308C92284C8BBA092C7E /* Pods-JOTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTA.debug.xcconfig"; sourceTree = "<group>"; };
 		ECD4FCD1C2F094B1A9768DBE13E41071 /* SwiftOTP-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "SwiftOTP-iOS"; path = SwiftOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE7C9B737575D48AD38C47382EE233BD /* Pods-JOTATests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTATests-Info.plist"; sourceTree = "<group>"; };
 		EEFA2A06DAB4E47A15B477498ACBFB68 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = SwiftOTP/Base32/StringExtension.swift; sourceTree = "<group>"; };
 		F16E71C52E5EFD8BDD0E2FD7F373940B /* SwiftOTP-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SwiftOTP-macOS.debug.xcconfig"; path = "../SwiftOTP-macOS/SwiftOTP-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		F58D4A5BFE499346CB0685C0CA466BFC /* Pods-JOTA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JOTA-dummy.m"; sourceTree = "<group>"; };
 		F5AD0F76D52DD24287B052CA88D84C45 /* UIApplication+Load.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Load.swift"; path = "Sources/UIApplication+Load.swift"; sourceTree = "<group>"; };
-		F716A767A49E5EF3E5301B65AE71D9B4 /* Pods-JOTAUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JOTAUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F78933A39FDE4BD812D73D81E6759DA2 /* Pods-OTPAutoFill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPAutoFill.debug.xcconfig"; sourceTree = "<group>"; };
-		F917DE9EC118C2116B0CFEBED434A21C /* Pods-JOTATests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JOTATests.modulemap"; sourceTree = "<group>"; };
-		FA3E545D2895EF3CD584343783F64871 /* Pods-JOTA-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JOTA-macOS.modulemap"; sourceTree = "<group>"; };
+		F6F9F6574548E6911C276ED832370A86 /* Pods-OTPCredentialProvider-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTPCredentialProvider-macOS.modulemap"; sourceTree = "<group>"; };
+		FA0CE1E2B49FB927E9B55DE4C1C17562 /* Pods-JOTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOTA.debug.xcconfig"; sourceTree = "<group>"; };
+		FC333AE16D1BF5DD2A38B3470FA6543E /* Pods-JOTAUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOTAUITests-Info.plist"; sourceTree = "<group>"; };
 		FDA7C2E4BB8149454792A83E12EEC26B /* Introspect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Introspect.release.xcconfig; sourceTree = "<group>"; };
+		FEEA1299C3122932895B27D813F66271 /* Pods-JOTA-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JOTA-macOS-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +409,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6841BB186AB19546119CC72567D5E94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E08D51F7AF7876649E435135BBE2D3D7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECA206987337C681538AA39687546773 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,6 +458,22 @@
 			path = "../Target Support Files/SwiftOTP-iOS";
 			sourceTree = "<group>";
 		};
+		1965E369330072CD2E2FEB4D855CCD40 /* Pods-JOTAUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E3AE74D24115A5827EA15BDE743006EA /* Pods-JOTAUITests.modulemap */,
+				AC645EB26EB3AE633E9D5803EEF4F2DE /* Pods-JOTAUITests-acknowledgements.markdown */,
+				2B398507752CE4966CC56008545AFAB1 /* Pods-JOTAUITests-acknowledgements.plist */,
+				2B4353AED4F293BECEB6D7C1E7F8BB1F /* Pods-JOTAUITests-dummy.m */,
+				FC333AE16D1BF5DD2A38B3470FA6543E /* Pods-JOTAUITests-Info.plist */,
+				BEBB7F186AB23038A53825C71C378597 /* Pods-JOTAUITests-umbrella.h */,
+				9670F8E14E8D6E1339937432FEC5EA65 /* Pods-JOTAUITests.debug.xcconfig */,
+				3BC3ECB02B3F9948EC6A9C4F848F4A10 /* Pods-JOTAUITests.release.xcconfig */,
+			);
+			name = "Pods-JOTAUITests";
+			path = "Target Support Files/Pods-JOTAUITests";
+			sourceTree = "<group>";
+		};
 		20EBF5076E6E0CCF76E40BF76E40FB1C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +513,37 @@
 			path = Toaster;
 			sourceTree = "<group>";
 		};
+		510FC8865440252087E71576C70411C1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				52843A07A90C9C595645A3DB7F692869 /* Pods-JOTA */,
+				BA5FCD2E5A7914568DF37F8519B3DC04 /* Pods-JOTA-macOS */,
+				83CB4EAB15F776755959B6FD88C1AA19 /* Pods-JOTATests */,
+				1965E369330072CD2E2FEB4D855CCD40 /* Pods-JOTAUITests */,
+				5B0A89D1162A00212082EF1BA8CB4184 /* Pods-OTPAutoFill */,
+				F613AB0A8A7AAD2AF8B19B37C6F50BB8 /* Pods-OTPCredentialProvider */,
+				A6B28C41007DCA7EC2CC1FDA2343D326 /* Pods-OTPCredentialProvider-macOS */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		52843A07A90C9C595645A3DB7F692869 /* Pods-JOTA */ = {
+			isa = PBXGroup;
+			children = (
+				27D96F1A28E50EE652C55515D66C3399 /* Pods-JOTA.modulemap */,
+				468A1912A50A5CE43B74F4E523834D2C /* Pods-JOTA-acknowledgements.markdown */,
+				51F9DC339BA3281F7A6237A9D6A9CB8B /* Pods-JOTA-acknowledgements.plist */,
+				7BA91F5419F7108173EA420135F22CFC /* Pods-JOTA-dummy.m */,
+				7B3CE9FA229E5A1A0139DE2DEF836176 /* Pods-JOTA-frameworks.sh */,
+				0B5DEB27FC75C287C866541D6B94193F /* Pods-JOTA-Info.plist */,
+				7B78780C7E94C2CED3C668858E4455DD /* Pods-JOTA-umbrella.h */,
+				FA0CE1E2B49FB927E9B55DE4C1C17562 /* Pods-JOTA.debug.xcconfig */,
+				4CC5CAB8B0088953748590B778E79AF0 /* Pods-JOTA.release.xcconfig */,
+			);
+			name = "Pods-JOTA";
+			path = "Target Support Files/Pods-JOTA";
+			sourceTree = "<group>";
+		};
 		57349B4D62AB9E60E1A14367BBC4FA27 /* KeychainAccess */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,20 +554,20 @@
 			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
-		5D739A64B3F9F3E6057BE099EC51910A /* Pods-JOTATests */ = {
+		5B0A89D1162A00212082EF1BA8CB4184 /* Pods-OTPAutoFill */ = {
 			isa = PBXGroup;
 			children = (
-				F917DE9EC118C2116B0CFEBED434A21C /* Pods-JOTATests.modulemap */,
-				1607EE4BBBE8BFC769AC5428D599CE5F /* Pods-JOTATests-acknowledgements.markdown */,
-				56886F2CB6FC178C3BA1652605C88552 /* Pods-JOTATests-acknowledgements.plist */,
-				A58A16E07C5A43D8403BD8528B4A7BCC /* Pods-JOTATests-dummy.m */,
-				EE7C9B737575D48AD38C47382EE233BD /* Pods-JOTATests-Info.plist */,
-				E5267AB1201734D97A9FDB891CBF408F /* Pods-JOTATests-umbrella.h */,
-				1589D3D52B31E4C4AF89A6A7CBD0E4C2 /* Pods-JOTATests.debug.xcconfig */,
-				E342E4F3892C5F78B8667488E73C954C /* Pods-JOTATests.release.xcconfig */,
+				B7488CA4D213C4240994172E77CC6DD3 /* Pods-OTPAutoFill.modulemap */,
+				1735A5C55D210E31CD38C5C530C7F1A4 /* Pods-OTPAutoFill-acknowledgements.markdown */,
+				DD4A423169D46E9332970A08C2D8B900 /* Pods-OTPAutoFill-acknowledgements.plist */,
+				ADED18C9F9975C5874D51EB7D34DE418 /* Pods-OTPAutoFill-dummy.m */,
+				A0707CF1C713725BBE0239B7BDF8BEAD /* Pods-OTPAutoFill-Info.plist */,
+				9E7553179C2BC7990F324E33689CAF14 /* Pods-OTPAutoFill-umbrella.h */,
+				4746E338CAC36B47F998CB05C4CB6D1B /* Pods-OTPAutoFill.debug.xcconfig */,
+				8C8D29869BD2B03B9EFDEB33F749CC43 /* Pods-OTPAutoFill.release.xcconfig */,
 			);
-			name = "Pods-JOTATests";
-			path = "Target Support Files/Pods-JOTATests";
+			name = "Pods-OTPAutoFill";
+			path = "Target Support Files/Pods-OTPAutoFill";
 			sourceTree = "<group>";
 		};
 		6D02F203074BD1E6827FFEDB24766A8D /* iOS */ = {
@@ -499,7 +580,7 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		7985B1CD802A01D637EE71D72B0862CC /* Products */ = {
+		7428ABCDEE56137784D330A3A8C70937 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				D0A70003FD5E49B30CA83DAAFE03116B /* Introspect */,
@@ -511,11 +592,28 @@
 				CEACB66CABA2CBC51B74FDC023708EBC /* Pods-JOTAUITests */,
 				DD35A21E2673F83B1030D05E5D3EFA75 /* Pods-OTPAutoFill */,
 				867940023BEC77AC1D3B4619AF946BE5 /* Pods-OTPCredentialProvider */,
+				6568E506F904A37E3694B91C217D3818 /* Pods-OTPCredentialProvider-macOS */,
 				ECD4FCD1C2F094B1A9768DBE13E41071 /* SwiftOTP-iOS */,
 				21B76E5801817865597BDB77EC4CAEE6 /* SwiftOTP-macOS */,
 				BD810337F4A305D60D9250A197AA1EF1 /* Toaster */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		83CB4EAB15F776755959B6FD88C1AA19 /* Pods-JOTATests */ = {
+			isa = PBXGroup;
+			children = (
+				67B1FD537D6D39257B3CF21B285691C2 /* Pods-JOTATests.modulemap */,
+				3D4D3D9767004D93B9AE3A66434F39B3 /* Pods-JOTATests-acknowledgements.markdown */,
+				CD121632749CD271FC965B5CA43331E5 /* Pods-JOTATests-acknowledgements.plist */,
+				669F4179CC7D8CCA95696F0CA1D728BB /* Pods-JOTATests-dummy.m */,
+				C5350E03ED65A82E97156CFDBAB7CA56 /* Pods-JOTATests-Info.plist */,
+				1A0397C78AB15BF930E329CB09C5F800 /* Pods-JOTATests-umbrella.h */,
+				74764B11C5C46885F30C0FFA525561E7 /* Pods-JOTATests.debug.xcconfig */,
+				B86E064A50DD097A4464B311D31FF842 /* Pods-JOTATests.release.xcconfig */,
+			);
+			name = "Pods-JOTATests";
+			path = "Target Support Files/Pods-JOTATests";
 			sourceTree = "<group>";
 		};
 		8D8368203364BB700FF43C156ED8FC40 /* SwiftOTP */ = {
@@ -536,22 +634,6 @@
 			path = SwiftOTP;
 			sourceTree = "<group>";
 		};
-		947BA3EC173FADBCCCDAF3BDA08EADA9 /* Pods-OTPCredentialProvider */ = {
-			isa = PBXGroup;
-			children = (
-				1C77473B7EBC114F7CC1982BD7AB85BD /* Pods-OTPCredentialProvider.modulemap */,
-				97DC456EF17AC74D4FECEDCE8D545B5B /* Pods-OTPCredentialProvider-acknowledgements.markdown */,
-				346881C1EF2DDCDAB9EE27AB29458C77 /* Pods-OTPCredentialProvider-acknowledgements.plist */,
-				0334A0234617663588FADCE36250145F /* Pods-OTPCredentialProvider-dummy.m */,
-				E0C5E3136F9C983D106CD20A51EDC574 /* Pods-OTPCredentialProvider-Info.plist */,
-				D25D435B5C2EB57E1DF4184047DAD1CE /* Pods-OTPCredentialProvider-umbrella.h */,
-				95BE4D83D49EBB83F90F5AAA65C52BE7 /* Pods-OTPCredentialProvider.debug.xcconfig */,
-				AA31CA9211A6AF27868247C28255E93D /* Pods-OTPCredentialProvider.release.xcconfig */,
-			);
-			name = "Pods-OTPCredentialProvider";
-			path = "Target Support Files/Pods-OTPCredentialProvider";
-			sourceTree = "<group>";
-		};
 		9A5AACA4327043D6F0CFFD524156FE3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,66 +643,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A15F517B388182408383F881FF4B400D /* Pods-JOTA-macOS */ = {
+		A6B28C41007DCA7EC2CC1FDA2343D326 /* Pods-OTPCredentialProvider-macOS */ = {
 			isa = PBXGroup;
 			children = (
-				FA3E545D2895EF3CD584343783F64871 /* Pods-JOTA-macOS.modulemap */,
-				78AF850A76DCEE3C84E558BC059BFF86 /* Pods-JOTA-macOS-acknowledgements.markdown */,
-				A152A53D3E303FD05419EED0FCBCBF00 /* Pods-JOTA-macOS-acknowledgements.plist */,
-				DCC3FB25034DB491EE056D74926CD248 /* Pods-JOTA-macOS-dummy.m */,
-				CBC24ECE92E14C6B036BA0D5B15654AA /* Pods-JOTA-macOS-frameworks.sh */,
-				3D1B0BB2A42D4FD1B13CD899B2CDE3F0 /* Pods-JOTA-macOS-Info.plist */,
-				5B036A86A5095D45C86A36F48401246B /* Pods-JOTA-macOS-umbrella.h */,
-				243FECB258A4D6570F5A794B49E9782C /* Pods-JOTA-macOS.debug.xcconfig */,
-				9ADFB7E60DA6299F4A958493C014A9FB /* Pods-JOTA-macOS.release.xcconfig */,
+				F6F9F6574548E6911C276ED832370A86 /* Pods-OTPCredentialProvider-macOS.modulemap */,
+				70DD810F9872FFBDB0C8EF1BD8CBAAA4 /* Pods-OTPCredentialProvider-macOS-acknowledgements.markdown */,
+				0292C87A7E9535E5AE984E3C17DFD563 /* Pods-OTPCredentialProvider-macOS-acknowledgements.plist */,
+				382F43AEFA2E374218FD41EF4493590B /* Pods-OTPCredentialProvider-macOS-dummy.m */,
+				82E69AA16FE3A787C03AF96BF8A5F390 /* Pods-OTPCredentialProvider-macOS-Info.plist */,
+				7E24EF5DC14C11A54600EDA6A6145D5E /* Pods-OTPCredentialProvider-macOS-umbrella.h */,
+				79A3526BB3E7B7003054F9EAE812C519 /* Pods-OTPCredentialProvider-macOS.debug.xcconfig */,
+				15D476EED5BCD58341772DED49677572 /* Pods-OTPCredentialProvider-macOS.release.xcconfig */,
 			);
-			name = "Pods-JOTA-macOS";
-			path = "Target Support Files/Pods-JOTA-macOS";
-			sourceTree = "<group>";
-		};
-		A4AFBC6168D87B3DCAEFA579235B4A68 /* Pods-OTPAutoFill */ = {
-			isa = PBXGroup;
-			children = (
-				4C7312358D579B68DDB28BC06626C76D /* Pods-OTPAutoFill.modulemap */,
-				23CD48C136D626EB012FCCF05A3C0A48 /* Pods-OTPAutoFill-acknowledgements.markdown */,
-				252968712867ACABDEBCF94296A483F8 /* Pods-OTPAutoFill-acknowledgements.plist */,
-				16DE0F5471BEB18A29722EA42CB125F2 /* Pods-OTPAutoFill-dummy.m */,
-				CE427C2B818B0139F9F925D23302278A /* Pods-OTPAutoFill-Info.plist */,
-				8775205683FF486EB36CDD0B3ECFE770 /* Pods-OTPAutoFill-umbrella.h */,
-				F78933A39FDE4BD812D73D81E6759DA2 /* Pods-OTPAutoFill.debug.xcconfig */,
-				CB25FD3E668CF75759E4176A25C25F89 /* Pods-OTPAutoFill.release.xcconfig */,
-			);
-			name = "Pods-OTPAutoFill";
-			path = "Target Support Files/Pods-OTPAutoFill";
-			sourceTree = "<group>";
-		};
-		A661804101E2253FDF975D0B409C7080 /* Pods-JOTAUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9F77D333EC2249B36536738F4278AE3D /* Pods-JOTAUITests.modulemap */,
-				F716A767A49E5EF3E5301B65AE71D9B4 /* Pods-JOTAUITests-acknowledgements.markdown */,
-				3AE2161D818F1F3AF3F7512FCE630B6A /* Pods-JOTAUITests-acknowledgements.plist */,
-				74A50B6D7E57A590AE80D6A56CDB579A /* Pods-JOTAUITests-dummy.m */,
-				63278BBB9F7D5347198C54D57876DC1E /* Pods-JOTAUITests-Info.plist */,
-				0F58DE55EAC408559458D7C450DBE99F /* Pods-JOTAUITests-umbrella.h */,
-				6DFBBA465965DBC7B3F5657976F14DE8 /* Pods-JOTAUITests.debug.xcconfig */,
-				6654AC1C63F2EFE64E9CBD88F76825DF /* Pods-JOTAUITests.release.xcconfig */,
-			);
-			name = "Pods-JOTAUITests";
-			path = "Target Support Files/Pods-JOTAUITests";
-			sourceTree = "<group>";
-		};
-		AF0E227A1D2C5C02A0AE14EBAE52CA99 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FF9BBE1B9848762BFF0F9FAEC7E75588 /* Pods-JOTA */,
-				A15F517B388182408383F881FF4B400D /* Pods-JOTA-macOS */,
-				5D739A64B3F9F3E6057BE099EC51910A /* Pods-JOTATests */,
-				A661804101E2253FDF975D0B409C7080 /* Pods-JOTAUITests */,
-				A4AFBC6168D87B3DCAEFA579235B4A68 /* Pods-OTPAutoFill */,
-				947BA3EC173FADBCCCDAF3BDA08EADA9 /* Pods-OTPCredentialProvider */,
-			);
-			name = "Targets Support Files";
+			name = "Pods-OTPCredentialProvider-macOS";
+			path = "Target Support Files/Pods-OTPCredentialProvider-macOS";
 			sourceTree = "<group>";
 		};
 		B300EE725BD620EAE3B8428BE2AAB47B /* Support Files */ = {
@@ -660,6 +696,23 @@
 			path = "../Target Support Files/KeychainAccess-iOS";
 			sourceTree = "<group>";
 		};
+		BA5FCD2E5A7914568DF37F8519B3DC04 /* Pods-JOTA-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				C3AB6EF4F56795A2814050324DD7010E /* Pods-JOTA-macOS.modulemap */,
+				E32A16784A0327E6DC2AA4E7BD5730B7 /* Pods-JOTA-macOS-acknowledgements.markdown */,
+				166194DF1CA06DD840B79F2D70A6F661 /* Pods-JOTA-macOS-acknowledgements.plist */,
+				FEEA1299C3122932895B27D813F66271 /* Pods-JOTA-macOS-dummy.m */,
+				AEDA689D738D25AEC1F7A1BEBE29C119 /* Pods-JOTA-macOS-frameworks.sh */,
+				DC869942C3BDF175B1155A63875135F6 /* Pods-JOTA-macOS-Info.plist */,
+				BC7B9A4F79489D8483222D08941B4C91 /* Pods-JOTA-macOS-umbrella.h */,
+				E21C7506BD2CD76C28A5287A6A7E4A05 /* Pods-JOTA-macOS.debug.xcconfig */,
+				1900E3707209E0BDFE22A64083355AF2 /* Pods-JOTA-macOS.release.xcconfig */,
+			);
+			name = "Pods-JOTA-macOS";
+			path = "Target Support Files/Pods-JOTA-macOS";
+			sourceTree = "<group>";
+		};
 		CE3EB5591A9C9B250E972267C2EA69D7 /* Introspect */ = {
 			isa = PBXGroup;
 			children = (
@@ -680,8 +733,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				9A5AACA4327043D6F0CFFD524156FE3B /* Frameworks */,
 				E6E0731DCE3D1FA22F605C2AA8249CF6 /* Pods */,
-				7985B1CD802A01D637EE71D72B0862CC /* Products */,
-				AF0E227A1D2C5C02A0AE14EBAE52CA99 /* Targets Support Files */,
+				7428ABCDEE56137784D330A3A8C70937 /* Products */,
+				510FC8865440252087E71576C70411C1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -696,21 +749,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		FF9BBE1B9848762BFF0F9FAEC7E75588 /* Pods-JOTA */ = {
+		F613AB0A8A7AAD2AF8B19B37C6F50BB8 /* Pods-OTPCredentialProvider */ = {
 			isa = PBXGroup;
 			children = (
-				AABBE0C867D75778FDAA781B496D89DD /* Pods-JOTA.modulemap */,
-				D417872C2F3760595ABAB8F0C6C47787 /* Pods-JOTA-acknowledgements.markdown */,
-				1484EC070A9B90910FFD42E8C1B9C60C /* Pods-JOTA-acknowledgements.plist */,
-				F58D4A5BFE499346CB0685C0CA466BFC /* Pods-JOTA-dummy.m */,
-				287797D8B85F9DD18A3CABF5F7BA40E7 /* Pods-JOTA-frameworks.sh */,
-				220754C91DBD978DB60F8531E4E9AF7B /* Pods-JOTA-Info.plist */,
-				D86E590BE2F6795A2C8A431EB7D739E3 /* Pods-JOTA-umbrella.h */,
-				E6A0EFAC7112308C92284C8BBA092C7E /* Pods-JOTA.debug.xcconfig */,
-				1FE95FF961EB036B7392E921696FFD74 /* Pods-JOTA.release.xcconfig */,
+				2CBDAD290C623073CD2AB94D39295196 /* Pods-OTPCredentialProvider.modulemap */,
+				890936A88AA230509F0CC9DDBCB85CAE /* Pods-OTPCredentialProvider-acknowledgements.markdown */,
+				041F413BF839AF454D44DF3E9BEDC436 /* Pods-OTPCredentialProvider-acknowledgements.plist */,
+				AB1BCA8C33D91773A843A193E20DFD96 /* Pods-OTPCredentialProvider-dummy.m */,
+				990A11DD08D206ECC7525DD7BEB8A6AB /* Pods-OTPCredentialProvider-Info.plist */,
+				6BEFCC5D02324EB5E084A0A1B81045CC /* Pods-OTPCredentialProvider-umbrella.h */,
+				C020F4ED098813590A33EE126FBA75FC /* Pods-OTPCredentialProvider.debug.xcconfig */,
+				17AEFF24D1001B2AD68F260B9E31E068 /* Pods-OTPCredentialProvider.release.xcconfig */,
 			);
-			name = "Pods-JOTA";
-			path = "Target Support Files/Pods-JOTA";
+			name = "Pods-OTPCredentialProvider";
+			path = "Target Support Files/Pods-OTPCredentialProvider";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -747,6 +799,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				290B0D2AAA0AB53F8EA0C49939554AF0 /* Pods-OTPAutoFill-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A86609D64E1242C0E93D9FA230E4667 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				958497EBA7AC00E83F677028F9C62FBC /* Pods-OTPCredentialProvider-macOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,6 +1067,26 @@
 			productReference = BD810337F4A305D60D9250A197AA1EF1 /* Toaster */;
 			productType = "com.apple.product-type.framework";
 		};
+		B9D58B255B3B881E8B638F2313A1C030 /* Pods-OTPCredentialProvider-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D7595CC5B969146588131F138183530 /* Build configuration list for PBXNativeTarget "Pods-OTPCredentialProvider-macOS" */;
+			buildPhases = (
+				8A86609D64E1242C0E93D9FA230E4667 /* Headers */,
+				2D55BD48CDD8C9A7528CF287F61F5058 /* Sources */,
+				D6841BB186AB19546119CC72567D5E94 /* Frameworks */,
+				1948CE41BA557306B027E8806C1AE2C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FBF61554CFB95442F9FD47142FC40AA /* PBXTargetDependency */,
+				781524BADD01F8C688E40FA3EB5F05E0 /* PBXTargetDependency */,
+			);
+			name = "Pods-OTPCredentialProvider-macOS";
+			productName = Pods_OTPCredentialProvider_macOS;
+			productReference = 6568E506F904A37E3694B91C217D3818 /* Pods-OTPCredentialProvider-macOS */;
+			productType = "com.apple.product-type.framework";
+		};
 		BC4DB37E754DF23E9C0DC76D295EDE37 /* SwiftOTP-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2984D31EF0CDCC4C793195A88BD1E660 /* Build configuration list for PBXNativeTarget "SwiftOTP-iOS" */;
@@ -1066,7 +1146,7 @@
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 100;
-			productRefGroup = 7985B1CD802A01D637EE71D72B0862CC /* Products */;
+			productRefGroup = 7428ABCDEE56137784D330A3A8C70937 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1079,6 +1159,7 @@
 				37A984B6E9AE1CAE7707C3577FEE9CC2 /* Pods-JOTAUITests */,
 				55F89C6443034F496B99794BDF49CC7A /* Pods-OTPAutoFill */,
 				29EB4021EBF8A5490AA7F1A537361887 /* Pods-OTPCredentialProvider */,
+				B9D58B255B3B881E8B638F2313A1C030 /* Pods-OTPCredentialProvider-macOS */,
 				BC4DB37E754DF23E9C0DC76D295EDE37 /* SwiftOTP-iOS */,
 				7DFD96858AE53EAD6C9D8FEC84E2D447 /* SwiftOTP-macOS */,
 				B90AB98A7BC6A346D671B36DB990DAC2 /* Toaster */,
@@ -1087,6 +1168,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1948CE41BA557306B027E8806C1AE2C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21F4B52C1106AF2F1F8F3EC6347E9E5F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1196,6 +1284,14 @@
 			files = (
 				8CA5BD6E385FF8DCEFF1B7B986818AA6 /* Keychain.swift in Sources */,
 				A2C73EA441592E4E9405DBB5FEBECF6F /* KeychainAccess-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D55BD48CDD8C9A7528CF287F61F5058 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABF6D2AB965F47BB1D59CCD5E4B22A8A /* Pods-OTPCredentialProvider-macOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1362,11 +1458,23 @@
 			target = 7DB03B74CC4B954A8ABEF95C6B6DC3D8 /* KeychainAccess-iOS */;
 			targetProxy = 4EB27E1D7AAE7E6FF7B65030C7E760EF /* PBXContainerItemProxy */;
 		};
+		781524BADD01F8C688E40FA3EB5F05E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftOTP-macOS";
+			target = 7DFD96858AE53EAD6C9D8FEC84E2D447 /* SwiftOTP-macOS */;
+			targetProxy = 03197C21F829CEB278ECFB22655488A3 /* PBXContainerItemProxy */;
+		};
 		990D562674173463F89F2F4AE2F26BAD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-JOTA";
 			target = F16FABCA9C8F4DC8BFFC5C605850FDB3 /* Pods-JOTA */;
 			targetProxy = AE324AC9A39199740C20B5112E482FD1 /* PBXContainerItemProxy */;
+		};
+		9FBF61554CFB95442F9FD47142FC40AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KeychainAccess-macOS";
+			target = 3C09BE69C6CD34FD7823532D303EAF8C /* KeychainAccess-macOS */;
+			targetProxy = 7C17A48DBEA4CF5A36755CE2962CD302 /* PBXContainerItemProxy */;
 		};
 		B659C945599DFC597666B1877572E2D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1377,46 +1485,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		000C2C9B95C75B55B06D3B8F69738235 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 243FECB258A4D6570F5A794B49E9782C /* Pods-JOTA-macOS.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		05BFA09BC42791AA68A79D3A3E9E5AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4258420E36F44AC7534545E88542D232 /* SwiftOTP-macOS.release.xcconfig */;
@@ -1444,7 +1512,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MODULEMAP_FILE = "Target Support Files/SwiftOTP-macOS/SwiftOTP-macOS.modulemap";
 				PRODUCT_MODULE_NAME = SwiftOTP;
 				PRODUCT_NAME = SwiftOTP;
@@ -1485,7 +1553,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MODULEMAP_FILE = "Target Support Files/SwiftOTP-macOS/SwiftOTP-macOS.modulemap";
 				PRODUCT_MODULE_NAME = SwiftOTP;
 				PRODUCT_NAME = SwiftOTP;
@@ -1524,7 +1592,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MODULEMAP_FILE = "Target Support Files/SwiftOTP-iOS/SwiftOTP-iOS.modulemap";
 				PRODUCT_MODULE_NAME = SwiftOTP;
 				PRODUCT_NAME = SwiftOTP;
@@ -1542,7 +1610,7 @@
 		};
 		1D0E560FB28F37A720E97F8602B81502 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E342E4F3892C5F78B8667488E73C954C /* Pods-JOTATests.release.xcconfig */;
+			baseConfigurationReference = B86E064A50DD097A4464B311D31FF842 /* Pods-JOTATests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1565,7 +1633,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MODULEMAP_FILE = "Target Support Files/Pods-JOTATests/Pods-JOTATests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1583,7 +1651,7 @@
 		};
 		24A886CCE4A63C3F0BB74609B9A58B26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95BE4D83D49EBB83F90F5AAA65C52BE7 /* Pods-OTPCredentialProvider.debug.xcconfig */;
+			baseConfigurationReference = C020F4ED098813590A33EE126FBA75FC /* Pods-OTPCredentialProvider.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1606,7 +1674,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MODULEMAP_FILE = "Target Support Files/Pods-OTPCredentialProvider/Pods-OTPCredentialProvider.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1616,6 +1684,46 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		29D48D7C52C6FA71216F765B9A9E48E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79A3526BB3E7B7003054F9EAE812C519 /* Pods-OTPCredentialProvider-macOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPCredentialProvider-macOS/Pods-OTPCredentialProvider-macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-OTPCredentialProvider-macOS/Pods-OTPCredentialProvider-macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1646,7 +1754,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MODULEMAP_FILE = "Target Support Files/SwiftOTP-iOS/SwiftOTP-iOS.modulemap";
 				PRODUCT_MODULE_NAME = SwiftOTP;
 				PRODUCT_NAME = SwiftOTP;
@@ -1661,88 +1769,7 @@
 			};
 			name = Debug;
 		};
-		3FEE4659D273AFF909DD60AC7B889E20 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9ADFB7E60DA6299F4A958493C014A9FB /* Pods-JOTA-macOS.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		49B1F930AC7EB1DD16EC141A8524BBA0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6654AC1C63F2EFE64E9CBD88F76825DF /* Pods-JOTAUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-JOTAUITests/Pods-JOTAUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/Pods-JOTAUITests/Pods-JOTAUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5D889513B55D4444E7D0D9D0A23E610D /* Release */ = {
+		37A558C6C2B62488FD0BB428396737AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1793,7 +1820,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1805,7 +1832,570 @@
 			};
 			name = Release;
 		};
-		5E6B33E81F67E69D04878B1852EEB882 /* Debug */ = {
+		49B1F930AC7EB1DD16EC141A8524BBA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BC3ECB02B3F9948EC6A9C4F848F4A10 /* Pods-JOTAUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-JOTAUITests/Pods-JOTAUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-JOTAUITests/Pods-JOTAUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7043D0B49271DFC35522B6E10FD24533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15D476EED5BCD58341772DED49677572 /* Pods-OTPCredentialProvider-macOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPCredentialProvider-macOS/Pods-OTPCredentialProvider-macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-OTPCredentialProvider-macOS/Pods-OTPCredentialProvider-macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7591E91AB7854C102A92641F24C4FC62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E21C7506BD2CD76C28A5287A6A7E4A05 /* Pods-JOTA-macOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8BC1FBCE88A3AD8B2DEDBFB3C75BF36E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C8D29869BD2B03B9EFDEB33F749CC43 /* Pods-OTPAutoFill.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8E05E1BF10BAF24CA518EAFE84A59C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA0CE1E2B49FB927E9B55DE4C1C17562 /* Pods-JOTA.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-JOTA/Pods-JOTA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-JOTA/Pods-JOTA.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8FD2ADF3C8DD1CE0A769A1BEFFECC9BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE7D2800F102E861EA3797C8A88EA6A0 /* KeychainAccess-iOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainAccess-iOS/KeychainAccess-iOS-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/KeychainAccess-iOS/KeychainAccess-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/KeychainAccess-iOS/KeychainAccess-iOS.modulemap";
+				PRODUCT_MODULE_NAME = KeychainAccess;
+				PRODUCT_NAME = KeychainAccess;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		901CBF39891E569CE1C29ECC85D499B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F3C0A534D93B2D2B561FA5E7FD47B80 /* Toaster.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/Toaster/Toaster-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/Toaster/Toaster-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Toaster/Toaster.modulemap";
+				PRODUCT_MODULE_NAME = Toaster;
+				PRODUCT_NAME = Toaster;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		93DBF7409770B3293BEF1A68392B2239 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4746E338CAC36B47F998CB05C4CB6D1B /* Pods-OTPAutoFill.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9DCF2D4B4A17735AD26ECF1A416BD1A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9670F8E14E8D6E1339937432FEC5EA65 /* Pods-JOTAUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-JOTAUITests/Pods-JOTAUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-JOTAUITests/Pods-JOTAUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A5F85834B24E6711BCA8401651B16D98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A455FCA964AB6FD3D4CFE0840F840848 /* Toaster.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/Toaster/Toaster-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/Toaster/Toaster-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Toaster/Toaster.modulemap";
+				PRODUCT_MODULE_NAME = Toaster;
+				PRODUCT_NAME = Toaster;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A6F758F1C0C01ADD2FFC29988FFF4EF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D75018E398AC9E6EA324BBE76114A009 /* KeychainAccess-macOS.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainAccess-macOS/KeychainAccess-macOS-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/KeychainAccess-macOS/KeychainAccess-macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/KeychainAccess-macOS/KeychainAccess-macOS.modulemap";
+				PRODUCT_MODULE_NAME = KeychainAccess;
+				PRODUCT_NAME = KeychainAccess;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A7D7084DDB2E598068ADA4FA6DBC727E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74764B11C5C46885F30C0FFA525561E7 /* Pods-JOTATests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-JOTATests/Pods-JOTATests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-JOTATests/Pods-JOTATests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B9C6BE3F6DC951F62AF76A82F3D5A612 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDA7C2E4BB8149454792A83E12EEC26B /* Introspect.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/Introspect/Introspect-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/Introspect/Introspect-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Introspect/Introspect.modulemap";
+				PRODUCT_MODULE_NAME = Introspect;
+				PRODUCT_NAME = Introspect;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.5;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BD03842E6F0E831FB7775338CA880042 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17AEFF24D1001B2AD68F260B9E31E068 /* Pods-OTPCredentialProvider.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPCredentialProvider/Pods-OTPCredentialProvider-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-OTPCredentialProvider/Pods-OTPCredentialProvider.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CFD1FCAD8E5D233E4AB70576241B0F48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1859,7 +2449,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1872,451 +2462,9 @@
 			};
 			name = Debug;
 		};
-		8BC1FBCE88A3AD8B2DEDBFB3C75BF36E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB25FD3E668CF75759E4176A25C25F89 /* Pods-OTPAutoFill.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8E05E1BF10BAF24CA518EAFE84A59C66 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6A0EFAC7112308C92284C8BBA092C7E /* Pods-JOTA.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-JOTA/Pods-JOTA-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/Pods-JOTA/Pods-JOTA.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8FD2ADF3C8DD1CE0A769A1BEFFECC9BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE7D2800F102E861EA3797C8A88EA6A0 /* KeychainAccess-iOS.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/KeychainAccess-iOS/KeychainAccess-iOS-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/KeychainAccess-iOS/KeychainAccess-iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/KeychainAccess-iOS/KeychainAccess-iOS.modulemap";
-				PRODUCT_MODULE_NAME = KeychainAccess;
-				PRODUCT_NAME = KeychainAccess;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		901CBF39891E569CE1C29ECC85D499B1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F3C0A534D93B2D2B561FA5E7FD47B80 /* Toaster.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/Toaster/Toaster-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/Toaster/Toaster-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/Toaster/Toaster.modulemap";
-				PRODUCT_MODULE_NAME = Toaster;
-				PRODUCT_NAME = Toaster;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		93DBF7409770B3293BEF1A68392B2239 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F78933A39FDE4BD812D73D81E6759DA2 /* Pods-OTPAutoFill.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/Pods-OTPAutoFill/Pods-OTPAutoFill.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9DCF2D4B4A17735AD26ECF1A416BD1A6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DFBBA465965DBC7B3F5657976F14DE8 /* Pods-JOTAUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-JOTAUITests/Pods-JOTAUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/Pods-JOTAUITests/Pods-JOTAUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A5F85834B24E6711BCA8401651B16D98 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A455FCA964AB6FD3D4CFE0840F840848 /* Toaster.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/Toaster/Toaster-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/Toaster/Toaster-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/Toaster/Toaster.modulemap";
-				PRODUCT_MODULE_NAME = Toaster;
-				PRODUCT_NAME = Toaster;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A6F758F1C0C01ADD2FFC29988FFF4EF6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D75018E398AC9E6EA324BBE76114A009 /* KeychainAccess-macOS.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/KeychainAccess-macOS/KeychainAccess-macOS-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/KeychainAccess-macOS/KeychainAccess-macOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/KeychainAccess-macOS/KeychainAccess-macOS.modulemap";
-				PRODUCT_MODULE_NAME = KeychainAccess;
-				PRODUCT_NAME = KeychainAccess;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A7D7084DDB2E598068ADA4FA6DBC727E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1589D3D52B31E4C4AF89A6A7CBD0E4C2 /* Pods-JOTATests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-JOTATests/Pods-JOTATests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/Pods-JOTATests/Pods-JOTATests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B9C6BE3F6DC951F62AF76A82F3D5A612 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDA7C2E4BB8149454792A83E12EEC26B /* Introspect.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/Introspect/Introspect-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/Introspect/Introspect-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/Introspect/Introspect.modulemap";
-				PRODUCT_MODULE_NAME = Introspect;
-				PRODUCT_NAME = Introspect;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.5;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BD03842E6F0E831FB7775338CA880042 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA31CA9211A6AF27868247C28255E93D /* Pods-OTPCredentialProvider.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-OTPCredentialProvider/Pods-OTPCredentialProvider-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MODULEMAP_FILE = "Target Support Files/Pods-OTPCredentialProvider/Pods-OTPCredentialProvider.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		D6118E6A867D202A2B1B2A6ABC6219F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FE95FF961EB036B7392E921696FFD74 /* Pods-JOTA.release.xcconfig */;
+			baseConfigurationReference = 4CC5CAB8B0088953748590B778E79AF0 /* Pods-JOTA.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2339,7 +2487,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MODULEMAP_FILE = "Target Support Files/Pods-JOTA/Pods-JOTA.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -2350,6 +2498,46 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D906F2CD84D4DE393C98BFB3AA9F695A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1900E3707209E0BDFE22A64083355AF2 /* Pods-JOTA-macOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MODULEMAP_FILE = "Target Support Files/Pods-JOTA-macOS/Pods-JOTA-macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2379,7 +2567,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MODULEMAP_FILE = "Target Support Files/KeychainAccess-iOS/KeychainAccess-iOS.modulemap";
 				PRODUCT_MODULE_NAME = KeychainAccess;
 				PRODUCT_NAME = KeychainAccess;
@@ -2421,7 +2609,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MODULEMAP_FILE = "Target Support Files/Introspect/Introspect.modulemap";
 				PRODUCT_MODULE_NAME = Introspect;
 				PRODUCT_NAME = Introspect;
@@ -2461,7 +2649,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MODULEMAP_FILE = "Target Support Files/KeychainAccess-macOS/KeychainAccess-macOS.modulemap";
 				PRODUCT_MODULE_NAME = KeychainAccess;
 				PRODUCT_NAME = KeychainAccess;
@@ -2526,8 +2714,17 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E6B33E81F67E69D04878B1852EEB882 /* Debug */,
-				5D889513B55D4444E7D0D9D0A23E610D /* Release */,
+				CFD1FCAD8E5D233E4AB70576241B0F48 /* Debug */,
+				37A558C6C2B62488FD0BB428396737AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D7595CC5B969146588131F138183530 /* Build configuration list for PBXNativeTarget "Pods-OTPCredentialProvider-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29D48D7C52C6FA71216F765B9A9E48E4 /* Debug */,
+				7043D0B49271DFC35522B6E10FD24533 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2535,8 +2732,8 @@
 		74B481723EC96D7A7525D22BF6CB4F07 /* Build configuration list for PBXNativeTarget "Pods-JOTA-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000C2C9B95C75B55B06D3B8F69738235 /* Debug */,
-				3FEE4659D273AFF909DD60AC7B889E20 /* Release */,
+				7591E91AB7854C102A92641F24C4FC62 /* Debug */,
+				D906F2CD84D4DE393C98BFB3AA9F695A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

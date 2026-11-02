@@ -171,6 +171,7 @@ struct ContentView: View {
                                         if let actualIndex = otps.firstIndex(where: { $0.id == otp.id }) {
                                             otps.remove(at: actualIndex)
                                             try! OTPLoader.saveOTPs(otps: otps)
+                                            AutoFillIdentities.sync(otps: otps)
                                         }
                                     }
                                 }
@@ -214,6 +215,7 @@ struct ContentView: View {
                                         if let otp = try? OTP(url: (feature as! CIQRCodeFeature).messageString!) {
                                             try! OTPLoader.saveOTPs(otps: otps + [otp])
                                             otps = OTPLoader.loadOTPs()
+                                            AutoFillIdentities.sync(otps: otps)
                                             toastTime = Date()
                                             toastText = "Added OTP!"
                                         }
@@ -234,6 +236,22 @@ struct ContentView: View {
                     Spacer()
                     Text(text).padding(.vertical, 10).foregroundColor(.white)
                     Spacer()
+                    Menu {
+                        Picker("Require Touch ID for AutoFill", selection: Binding(
+                            get: { AutoFillLock.timeout },
+                            set: { AutoFillLock.timeout = $0 }
+                        )) {
+                            ForEach(AutoFillLock.Timeout.allCases, id: \.self) { timeout in
+                                Text(timeout.title).tag(timeout)
+                            }
+                        }
+                        .pickerStyle(.inline)
+                    } label: {
+                        Image(systemName: "gearshape").foregroundColor(.white).font(.title2)
+                    }
+                    .menuStyle(.borderlessButton)
+                    .menuIndicator(.hidden)
+                    .fixedSize()
                     Button(action: {
                         NSApp.terminate(self)
                     }) {
@@ -251,6 +269,7 @@ struct ContentView: View {
         .onReceive(viewModel.$isShown, perform: { shown in
             if shown {
                 otps = OTPLoader.loadOTPs()
+                AutoFillIdentities.sync(otps: otps)
                 if !isUnlocked {
                     authenticate()
                 }
@@ -271,6 +290,7 @@ struct ContentView: View {
                                 let updatedOTP = try otp.copyWith(label: newLabel, user: newUser)
                                 otps[index] = updatedOTP
                                 try OTPLoader.saveOTPs(otps: otps)
+                                AutoFillIdentities.sync(otps: otps)
                                 toastTime = Date()
                                 toastText = "Saved changes!"
                             } catch {

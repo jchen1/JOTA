@@ -38,6 +38,14 @@ enum AutoFillIdentities {
         return otps.filter { $0.autofillRecordID == recordID }
     }
 
+    /// OTPs previously filled on these hosts win; otherwise fall back to label matching.
+    static func suggestions(for hosts: [String], in otps: [OTP]) -> [OTP] {
+        var seen = Set<String>()
+        let learned = hosts.flatMap { self.otps(learnedFor: $0, in: otps) }
+        let candidates = learned.isEmpty ? hosts.flatMap { OTPMatcher.suggestions(from: otps, host: $0) } : learned
+        return candidates.filter { seen.insert($0.autofillRecordID).inserted }
+    }
+
     static func remember(_ otp: OTP, forHosts hosts: [String], allOTPs: [OTP]) {
         var learned = learnedHosts
         for host in hosts.map(OTPMatcher.normalizedHost) where !host.isEmpty {
