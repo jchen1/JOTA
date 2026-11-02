@@ -236,22 +236,6 @@ struct ContentView: View {
                     Spacer()
                     Text(text).padding(.vertical, 10).foregroundColor(.white)
                     Spacer()
-                    Menu {
-                        Picker("Require Touch ID for AutoFill", selection: Binding(
-                            get: { AutoFillLock.timeout },
-                            set: { AutoFillLock.timeout = $0 }
-                        )) {
-                            ForEach(AutoFillLock.Timeout.allCases, id: \.self) { timeout in
-                                Text(timeout.title).tag(timeout)
-                            }
-                        }
-                        .pickerStyle(.inline)
-                    } label: {
-                        Image(systemName: "gearshape").foregroundColor(.white).font(.title2)
-                    }
-                    .menuStyle(.borderlessButton)
-                    .menuIndicator(.hidden)
-                    .fixedSize()
                     Button(action: {
                         NSApp.terminate(self)
                     }) {

@@ -21,7 +21,7 @@ export default function Command(props: LaunchProps<{ launchContext: Context }>) 
     return (
       <List>
         <List.EmptyView
-          icon={Icon.Lock}
+          icon={Icon.ExclamationMark}
           title="Couldn't load codes"
           description={error.message}
           actions={

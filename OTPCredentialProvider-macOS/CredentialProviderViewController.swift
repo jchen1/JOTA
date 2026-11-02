@@ -16,7 +16,6 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
 
     private var request: Request?
     private var otps = [OTP]()
-    private var hasAuthenticated = false
     private let model = PickerModel()
 
     // MARK: - ASCredentialProviderViewController
@@ -36,10 +35,6 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
     override func provideCredentialWithoutUserInteraction(for credentialRequest: ASCredentialRequest) {
         guard let identity = credentialRequest.credentialIdentity as? ASOneTimeCodeCredentialIdentity else {
             cancel(.credentialIdentityNotFound)
-            return
-        }
-        guard AutoFillLock.isUnlocked else {
-            cancel(.userInteractionRequired)
             return
         }
         guard let otp = OTPLoader.loadOTPs().first(where: { $0.autofillRecordID == identity.recordIdentifier }) else {
@@ -62,7 +57,6 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
     override func loadView() {
         model.onSelect = { [weak self] otp in self?.select(otp) }
         model.onCancel = { [weak self] in self?.cancel(.userCanceled) }
-        model.onUnlock = { [weak self] in self?.authenticate() }
         let hosting = NSHostingView(rootView: PickerView(model: model))
         hosting.frame = NSRect(x: 0, y: 0, width: 380, height: 440)
         view = hosting
@@ -70,19 +64,10 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
 
     override func viewDidAppear() {
         super.viewDidAppear()
-        guard !hasAuthenticated else { return }
-        authenticate()
+        proceed()
     }
 
     // MARK: - Flow
-
-    private func authenticate() {
-        AutoFillLock.authenticate(reason: "fill a verification code") { [weak self] success in
-            guard let self = self, success else { return }
-            self.hasAuthenticated = true
-            self.proceed()
-        }
-    }
 
     private func proceed() {
         otps = OTPLoader.loadOTPs()
@@ -117,7 +102,7 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
         model.others = otps
             .filter { !suggestedIDs.contains($0.autofillRecordID) }
             .sorted { ($0.label ?? "").lowercased() < ($1.label ?? "").lowercased() }
-        model.isLocked = false
+        model.isLoaded = true
     }
 
     private func select(_ otp: OTP) {
@@ -143,12 +128,11 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
 // MARK: - Picker UI
 
 private final class PickerModel: ObservableObject {
-    @Published var isLocked = true
+    @Published var isLoaded = false
     @Published var suggestions = [OTP]()
     @Published var others = [OTP]()
     var onSelect: (OTP) -> Void = { _ in }
     var onCancel: () -> Void = {}
-    var onUnlock: () -> Void = {}
 }
 
 private struct PickerView: View {
@@ -164,14 +148,8 @@ private struct PickerView: View {
             .padding(12)
             Divider()
 
-            if model.isLocked {
-                VStack(spacing: 12) {
-                    Spacer()
-                    Image(systemName: "lock.fill").font(.system(size: 32)).foregroundStyle(.secondary)
-                    Button("Unlock JOTA", action: model.onUnlock)
-                    Spacer()
-                }
-                .frame(maxWidth: .infinity)
+            if !model.isLoaded {
+                ProgressView().frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
                 TimelineView(.periodic(from: .now, by: 1)) { context in
                     List {

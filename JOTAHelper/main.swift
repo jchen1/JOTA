@@ -16,7 +16,7 @@ struct CodeEntry: Encodable {
     let label: String
     let user: String
     let code: String
-    /// Code for the following period, so callers can roll over without re-authenticating.
+    /// Code for the following period, so callers can roll over without asking again.
     let nextCode: String?
     let period: Int?
     let secondsLeft: Int?
@@ -51,23 +51,7 @@ func hosts(forURL url: String?) -> [String] {
     return host.isEmpty ? [] : [host]
 }
 
-func requireUnlock() {
-    var finished = false
-    var unlocked = false
-    AutoFillLock.authenticate(reason: "show your verification codes") { success in
-        unlocked = success
-        finished = true
-    }
-    while !finished {
-        RunLoop.main.run(mode: .default, before: .distantFuture)
-    }
-    if !unlocked {
-        fail("locked", code: 3)
-    }
-}
-
 func list(arguments: [String]) {
-    requireUnlock()
     let otps = OTPLoader.loadOTPs()
     let suggested = AutoFillIdentities.suggestions(for: hosts(forURL: option("--url", in: arguments)), in: otps)
     let suggestedIDs = Set(suggested.map(\.autofillRecordID))

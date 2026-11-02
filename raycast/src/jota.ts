@@ -22,8 +22,6 @@ export type CodeList = {
 
 export class JOTAError extends Error {}
 
-const LOCKED_EXIT_CODE = 3;
-
 function helperPath(): string {
   const { helperPath } = getPreferenceValues<{ helperPath?: string }>();
   return (
@@ -39,13 +37,7 @@ export function listCodes(url?: string): Promise<CodeList> {
   }
   const args = url ? ["list", "--url", url] : ["list"];
   return new Promise((resolve, reject) => {
-    // Generous timeout: the helper may be waiting on Touch ID.
-    execFile(path, args, { timeout: 120_000 }, (error, stdout) => {
-      const exitCode = error && typeof error.code === "number" ? error.code : 0;
-      if (exitCode === LOCKED_EXIT_CODE) {
-        reject(new JOTAError("JOTA is locked"));
-        return;
-      }
+    execFile(path, args, { timeout: 15_000 }, (error, stdout) => {
       try {
         const parsed = JSON.parse(stdout);
         if (!Array.isArray(parsed)) {
