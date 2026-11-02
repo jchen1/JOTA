@@ -1,0 +1,52 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "jota",
+  "title": "JOTA",
+  "description": "Paste two-factor codes from JOTA",
+  "icon": "icon.png",
+  "author": "jchen1",
+  "license": "MIT",
+  "categories": [
+    "Security"
+  ],
+  "commands": [
+    {
+      "name": "paste-code",
+      "title": "Paste Verification Code",
+      "subtitle": "JOTA",
+      "description": "Paste the code for the site in your current browser tab, or pick one if there's no single match",
+      "mode": "no-view"
+    },
+    {
+      "name": "search-codes",
+      "title": "Search Verification Codes",
+      "subtitle": "JOTA",
+      "description": "Search all JOTA codes",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "helperPath",
+      "title": "JOTA Helper Path",
+      "description": "Path to the JOTAHelper binary inside the JOTA Mac app",
+      "type": "textfield",
+      "required": false,
+      "default": "/Applications/JOTA.app/Contents/Helpers/JOTAHelper.app/Contents/MacOS/JOTAHelper"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "2.10.1",
+    "@raycast/utils": "2.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "typecheck": "tsc --noEmit"
+  }
+}

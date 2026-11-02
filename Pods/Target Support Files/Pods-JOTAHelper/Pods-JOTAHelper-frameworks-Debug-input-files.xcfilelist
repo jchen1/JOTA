@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-JOTAHelper/Pods-JOTAHelper-frameworks.sh
+${BUILT_PRODUCTS_DIR}/KeychainAccess-macOS/KeychainAccess.framework
+${BUILT_PRODUCTS_DIR}/SwiftOTP-macOS/SwiftOTP.framework

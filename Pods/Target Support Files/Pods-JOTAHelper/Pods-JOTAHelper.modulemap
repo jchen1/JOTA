@@ -1,0 +1,6 @@
+framework module Pods_JOTAHelper {
+  umbrella header "Pods-JOTAHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

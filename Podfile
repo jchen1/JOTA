@@ -65,6 +65,14 @@ target 'OTPCredentialProvider-macOS' do
   pod 'SwiftOTP', '~> 3.0'
 end
 
+target 'JOTAHelper' do
+  platform :osx, '15.0'
+  use_frameworks!
+
+  pod 'KeychainAccess'
+  pod 'SwiftOTP', '~> 3.0'
+end
+
 post_install do |installer|
     # Fix deployment target for pods that don't specify one
     # or specify one that is older than our own deployment target.
