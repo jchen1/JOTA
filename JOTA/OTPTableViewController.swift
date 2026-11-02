@@ -301,11 +301,13 @@ class OTPTableViewController: UITableViewController {
             let newUser = alert.textFields?[1].text
 
             do {
-                let updatedOTP = try otp.copyWith(label: newLabel, user: newUser)
-                self.otps[actualIndex] = updatedOTP
-                try OTPLoader.saveOTPs(otps: self.otps)
-                AutoFillIdentities.sync(otps: self.otps)
-                self.filterContentForSearchText(self.searchController.searchBar.text ?? "")
+                try OTPLoader.update { stored in
+                    guard let index = stored.firstIndex(where: { $0.secretData == otp.secretData }) else {
+                        throw OTP.OTPError.unableToCreateOTP
+                    }
+                    stored[index] = try otp.copyWith(label: newLabel, user: newUser)
+                }
+                self.reloadOTPsFromStorage()
             } catch {
                 Toast(text: "Failed to save changes").show()
             }
@@ -326,16 +328,7 @@ class OTPTableViewController: UITableViewController {
     // MARK: - Delete Confirmation
 
     private func confirmDelete(at indexPath: IndexPath) {
-        let actualIndex: Int
-        let otp: OTP
-
-        if isFiltering {
-            otp = filteredOTPs[indexPath.row]
-            actualIndex = otps.firstIndex(where: { $0.id == otp.id }) ?? indexPath.row
-        } else {
-            otp = otps[indexPath.row]
-            actualIndex = indexPath.row
-        }
+        let otp = isFiltering ? filteredOTPs[indexPath.row] : otps[indexPath.row]
 
         let alert = UIAlertController(
             title: "Delete OTP (\(otp.label ?? otp.description))",
@@ -345,13 +338,14 @@ class OTPTableViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
             guard let self = self else { return }
-            self.otps.remove(at: actualIndex)
-            if self.isFiltering {
-                self.filteredOTPs.remove(at: indexPath.row)
+            do {
+                try OTPLoader.update { stored in
+                    stored.removeAll { $0.secretData == otp.secretData }
+                }
+            } catch {
+                Toast(text: "Failed to delete").show()
             }
-            self.tableView.deleteRows(at: [indexPath], with: .fade)
-            try? OTPLoader.saveOTPs(otps: self.otps)
-            AutoFillIdentities.sync(otps: self.otps)
+            self.reloadOTPsFromStorage()
         })
 
         present(alert, animated: true)
@@ -390,11 +384,8 @@ class OTPTableViewController: UITableViewController {
 
     @IBAction func unwindToOTPList(sender: UIStoryboardSegue) {
         if let source = sender.source as? ScannerViewController, let otp = source.otp {
-            // Start from the stored list so entries synced from other devices aren't overwritten.
-            var updated = OTPLoader.loadOTPs()
-            updated.append(otp)
             do {
-                try OTPLoader.saveOTPs(otps: updated)
+                try OTPLoader.update { $0.append(otp) }
             } catch {
                 Toast(text: "Failed to save new OTP").show()
                 return

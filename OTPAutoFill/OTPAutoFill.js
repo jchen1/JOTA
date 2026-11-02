@@ -80,8 +80,10 @@ function score(element) {
             break;
         }
     }
-    if (CODE_HINT.test(description)) points += 40;
-    if (NOT_CODE_HINT.test(description)) points -= 60;
+    var looksLikeCode = CODE_HINT.test(description);
+    if (looksLikeCode) points += 40;
+    // "login-verification-code" is a code field; only penalize words like "login" alone.
+    if (NOT_CODE_HINT.test(description) && !looksLikeCode) points -= 60;
     if ((element.getAttribute("inputmode") || "").toLowerCase() === "numeric") points += 20;
     if (maxLength >= 4 && maxLength <= 10) points += 20;
     if (maxLength === 1) points += 10;
@@ -95,7 +97,7 @@ function findTarget() {
     if (inputs.length === 0) return null;
 
     var marked = inputs.filter(function(element) { return element.hasAttribute(TARGET_ATTRIBUTE); });
-    if (marked.length > 0 && score(marked[0]) >= 0) return marked[0];
+    if (marked.length > 0 && (score(marked[0]) >= 0 || CODE_HINT.test(describe(marked[0])))) return marked[0];
 
     var best = null;
     var bestScore = 0;

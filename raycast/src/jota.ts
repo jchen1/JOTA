@@ -10,14 +10,12 @@ export type CodeEntry = {
   code: string;
   nextCode?: string;
   period?: number;
-  secondsLeft?: number;
+  /** Unix time (seconds) when `code` expires; `nextCode` is valid for one period after. */
+  expiresAt?: number;
+  /** Loosely matches the current site; listed first. */
   suggested: boolean;
-};
-
-export type CodeList = {
-  entries: CodeEntry[];
-  /** When the helper produced the list, used to roll codes over locally. */
-  fetchedAt: number;
+  /** Matches the current site strongly enough to paste without asking. */
+  confident: boolean;
 };
 
 export class JOTAError extends Error {}
@@ -30,7 +28,7 @@ function helperPath(): string {
   );
 }
 
-export function listCodes(url?: string): Promise<CodeList> {
+export function listCodes(url?: string): Promise<CodeEntry[]> {
   const path = helperPath();
   if (!existsSync(path)) {
     return Promise.reject(new JOTAError(`JOTA helper not found at ${path}. Set its path in the extension preferences.`));
@@ -44,7 +42,7 @@ export function listCodes(url?: string): Promise<CodeList> {
           reject(new JOTAError(parsed?.error ?? "Unexpected output from JOTA helper"));
           return;
         }
-        resolve({ entries: parsed, fetchedAt: Date.now() });
+        resolve(parsed);
       } catch {
         reject(new JOTAError(error?.message ?? "Couldn't read JOTA helper output"));
       }
@@ -52,20 +50,26 @@ export function listCodes(url?: string): Promise<CodeList> {
   });
 }
 
-/** The code valid at `now`, using `nextCode` once the period the helper saw has ended. */
-export function currentCode(entry: CodeEntry, fetchedAt: number, now = Date.now()): { code: string; secondsLeft?: number } {
-  if (entry.period === undefined || entry.secondsLeft === undefined) {
+/** The code valid at `now` (ms), or no code once both fetched periods have passed. */
+export function currentCode(entry: CodeEntry, now = Date.now()): { code?: string; secondsLeft?: number } {
+  if (entry.period === undefined || entry.expiresAt === undefined) {
     return { code: entry.code };
   }
-  const elapsed = Math.floor((now - fetchedAt) / 1000);
-  const left = entry.secondsLeft - elapsed;
-  if (left > 0) {
-    return { code: entry.code, secondsLeft: left };
+  const nowSeconds = now / 1000;
+  if (nowSeconds < entry.expiresAt) {
+    return { code: entry.code, secondsLeft: Math.ceil(entry.expiresAt - nowSeconds) };
   }
-  if (entry.nextCode && left > -entry.period) {
-    return { code: entry.nextCode, secondsLeft: left + entry.period };
+  const nextExpiry = entry.expiresAt + entry.period;
+  if (entry.nextCode && nowSeconds < nextExpiry) {
+    return { code: entry.nextCode, secondsLeft: Math.ceil(nextExpiry - nowSeconds) };
   }
-  return { code: "------", secondsLeft: 0 };
+  return {};
+}
+
+/** Earliest time (ms) any fetched code expires; refetching then keeps a valid code on hand. */
+export function refreshAt(entries: CodeEntry[]): number | undefined {
+  const expiries = entries.flatMap((entry) => (entry.expiresAt === undefined ? [] : [entry.expiresAt * 1000]));
+  return expiries.length > 0 ? Math.min(...expiries) : undefined;
 }
 
 const chromiumBrowsers: Record<string, string> = {

@@ -7,12 +7,12 @@ export default async function Command() {
   const url = await frontmostBrowserURL();
 
   try {
-    const list = await listCodes(url);
-    const suggested = list.entries.filter((entry) => entry.suggested);
-    if (suggested.length === 1) {
-      const entry = suggested[0];
-      await Clipboard.paste(currentCode(entry, list.fetchedAt).code);
-      await showHUD(`Pasted ${entry.label || "code"}`);
+    const entries = await listCodes(url);
+    const confident = entries.filter((entry) => entry.confident);
+    const code = confident.length === 1 ? currentCode(confident[0]).code : undefined;
+    if (code) {
+      await Clipboard.paste(code);
+      await showHUD(`Pasted ${confident[0].label || "code"}`);
       return;
     }
     await launchCommand({ name: "search-codes", type: LaunchType.UserInitiated, context: { url } });

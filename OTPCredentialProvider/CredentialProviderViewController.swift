@@ -169,8 +169,8 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
                 showPicker(hosts: [identity.serviceIdentifier.identifier])
             }
         case .pick(let hosts):
-            let candidates = suggestions(for: hosts)
-            if candidates.count == 1, let otp = candidates.first {
+            let confident = AutoFillIdentities.confidentSuggestions(for: hosts, in: otps)
+            if confident.count == 1, let otp = confident.first {
                 remember(otp, hosts: hosts)
                 complete(with: otp)
             } else {

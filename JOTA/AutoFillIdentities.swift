@@ -46,6 +46,23 @@ enum AutoFillIdentities {
         return candidates.filter { seen.insert($0.autofillRecordID).inserted }
     }
 
+    /// Whether `otp` can be filled on one of `hosts` without the user choosing it: it was
+    /// filled there before, or a host is the label's guessed domain or a subdomain of it.
+    /// Looser label matches (e.g. "Google" on notgoogle.com) are only offered as suggestions.
+    static func isConfidentMatch(_ otp: OTP, hosts: [String]) -> Bool {
+        let learned = learnedHosts
+        let guessed = guessedDomains(for: otp)
+        return hosts.map(OTPMatcher.normalizedHost).contains { host in
+            learned[host] == otp.autofillRecordID
+                || guessed.contains { host == $0 || host.hasSuffix("." + $0) }
+        }
+    }
+
+    /// Suggestions safe to fill automatically; see `isConfidentMatch`.
+    static func confidentSuggestions(for hosts: [String], in otps: [OTP]) -> [OTP] {
+        suggestions(for: hosts, in: otps).filter { isConfidentMatch($0, hosts: hosts) }
+    }
+
     static func remember(_ otp: OTP, forHosts hosts: [String], allOTPs: [OTP]) {
         var learned = learnedHosts
         for host in hosts.map(OTPMatcher.normalizedHost) where !host.isEmpty {

@@ -77,4 +77,14 @@ class OTPLoader {
     public static func saveOTPs(otps: [OTP]) throws {
         return migrate(otps: otps)
     }
+
+    /// Applies `change` to the latest stored list rather than a caller's cached copy, so
+    /// entries synced from other devices since the caller last loaded aren't dropped.
+    @discardableResult
+    public static func update(_ change: (inout [OTP]) throws -> Void) throws -> [OTP] {
+        var otps = loadOTPs()
+        try change(&otps)
+        try saveOTPs(otps: otps)
+        return otps
+    }
 }

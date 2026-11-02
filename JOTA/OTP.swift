@@ -69,7 +69,9 @@ public class OTP: NSObject,NSCoding {
             otpContainer = .HOTP(hotp, counter)
             break
         case .TOTP:
-            guard let totp = TOTP(secret: secret, digits: digits, timeInterval: timeInterval, algorithm: algorithm) else {
+            // SwiftOTP accepts any interval but traps when generating with one below 1.
+            guard timeInterval > 0,
+                  let totp = TOTP(secret: secret, digits: digits, timeInterval: timeInterval, algorithm: algorithm) else {
                 throw OTPError.unableToCreateOTP
             }
             otpContainer = .TOTP(totp)

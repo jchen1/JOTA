@@ -168,9 +168,10 @@ struct ContentView: View {
                                     }
                                     Divider()
                                     Button("Delete", role: .destructive) {
-                                        if let actualIndex = otps.firstIndex(where: { $0.id == otp.id }) {
-                                            otps.remove(at: actualIndex)
-                                            try! OTPLoader.saveOTPs(otps: otps)
+                                        if let updated = try? OTPLoader.update({ stored in
+                                            stored.removeAll { $0.secretData == otp.secretData }
+                                        }) {
+                                            otps = updated
                                             AutoFillIdentities.sync(otps: otps)
                                         }
                                     }
@@ -213,8 +214,7 @@ struct ContentView: View {
                                     }
                                     for feature in features {
                                         if let otp = try? OTP(url: (feature as! CIQRCodeFeature).messageString!) {
-                                            try! OTPLoader.saveOTPs(otps: otps + [otp])
-                                            otps = OTPLoader.loadOTPs()
+                                            otps = (try? OTPLoader.update { $0.append(otp) }) ?? OTPLoader.loadOTPs()
                                             AutoFillIdentities.sync(otps: otps)
                                             toastTime = Date()
                                             toastText = "Added OTP!"
@@ -269,11 +269,14 @@ struct ContentView: View {
                     label: $editLabel,
                     user: $editUser,
                     onSave: { newLabel, newUser in
-                        if let index = editingIndex {
+                        if editingIndex != nil {
                             do {
-                                let updatedOTP = try otp.copyWith(label: newLabel, user: newUser)
-                                otps[index] = updatedOTP
-                                try OTPLoader.saveOTPs(otps: otps)
+                                otps = try OTPLoader.update { stored in
+                                    guard let index = stored.firstIndex(where: { $0.secretData == otp.secretData }) else {
+                                        throw OTP.OTPError.unableToCreateOTP
+                                    }
+                                    stored[index] = try otp.copyWith(label: newLabel, user: newUser)
+                                }
                                 AutoFillIdentities.sync(otps: otps)
                                 toastTime = Date()
                                 toastText = "Saved changes!"

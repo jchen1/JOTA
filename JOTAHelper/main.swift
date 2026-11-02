@@ -19,8 +19,12 @@ struct CodeEntry: Encodable {
     /// Code for the following period, so callers can roll over without asking again.
     let nextCode: String?
     let period: Int?
-    let secondsLeft: Int?
+    /// Unix time when `code` expires; `nextCode` is valid for one period after that.
+    let expiresAt: Int?
+    /// Matches the site loosely (label match); show it first.
     let suggested: Bool
+    /// Matches the site strongly enough to paste without the user choosing.
+    let confident: Bool
 }
 
 struct ErrorOutput: Encodable {
@@ -52,26 +56,33 @@ func hosts(forURL url: String?) -> [String] {
 }
 
 func list(arguments: [String]) {
+    let hostList = hosts(forURL: option("--url", in: arguments))
     let otps = OTPLoader.loadOTPs()
-    let suggested = AutoFillIdentities.suggestions(for: hosts(forURL: option("--url", in: arguments)), in: otps)
+    let suggested = AutoFillIdentities.suggestions(for: hostList, in: otps)
     let suggestedIDs = Set(suggested.map(\.autofillRecordID))
     let others = otps
         .filter { !suggestedIDs.contains($0.autofillRecordID) }
         .sorted { ($0.label ?? "").lowercased() < ($1.label ?? "").lowercased() }
 
+    // One timestamp for every code so expiry times line up with what was generated.
     let now = Int(Date().timeIntervalSince1970)
     let entries = (suggested + others).compactMap { otp -> CodeEntry? in
-        guard let code = try? otp.generate() else { return nil }
         let period = otp.timeInterval
+        let expiresAt = period.map { now - now % $0 + $0 }
+        let code = period == nil
+            ? try? otp.generate()
+            : try? otp.generate(time: Date(timeIntervalSince1970: TimeInterval(now)))
+        guard let code = code else { return nil }
         return CodeEntry(
             id: otp.autofillRecordID,
             label: otp.label ?? "",
             user: otp.user ?? "",
             code: code,
-            nextCode: period.flatMap { try? otp.generate(time: Date(timeIntervalSince1970: TimeInterval(now - now % $0 + $0))) },
+            nextCode: expiresAt.flatMap { try? otp.generate(time: Date(timeIntervalSince1970: TimeInterval($0))) },
             period: period,
-            secondsLeft: period.map { $0 - now % $0 },
-            suggested: suggestedIDs.contains(otp.autofillRecordID)
+            expiresAt: expiresAt,
+            suggested: suggestedIDs.contains(otp.autofillRecordID),
+            confident: suggestedIDs.contains(otp.autofillRecordID) && AutoFillIdentities.isConfidentMatch(otp, hosts: hostList)
         )
     }
     printJSON(entries)

@@ -1,14 +1,16 @@
 import { Action, ActionPanel, Color, Icon, LaunchProps, List } from "@raycast/api";
 import { usePromise } from "@raycast/utils";
 import { useEffect, useState } from "react";
-import { CodeEntry, CodeList, currentCode, frontmostBrowserURL, listCodes } from "./jota";
+import { CodeEntry, currentCode, frontmostBrowserURL, listCodes, refreshAt } from "./jota";
 
 type Context = { url?: string };
 
 export default function Command(props: LaunchProps<{ launchContext: Context }>) {
-  const { data, isLoading, error, revalidate } = usePromise(async (): Promise<CodeList & { url?: string }> => {
-    const url = props.launchContext?.url ?? (await frontmostBrowserURL());
-    return { ...(await listCodes(url)), url };
+  const [url, setURL] = useState<string | undefined>(props.launchContext?.url);
+  const { data, isLoading, error, revalidate } = usePromise(async () => {
+    const resolvedURL = props.launchContext?.url ?? (await frontmostBrowserURL());
+    setURL(resolvedURL);
+    return listCodes(resolvedURL);
   });
 
   const [now, setNow] = useState(Date.now());
@@ -16,6 +18,13 @@ export default function Command(props: LaunchProps<{ launchContext: Context }>) 
     const timer = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(timer);
   }, []);
+
+  const nextRefresh = data ? refreshAt(data) : undefined;
+  useEffect(() => {
+    if (!isLoading && nextRefresh !== undefined && now >= nextRefresh) {
+      revalidate();
+    }
+  }, [now, nextRefresh, isLoading]);
 
   if (error) {
     return (
@@ -34,12 +43,12 @@ export default function Command(props: LaunchProps<{ launchContext: Context }>) 
     );
   }
 
-  const suggested = data?.entries.filter((entry) => entry.suggested) ?? [];
-  const others = data?.entries.filter((entry) => !entry.suggested) ?? [];
-  const host = data?.url ? safeHost(data.url) : undefined;
+  const suggested = data?.filter((entry) => entry.suggested) ?? [];
+  const others = data?.filter((entry) => !entry.suggested) ?? [];
+  const host = url ? safeHost(url) : undefined;
 
   const item = (entry: CodeEntry) => {
-    const { code, secondsLeft } = currentCode(entry, data!.fetchedAt, now);
+    const { code, secondsLeft } = currentCode(entry, now);
     const expiring = secondsLeft !== undefined && secondsLeft <= 5;
     return (
       <List.Item
@@ -48,14 +57,16 @@ export default function Command(props: LaunchProps<{ launchContext: Context }>) 
         subtitle={entry.user}
         keywords={[entry.user]}
         accessories={[
-          { tag: { value: code, color: expiring ? Color.Red : Color.PrimaryText } },
+          { tag: { value: code ?? "······", color: expiring || !code ? Color.Red : Color.PrimaryText } },
           ...(secondsLeft !== undefined ? [{ text: `${secondsLeft}s` }] : []),
         ]}
         actions={
-          <ActionPanel>
-            <Action.Paste title="Paste Code" content={code} />
-            <Action.CopyToClipboard title="Copy Code" content={code} concealed />
-          </ActionPanel>
+          code ? (
+            <ActionPanel>
+              <Action.Paste title="Paste Code" content={code} />
+              <Action.CopyToClipboard title="Copy Code" content={code} concealed />
+            </ActionPanel>
+          ) : undefined
         }
       />
     );
@@ -63,7 +74,9 @@ export default function Command(props: LaunchProps<{ launchContext: Context }>) 
 
   return (
     <List isLoading={isLoading} searchBarPlaceholder="Search codes">
-      {suggested.length > 0 && <List.Section title={host ? `Suggested for ${host}` : "Suggested"}>{suggested.map(item)}</List.Section>}
+      {suggested.length > 0 && (
+        <List.Section title={host ? `Suggested for ${host}` : "Suggested"}>{suggested.map(item)}</List.Section>
+      )}
       <List.Section title={suggested.length > 0 ? "Other Codes" : "All Codes"}>{others.map(item)}</List.Section>
     </List>
   );
